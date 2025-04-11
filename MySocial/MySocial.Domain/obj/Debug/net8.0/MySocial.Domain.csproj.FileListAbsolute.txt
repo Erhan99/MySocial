@@ -1,0 +1,11 @@
+C:\Users\ERHAN\Documents\GitHub\MySocial\MySocial\MySocial.Domain\bin\Debug\net8.0\MySocial.Domain.deps.json
+C:\Users\ERHAN\Documents\GitHub\MySocial\MySocial\MySocial.Domain\bin\Debug\net8.0\MySocial.Domain.dll
+C:\Users\ERHAN\Documents\GitHub\MySocial\MySocial\MySocial.Domain\bin\Debug\net8.0\MySocial.Domain.pdb
+C:\Users\ERHAN\Documents\GitHub\MySocial\MySocial\MySocial.Domain\obj\Debug\net8.0\MySocial.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ERHAN\Documents\GitHub\MySocial\MySocial\MySocial.Domain\obj\Debug\net8.0\MySocial.Domain.AssemblyInfoInputs.cache
+C:\Users\ERHAN\Documents\GitHub\MySocial\MySocial\MySocial.Domain\obj\Debug\net8.0\MySocial.Domain.AssemblyInfo.cs
+C:\Users\ERHAN\Documents\GitHub\MySocial\MySocial\MySocial.Domain\obj\Debug\net8.0\MySocial.Domain.csproj.CoreCompileInputs.cache
+C:\Users\ERHAN\Documents\GitHub\MySocial\MySocial\MySocial.Domain\obj\Debug\net8.0\MySocial.Domain.dll
+C:\Users\ERHAN\Documents\GitHub\MySocial\MySocial\MySocial.Domain\obj\Debug\net8.0\refint\MySocial.Domain.dll
+C:\Users\ERHAN\Documents\GitHub\MySocial\MySocial\MySocial.Domain\obj\Debug\net8.0\MySocial.Domain.pdb
+C:\Users\ERHAN\Documents\GitHub\MySocial\MySocial\MySocial.Domain\obj\Debug\net8.0\ref\MySocial.Domain.dll

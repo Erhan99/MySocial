@@ -1,0 +1,49 @@
+/* _content/MySocial.WebUI/Views/Shared/_Layout.cshtml.rz.scp.css */
+/* Please see documentation at https://learn.microsoft.com/aspnet/core/client-side/bundling-and-minification
+for details on configuring this project to bundle and minify static web assets. */
+
+a.navbar-brand[b-jr3ximq6hr] {
+  white-space: normal;
+  text-align: center;
+  word-break: break-all;
+}
+
+a[b-jr3ximq6hr] {
+  color: #0077cc;
+}
+
+.btn-primary[b-jr3ximq6hr] {
+  color: #fff;
+  background-color: #1b6ec2;
+  border-color: #1861ac;
+}
+
+.nav-pills .nav-link.active[b-jr3ximq6hr], .nav-pills .show > .nav-link[b-jr3ximq6hr] {
+  color: #fff;
+  background-color: #1b6ec2;
+  border-color: #1861ac;
+}
+
+.border-top[b-jr3ximq6hr] {
+  border-top: 1px solid #e5e5e5;
+}
+.border-bottom[b-jr3ximq6hr] {
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.box-shadow[b-jr3ximq6hr] {
+  box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+}
+
+button.accept-policy[b-jr3ximq6hr] {
+  font-size: 1rem;
+  line-height: inherit;
+}
+
+.footer[b-jr3ximq6hr] {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  white-space: nowrap;
+  line-height: 60px;
+}
