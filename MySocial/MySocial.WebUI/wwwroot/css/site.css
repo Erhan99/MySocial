@@ -1,5 +1,9 @@
+* {
+    font-family: "Montserrat"
+}
 html {
-  font-size: 14px;
+    font-size: 14px;
+    height: 100%;
 }
 
 @media (min-width: 768px) {
@@ -18,5 +22,12 @@ html {
 }
 
 body {
-  margin-bottom: 60px;
+    margin-bottom: 60px;
+    height: 100%;
+    overflow-x: hidden;
+}
+
+.navButton:hover {
+    background-color: #b8daff;
+    cursor: pointer;
 }

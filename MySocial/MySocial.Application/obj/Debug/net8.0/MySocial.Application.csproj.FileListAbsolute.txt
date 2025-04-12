@@ -1,0 +1,16 @@
+C:\Users\ERHAN\Documents\GitHub\MySocial\MySocial\MySocial.Application\bin\Debug\net8.0\MySocial.Application.deps.json
+C:\Users\ERHAN\Documents\GitHub\MySocial\MySocial\MySocial.Application\bin\Debug\net8.0\MySocial.Application.dll
+C:\Users\ERHAN\Documents\GitHub\MySocial\MySocial\MySocial.Application\bin\Debug\net8.0\MySocial.Application.pdb
+C:\Users\ERHAN\Documents\GitHub\MySocial\MySocial\MySocial.Application\bin\Debug\net8.0\MySocial.Domain.dll
+C:\Users\ERHAN\Documents\GitHub\MySocial\MySocial\MySocial.Application\bin\Debug\net8.0\MySocial.Domain.pdb
+C:\Users\ERHAN\Documents\GitHub\MySocial\MySocial\MySocial.Application\obj\Debug\net8.0\MySocial.Application.csproj.AssemblyReference.cache
+C:\Users\ERHAN\Documents\GitHub\MySocial\MySocial\MySocial.Application\obj\Debug\net8.0\MySocial.Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ERHAN\Documents\GitHub\MySocial\MySocial\MySocial.Application\obj\Debug\net8.0\MySocial.Application.AssemblyInfoInputs.cache
+C:\Users\ERHAN\Documents\GitHub\MySocial\MySocial\MySocial.Application\obj\Debug\net8.0\MySocial.Application.AssemblyInfo.cs
+C:\Users\ERHAN\Documents\GitHub\MySocial\MySocial\MySocial.Application\obj\Debug\net8.0\MySocial.Application.csproj.CoreCompileInputs.cache
+C:\Users\ERHAN\Documents\GitHub\MySocial\MySocial\MySocial.Application\obj\Debug\net8.0\MySocial.Application.sourcelink.json
+C:\Users\ERHAN\Documents\GitHub\MySocial\MySocial\MySocial.Application\obj\Debug\net8.0\MySocial.A1EB2DC7.Up2Date
+C:\Users\ERHAN\Documents\GitHub\MySocial\MySocial\MySocial.Application\obj\Debug\net8.0\MySocial.Application.dll
+C:\Users\ERHAN\Documents\GitHub\MySocial\MySocial\MySocial.Application\obj\Debug\net8.0\refint\MySocial.Application.dll
+C:\Users\ERHAN\Documents\GitHub\MySocial\MySocial\MySocial.Application\obj\Debug\net8.0\MySocial.Application.pdb
+C:\Users\ERHAN\Documents\GitHub\MySocial\MySocial\MySocial.Application\obj\Debug\net8.0\ref\MySocial.Application.dll

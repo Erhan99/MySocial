@@ -13,6 +13,30 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
+      "Id": "C:\\Users\\ERHAN\\Documents\\GitHub\\MySocial\\MySocial\\MySocial.WebUI\\wwwroot\\icons\\home_icon.svg",
+      "PackagePath": "staticwebassets\\icons\\home_icon.svg"
+    },
+    {
+      "Id": "C:\\Users\\ERHAN\\Documents\\GitHub\\MySocial\\MySocial\\MySocial.WebUI\\wwwroot\\icons\\logout_icon.svg",
+      "PackagePath": "staticwebassets\\icons\\logout_icon.svg"
+    },
+    {
+      "Id": "C:\\Users\\ERHAN\\Documents\\GitHub\\MySocial\\MySocial\\MySocial.WebUI\\wwwroot\\icons\\message_icon.svg",
+      "PackagePath": "staticwebassets\\icons\\message_icon.svg"
+    },
+    {
+      "Id": "C:\\Users\\ERHAN\\Documents\\GitHub\\MySocial\\MySocial\\MySocial.WebUI\\wwwroot\\icons\\notifications_icon.svg",
+      "PackagePath": "staticwebassets\\icons\\notifications_icon.svg"
+    },
+    {
+      "Id": "C:\\Users\\ERHAN\\Documents\\GitHub\\MySocial\\MySocial\\MySocial.WebUI\\wwwroot\\icons\\profile_icon.svg",
+      "PackagePath": "staticwebassets\\icons\\profile_icon.svg"
+    },
+    {
+      "Id": "C:\\Users\\ERHAN\\Documents\\GitHub\\MySocial\\MySocial\\MySocial.WebUI\\wwwroot\\icons\\settings_icon.svg",
+      "PackagePath": "staticwebassets\\icons\\settings_icon.svg"
+    },
+    {
       "Id": "C:\\Users\\ERHAN\\Documents\\GitHub\\MySocial\\MySocial\\MySocial.WebUI\\wwwroot\\js\\site.js",
       "PackagePath": "staticwebassets\\js\\site.js"
     },

@@ -1,3 +1,4 @@
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using MySocial.WebUI.Models;
 using System.Diagnostics;
@@ -13,6 +14,7 @@ namespace MySocial.WebUI.Controllers
             _logger = logger;
         }
 
+        [Authorize]
         public IActionResult Index()
         {
             return View();

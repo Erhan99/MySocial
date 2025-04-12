@@ -9,3 +9,4 @@ C:\Users\ERHAN\Documents\GitHub\MySocial\MySocial\MySocial.Domain\obj\Debug\net8
 C:\Users\ERHAN\Documents\GitHub\MySocial\MySocial\MySocial.Domain\obj\Debug\net8.0\refint\MySocial.Domain.dll
 C:\Users\ERHAN\Documents\GitHub\MySocial\MySocial\MySocial.Domain\obj\Debug\net8.0\MySocial.Domain.pdb
 C:\Users\ERHAN\Documents\GitHub\MySocial\MySocial\MySocial.Domain\obj\Debug\net8.0\ref\MySocial.Domain.dll
+C:\Users\ERHAN\Documents\GitHub\MySocial\MySocial\MySocial.Domain\obj\Debug\net8.0\MySocial.Domain.sourcelink.json
