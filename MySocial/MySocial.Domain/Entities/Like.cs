@@ -17,7 +17,7 @@ namespace MySocial.Domain.Entities
         [ForeignKey("PostId")]
         public int PostId { get; set; }
         [ForeignKey("UserId")]
-        public int UserId { get; set; }
+        public string UserId { get; set; }
         public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
     }
 }

@@ -17,9 +17,9 @@ namespace MySocial.Domain.Entities
         public string Content { get; set; }
         public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
         [ForeignKey("SenderId")]
-        public int SenderId { get; set; }
+        public string SenderId { get; set; }
         [ForeignKey("ReceiverId")]
-        public int ReceiverId { get; set; }
+        public string ReceiverId { get; set; }
         public string Status { get; set; } 
     }
 }
