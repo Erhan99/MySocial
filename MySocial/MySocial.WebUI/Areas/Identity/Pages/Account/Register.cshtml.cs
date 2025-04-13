@@ -75,6 +75,7 @@ namespace MySocial.WebUI.Areas.Identity.Pages.Account
             ///     This API supports the ASP.NET Core Identity default UI infrastructure and is not intended to be used
             ///     directly from your code. This API may change or be removed in future releases.
             /// </summary>
+
             [Required]
             [EmailAddress]
             [Display(Name = "Email")]
@@ -100,7 +101,11 @@ namespace MySocial.WebUI.Areas.Identity.Pages.Account
             public string ConfirmPassword { get; set; }
 
             [Display(Name = "Profile Picture")]
-            public string ProfilePictureUrl { get; set; } 
+            public string ProfilePictureUrl { get; set; }
+
+            [Required]
+            [Display(Name = "Username")]
+            public string Username { get; set; }
         }
 
 
@@ -118,7 +123,7 @@ namespace MySocial.WebUI.Areas.Identity.Pages.Account
             {
                 var user = CreateUser();
 
-                await _userStore.SetUserNameAsync(user, Input.Email, CancellationToken.None);
+                await _userStore.SetUserNameAsync(user, Input.Username, CancellationToken.None);
                 await _emailStore.SetEmailAsync(user, Input.Email, CancellationToken.None);
                 var result = await _userManager.CreateAsync(user, Input.Password);
 
@@ -163,6 +168,7 @@ namespace MySocial.WebUI.Areas.Identity.Pages.Account
             try
             {
                 ApplicationUser user = Activator.CreateInstance<ApplicationUser>();
+                user.UserName = Input.Username;
                 return user;
             }
             catch

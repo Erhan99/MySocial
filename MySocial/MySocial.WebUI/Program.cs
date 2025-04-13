@@ -2,6 +2,8 @@ using Microsoft.EntityFrameworkCore;
 using MySocial.Infrastructure.Data;
 using MySocial.Infrastructure.Identity;
 using Microsoft.AspNetCore.Identity;
+using MySocial.Infrastructure.Repositories;
+using MySocial.Application.Interfaces.Repositories;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -12,9 +14,13 @@ string connectionString = builder.Configuration.GetConnectionString("DefaultConn
 builder.Services.AddDbContext<MSDbContext>(options => options.UseSqlServer(connectionString));
 
 
-builder.Services.AddDefaultIdentity<ApplicationUser>()
+builder.Services.AddDefaultIdentity<ApplicationUser>(options =>
+{
+    options.User.RequireUniqueEmail = true;
+})
     .AddEntityFrameworkStores<MSDbContext>();
 
+builder.Services.AddScoped<IPostRepository ,PostRepository>();
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

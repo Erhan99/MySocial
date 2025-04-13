@@ -19,6 +19,10 @@ namespace MySocial.Infrastructure.Data
         {
             base.OnModelCreating(builder);
 
+            builder.Entity<ApplicationUser>()
+                .HasIndex(u => u.UserName)
+                .IsUnique();
+
             builder.Entity<Post>()
                 .HasOne<ApplicationUser>()
                 .WithMany()

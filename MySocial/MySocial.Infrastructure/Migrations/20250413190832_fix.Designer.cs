@@ -12,7 +12,7 @@ using MySocial.Infrastructure.Data;
 namespace MySocial.Infrastructure.Migrations
 {
     [DbContext(typeof(MSDbContext))]
-    [Migration("20250413141704_fix")]
+    [Migration("20250413190832_fix")]
     partial class fix
     {
         /// <inheritdoc />
@@ -388,6 +388,10 @@ namespace MySocial.Infrastructure.Migrations
                         .IsUnique()
                         .HasDatabaseName("UserNameIndex")
                         .HasFilter("[NormalizedUserName] IS NOT NULL");
+
+                    b.HasIndex("UserName")
+                        .IsUnique()
+                        .HasFilter("[UserName] IS NOT NULL");
 
                     b.ToTable("AspNetUsers", (string)null);
                 });

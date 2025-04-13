@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("MySocial.Infrastructure")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8dea451c467082877392a7abb264d0420b115929")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f84ec2b25a6dbe5e3e9358194737a6a93ca7d166")]
 [assembly: System.Reflection.AssemblyProductAttribute("MySocial.Infrastructure")]
 [assembly: System.Reflection.AssemblyTitleAttribute("MySocial.Infrastructure")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -1,5 +1,6 @@
 wwwroot\css\site.css
 wwwroot\favicon.ico
+wwwroot\icons\default_profile_icon.svg
 wwwroot\icons\home_icon.svg
 wwwroot\icons\logout_icon.svg
 wwwroot\icons\message_icon.svg
