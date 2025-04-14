@@ -12,10 +12,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
 <body class="d-flex flex-column">
-    <div class="d-flex flex-grow-1">
+    <div class="d-flex">
         @if (User.Identity.IsAuthenticated)
         {
-            <div class="d-flex flex-column flex-shrink-0 p-3 shadow-sm bg-light position-relative" style="width: 25%; border-right: 1px solid #F4F5F5; height: 100%;">
+            <div class="d-flex flex-column flex-shrink-0 p-3 shadow-sm bg-light position-fixed" style="width: 25%; border-right: 1px solid #F4F5F5; height: 100%;">
                 <nav class="d-flex flex-column flex-grow-1">
                     <a class="align-items-center pb-3 mb-3 link-dark text-dark text-decoration-none">
                         <h3 class=" fw-bold">MySocial</h3>
@@ -60,7 +60,7 @@
                 </nav>
             </div>
         } 
-        <div class="@(User.Identity.IsAuthenticated ? null : "flex-grow-1")" style="@(User.Identity.IsAuthenticated ? "width: 50%;" : null)">
+        <div class="@(User.Identity.IsAuthenticated ? null : "flex-grow-1")" style="@(User.Identity.IsAuthenticated ? "width: 50%; margin-left: 25%;" : null)">
             <main role="main" class="pb-3 container pt-5">
                 @RenderBody()
             </main>

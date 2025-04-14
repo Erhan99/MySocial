@@ -7,7 +7,6 @@ namespace MySocial.WebUI.ViewModels
     {
         public string Content { get; set; }
         public string? ImageUrl { get; set; }
-
         public IEnumerable<PostUser>? Posts { get; set; } 
     }
 }

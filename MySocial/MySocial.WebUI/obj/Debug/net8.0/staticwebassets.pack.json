@@ -17,6 +17,10 @@
       "PackagePath": "staticwebassets\\icons\\default_profile_icon.svg"
     },
     {
+      "Id": "C:\\Users\\ERHAN\\Documents\\GitHub\\MySocial\\MySocial\\MySocial.WebUI\\wwwroot\\icons\\heart_icon.svg",
+      "PackagePath": "staticwebassets\\icons\\heart_icon.svg"
+    },
+    {
       "Id": "C:\\Users\\ERHAN\\Documents\\GitHub\\MySocial\\MySocial\\MySocial.WebUI\\wwwroot\\icons\\home_icon.svg",
       "PackagePath": "staticwebassets\\icons\\home_icon.svg"
     },

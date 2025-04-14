@@ -14,12 +14,14 @@ namespace MySocial.WebUI.Controllers
         private readonly ILogger<HomeController> _logger;
         private readonly IPostRepository _postRepository;
         private readonly UserManager<ApplicationUser> _userManager;
+        private readonly ILikeInterface _likeRepository;
 
-        public HomeController(ILogger<HomeController> logger, IPostRepository postRepository, UserManager<ApplicationUser> userManager)
+        public HomeController(ILogger<HomeController> logger, IPostRepository postRepository, UserManager<ApplicationUser> userManager, ILikeInterface likeRepository )
         {
             _logger = logger;
             _postRepository = postRepository;
             _userManager = userManager;
+            _likeRepository = likeRepository;
         }
 
         [Authorize]
@@ -29,7 +31,10 @@ namespace MySocial.WebUI.Controllers
             var postsWithUser = posts.Select(p => new PostUser
             {
                 post = p,
-                user = _userManager.Users.FirstOrDefault(u => u.Id == p.UserId)
+                user = _userManager.Users.FirstOrDefault(u => u.Id == p.UserId),
+                likes = _likeRepository.GetLikes(p.Id).Count(),
+                isLiked = _likeRepository.GetLikes(p.Id).Any(l => p.Id == l.PostId)
+
             }).ToList();
             post.Posts = postsWithUser;
             return View(post);

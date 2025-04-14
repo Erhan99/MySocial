@@ -7,5 +7,7 @@ namespace MySocial.WebUI.Models
     {
         public Post post { get; set; }
         public ApplicationUser user { get; set; }
+        public int likes { get; set; }
+        public bool isLiked { get; set; }
     }
 }

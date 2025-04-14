@@ -21,6 +21,7 @@ builder.Services.AddDefaultIdentity<ApplicationUser>(options =>
     .AddEntityFrameworkStores<MSDbContext>();
 
 builder.Services.AddScoped<IPostRepository ,PostRepository>();
+builder.Services.AddScoped<ILikeInterface, LikeRepository>();
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
