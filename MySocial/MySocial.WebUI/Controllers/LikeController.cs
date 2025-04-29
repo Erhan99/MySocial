@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using MySocial.Application.Interfaces.Repositories;
+using MySocial.WebUI.Models;
 
 namespace MySocial.WebUI.Controllers
 {
@@ -15,10 +16,11 @@ namespace MySocial.WebUI.Controllers
         {
             return View();
         }
-
-        public IActionResult LikePost(int postId, string userId)
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public IActionResult LikePost([FromBody] LikeRequest request)
         {
-            _likeRepository.AddLike(postId, userId);
+            _likeRepository.AddLike(request.PostId, request.UserId);
             return RedirectToAction("Index", "Home");
         }
     }

@@ -8,7 +8,7 @@ wwwroot\icons\message_icon.svg
 wwwroot\icons\notifications_icon.svg
 wwwroot\icons\profile_icon.svg
 wwwroot\icons\settings_icon.svg
-wwwroot\js\site.js
+wwwroot\js\home.js
 wwwroot\lib\bootstrap\dist\css\bootstrap.css
 wwwroot\lib\bootstrap\dist\css\bootstrap.css.map
 wwwroot\lib\bootstrap\dist\css\bootstrap.min.css
