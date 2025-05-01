@@ -1,9 +1,8 @@
 using Microsoft.EntityFrameworkCore;
+using MySocial.Application.Interfaces.Repositories;
 using MySocial.Infrastructure.Data;
 using MySocial.Infrastructure.Identity;
-using Microsoft.AspNetCore.Identity;
 using MySocial.Infrastructure.Repositories;
-using MySocial.Application.Interfaces.Repositories;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -17,10 +16,10 @@ builder.Services.AddDbContext<MSDbContext>(options => options.UseSqlServer(conne
 builder.Services.AddDefaultIdentity<ApplicationUser>(options =>
 {
     options.User.RequireUniqueEmail = true;
-})
-    .AddEntityFrameworkStores<MSDbContext>();
+    options.SignIn.RequireConfirmedAccount = false;
+}).AddEntityFrameworkStores<MSDbContext>();
 
-builder.Services.AddScoped<IPostRepository ,PostRepository>();
+builder.Services.AddScoped<IPostRepository, PostRepository>();
 builder.Services.AddScoped<ILikeInterface, LikeRepository>();
 var app = builder.Build();
 

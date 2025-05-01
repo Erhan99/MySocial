@@ -4,7 +4,6 @@ using Microsoft.AspNetCore.Mvc;
 using MySocial.Application.Interfaces.Repositories;
 using MySocial.Infrastructure.Identity;
 using MySocial.WebUI.Models;
-using MySocial.WebUI.ViewModels;
 using System.Diagnostics;
 
 namespace MySocial.WebUI.Controllers
@@ -16,7 +15,7 @@ namespace MySocial.WebUI.Controllers
         private readonly UserManager<ApplicationUser> _userManager;
         private readonly ILikeInterface _likeRepository;
 
-        public HomeController(ILogger<HomeController> logger, IPostRepository postRepository, UserManager<ApplicationUser> userManager, ILikeInterface likeRepository )
+        public HomeController(ILogger<HomeController> logger, IPostRepository postRepository, UserManager<ApplicationUser> userManager, ILikeInterface likeRepository)
         {
             _logger = logger;
             _postRepository = postRepository;
@@ -25,19 +24,9 @@ namespace MySocial.WebUI.Controllers
         }
 
         [Authorize]
-        public IActionResult Index(PostViewModel post)
+        public IActionResult Index()
         {
-            var posts = _postRepository.GetPosts();
-            var postsWithUser = posts.Select(p => new PostUser
-            {
-                post = p,
-                user = _userManager.Users.FirstOrDefault(u => u.Id == p.UserId),
-                likes = _likeRepository.GetLikes(p.Id).Count(),
-                isLiked = _likeRepository.GetLikes(p.Id).Any(l => p.Id == l.PostId)
-
-            }).ToList();
-            post.Posts = postsWithUser;
-            return View(post);
+            return View();
         }
 
         public IActionResult Privacy()

@@ -4,8 +4,7 @@ using Microsoft.AspNetCore.Mvc;
 using MySocial.Application.Interfaces.Repositories;
 using MySocial.Domain.Entities;
 using MySocial.Infrastructure.Identity;
-using MySocial.Infrastructure.Repositories;
-using MySocial.WebUI.ViewModels;
+using MySocial.WebUI.Models;
 using System.Security.Claims;
 
 namespace MySocial.WebUI.Controllers
@@ -13,30 +12,41 @@ namespace MySocial.WebUI.Controllers
     public class PostController : Controller
     {
         private readonly IPostRepository _postRepository;
+        private readonly UserManager<ApplicationUser> _userManager;
 
-        public PostController(IPostRepository postRepository)
+        public PostController(IPostRepository postRepository, UserManager<ApplicationUser> userManager)
         {
             _postRepository = postRepository;
+            _userManager = userManager;
+        }
+
+        public IActionResult GetPosts()
+        {
+            var posts = _postRepository.GetPosts(); 
+            return Ok(new { data = posts });
         }
 
         [HttpPost]
         [ValidateAntiForgeryToken]
         [Authorize]
-        public IActionResult AddPost(PostViewModel model)
+        public IActionResult AddPost([FromBody] PostRequest request)
         {
-            if (ModelState.IsValid)
+            Post post = new Post
             {
-                Post post = new Post
-                {
-                    Content = model.Content,
-                    CreatedAt = DateTime.Now,
-                    UserId = User.FindFirstValue(ClaimTypes.NameIdentifier)
+                Content = request.Content,
+                CreatedAt = DateTime.Now,
+                UserId = User.FindFirstValue(ClaimTypes.NameIdentifier)
 
-                };
+            };
+            try
+            {
                 _postRepository.AddPost(post);
-                return RedirectToAction("Index", "Home");
             }
-            return View(model);
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+            return Ok(new { success = true, data = _postRepository.GetPostById(post.Id) });
         }
     }
 }

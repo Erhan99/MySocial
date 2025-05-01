@@ -2,11 +2,6 @@
 using Microsoft.EntityFrameworkCore;
 using MySocial.Domain.Entities;
 using MySocial.Infrastructure.Identity;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace MySocial.Infrastructure.Data
 {
@@ -31,8 +26,8 @@ namespace MySocial.Infrastructure.Data
 
             builder.Entity<Like>()
                 .HasOne<Post>()
-                .WithOne()
-                .HasForeignKey<Like>(l => l.PostId)
+                .WithMany()
+                .HasForeignKey(l => l.PostId)
                 .OnDelete(DeleteBehavior.Cascade);
 
             builder.Entity<Like>()

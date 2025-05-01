@@ -1,49 +1,164 @@
-﻿@model MySocial.WebUI.ViewModels.PostViewModel
+﻿@using MySocial.Infrastructure.Identity
 @{
-    ViewData["Title"] = "Home Page";
+	ViewData["Title"] = "Home Page";
+	string logged = @UserManager.GetUserId(User);
 }
+@inject Microsoft.AspNetCore.Identity.UserManager<ApplicationUser> UserManager
+
 
 <div class="text-center">
     <section class="my-1">
-        <form class="align-items-end" asp-action="AddPost" asp-controller="Post">
-                <input type="text" asp-for="Content" class="form-control rounded-2 shadow-sm py-3" id="search" placeholder="What's hapenning?"/>
+        <form class="align-items-end" id="postForm">
+            @Html.AntiForgeryToken()
+                <input type="text" class="form-control rounded-2 shadow-sm py-3" id="postContent" placeholder="What's hapenning?"/>
                 <div class="d-flex justify-content-end mt-3">
                     <button type="submit" class="btn btn-primary px-3 rounded-2">Post</button>
                 </div>
             </form>
     </section>
-	<section class="mt-3">
-		@foreach (var post in Model.Posts)
-		{
-			<div class="card my-3">
-				<div class="d-flex flex-row mb-3 align-items-center mx-3 mt-2">
-					<img src="@post.user.ProfilePictureUrl" alt="Profile Picture" class="rounded-circle me-2" width="50" height="50"/>
-					<h5>@post.user.UserName</h5>
-				</div>
-				<div class="mb-3 px-3">
-					<div class="text-lg-start">
-						<p >@post.post.Content</p>
-						<div class="my-3 d-flex flex-row gap-2">
-							<button 
-								class="border-0 bg-transparent likeButton" 
-								data-post-id="@post.post.Id"
-								data-user-id="@post.user.Id"
-									data-is-liked="@post.isLiked.ToString().ToLower()"
-								data-like-count="@post.likes">
-									<svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="@(post.isLiked ? "red" : "#e3e3e3")">
-										<path d="m480-120-58-52q-101-91-167-157T150-447.5Q111-500 95.5-544T80-634q0-94 63-157t157-63q52 0 99 22t81 62q34-40 81-62t99-22q94 0 157 63t63 157q0 46-15.5 90T810-447.5Q771-395 705-329T538-172l-58 52Z" />
-									</svg>
-								</button>
-							<p id="like-count-@post.post.Id">
-								@post.likes
-							</p>
-						</div>
-						<p ><small class="text-muted">@post.post.CreatedAt.ToString("g")</small></p>
-					</div>
-				</div>
-			</div>
-		}
+	<section class="mt-3" id="posts">
+		
 	</section>
 </div>
 <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-<script src="/js/home.js"></script>
+<script>
+    const loggedUserId = "@logged";
+    let posts = [];
+    document.addEventListener("DOMContentLoaded", async function () {
+       const LikeButtonEventHandler = async () => {
+          document.querySelectorAll(".likeForm").forEach(button => {
+             button.addEventListener("submit", async function (e) {
+                e.preventDefault();
+
+                const svg = this.querySelector("svg");
+                const postId = this.dataset.postId;
+                const countEl = document.getElementById(`like-count-${postId}`);
+                console.log("posts in like fase", posts)
+                const post = posts.find(p => p.id == postId);
+                let isLiked = post.usersLiked.includes(loggedUserId);
+                const token = this.querySelector('input[name="__RequestVerificationToken"]').value;
+                try {
+                    if(isLiked){
+                        await axios.post("/Like/RemoveLike", { postId: parseInt(postId) }, { headers: {"RequestVerificationToken" : token}})
+                    }
+                    else{
+                        await axios.post("/Like/LikePost", { postId: parseInt(postId) }, {headers: {"RequestVerificationToken" : token}});
+                    }
+                   const likeState = !isLiked;
+                   svg.setAttribute("fill", likeState ? "red" : "#e3e3e3");
+                   let currentLikes = parseInt(countEl.textContent);
+                   countEl.textContent = likeState ? currentLikes + 1 : currentLikes - 1;
+                   if (likeState && !post.usersLiked.includes(loggedUserId)) {
+                      post.usersLiked.push(loggedUserId);
+                   } else if (!likeState){
+                      post.usersLiked = post.usersLiked.filter(id => id !== loggedUserId);
+                   }
+                } catch (error) {
+                   console.error("Error liking post", error);
+                }
+             });
+          });
+       };
+
+       const postsSection = document.querySelector("#posts");
+
+       await axios.get("/post/GetPosts").then(response => {
+          posts = response.data.data;
+          console.log(posts)
+          posts.forEach(post => {
+             postsSection.innerHTML += `
+                <div class="card my-3">
+                <div class="d-flex justify-content-between">
+                   <div class="d-flex flex-row mb-3 align-items-center mx-3 mt-2">
+                      <img src=${post.user.profilePictureUrl} alt="Profile Picture" class="rounded-circle me-2" width="50" height="50"/>
+                      <h5>${post.user.userName}</h5>
+                   </div>
+                       <div class="dropdown">
+      <button class="btn" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="black">
+            <path d="M240-400q-33 0-56.5-23.5T160-480q0-33 23.5-56.5T240-560q33 0 56.5 23.5T320-480q0 33-23.5 56.5T240-400Zm240 0q-33 0-56.5-23.5T400-480q0-33 23.5-56.5T480-560q33 0 56.5 23.5T560-480q0 33-23.5 56.5T480-400Zm240 0q-33 0-56.5-23.5T640-480q0-33 23.5-56.5T720-560q33 0 56.5 23.5T800-480q0 33-23.5 56.5T720-400Z"/>
+        </svg>
+      </button>
+      <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+        <a class="dropdown-item" href="#">Edit</a>
+        <a class="dropdown-item" href="#">Delete</a>
+      </div>
+    </div>
+                </div>
+                   <div class="mb-3 px-3">
+                      <div class="text-lg-start">
+                         <p>${post.content}</p>
+                         <div class="my-3 d-flex flex-row gap-2">
+                         <form class="likeForm" data-post-id="${post.id}">
+                            @Html.AntiForgeryToken()
+                            <button class="border-0 bg-transparent">
+                               <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="${post.usersLiked.includes(loggedUserId) ? "red" : "#e3e3e3"}">
+                                  <path d="m480-120-58-52q-101-91-167-157T150-447.5Q111-500 95.5-544T80-634q0-94 63-157t157-63q52 0 99 22t81 62q34-40 81-62t99-22q94 0 157 63t63 157q0 46-15.5 90T810-447.5Q771-395 705-329T538-172l-58 52Z" />
+                               </svg>
+                            </button>
+                          </form>
+                            <p id="like-count-${post.id}">${post.likes}</p>
+                         </div>
+                           <p><small class="text-muted">${new Date(post.createdAt).toLocaleString(undefined, {
+                               day: 'numeric',
+                               month: 'long',
+                               year: 'numeric',
+                               hour: 'numeric',
+                               minute: '2-digit'
+                            })}</small></p>
+                      </div>
+                   </div>
+                </div>`;
+          });
+          LikeButtonEventHandler();
+       });
+
+       document.querySelector("#postForm").addEventListener("submit", function (e) {
+          e.preventDefault();
+          const content = document.querySelector("#postContent").value;
+          const token = this.querySelector('input[name="__RequestVerificationToken"]').value;
+
+          try {
+             axios.post("/post/addPost", {
+                Content: content
+             }, {
+                 headers: {
+                     "RequestVerificationToken" : token
+                 }
+             }).then(response => {
+                const post = response.data.data;
+                console.log("post for post", post)
+                postsSection.innerHTML = `
+                   <div class="card my-3">
+                      <div class="d-flex flex-row mb-3 align-items-center mx-3 mt-2">
+                         <img src=${post.user.profilePictureUrl} alt="Profile Picture" class="rounded-circle me-2" width="50" height="50"/>
+                         <h5>${post.user.userName}</h5>
+                      </div>
+                      <div class="mb-3 px-3">
+                         <div class="text-lg-start">
+                            <p>${post.content}</p>
+                            <div class="my-3 d-flex flex-row gap-2">
+                               <form class="likeForm" data-post-id="${post.id}">
+                                @Html.AntiForgeryToken()
+                            <button class="border-0 bg-transparent">
+                               <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="${post.usersLiked.includes(loggedUserId) ? "red" : "#e3e3e3"}">
+                                  <path d="m480-120-58-52q-101-91-167-157T150-447.5Q111-500 95.5-544T80-634q0-94 63-157t157-63q52 0 99 22t81 62q34-40 81-62t99-22q94 0 157 63t63 157q0 46-15.5 90T810-447.5Q771-395 705-329T538-172l-58 52Z" />
+                               </svg>
+                            </button>
+                          </form>
+                               <p id="like-count-${post.id}">${post.likes}</p>
+                            </div>
+                            <p><small class="text-muted">${new Date(post.createdAt).toLocaleString()}</small></p>
+                         </div>
+                      </div>
+                   </div>
+                ` + postsSection.innerHTML;
+                posts.push(post)
+                LikeButtonEventHandler();
+             });
+          } catch (error) {
+             console.error("Error adding post", error);
+          }
+       });
+    });
+</script>

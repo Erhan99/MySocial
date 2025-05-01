@@ -1,12 +1,6 @@
-﻿using Microsoft.EntityFrameworkCore;
-using MySocial.Application.Interfaces.Repositories;
+﻿using MySocial.Application.Interfaces.Repositories;
 using MySocial.Domain.Entities;
 using MySocial.Infrastructure.Data;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace MySocial.Infrastructure.Repositories
 {
@@ -17,36 +11,31 @@ namespace MySocial.Infrastructure.Repositories
         {
             _context = context;
         }
-        public bool AddLike(int postId, string userId)
+        public void AddLike(int postId, string userId)
         {
-            if(_context.Likes.Any(l => l.PostId == postId && l.UserId == userId))
+            _context.Likes.Add(new Like
             {
-                _context.Remove(_context.Likes.FirstOrDefault(l => l.PostId == postId && l.UserId == userId));
-                _context.SaveChanges();
-                return false;
-            }
-            else
-            {
-                _context.Likes.Add(new Domain.Entities.Like
-                {
-                    PostId = postId,
-                    UserId = userId,
-                    CreatedAt = DateTime.UtcNow
-                });
-                _context.SaveChanges();
-                return true;
-            }
+                PostId = postId,
+                UserId = userId,
+                CreatedAt = DateTime.UtcNow
+            });
+            _context.SaveChanges();
         }
 
         public IEnumerable<Like> GetLikes(int postId)
         {
-            return _context.Likes.Where(l => l.PostId == postId);
-                
-        }
+            return _context.Likes.Where(l => l.PostId == postId && l.IsDeleted == false);
 
+        }
+        
         public void RemoveLike(int postId, string userId)
         {
-            throw new NotImplementedException();
+            Like like = _context.Likes.Where(l => l.UserId == userId && l.PostId == postId && l.IsDeleted == false).FirstOrDefault();
+            if (like != null)
+            {
+                like.IsDeleted = true;
+                _context.SaveChanges();
+            }
         }
     }
 }

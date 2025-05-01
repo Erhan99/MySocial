@@ -174,6 +174,9 @@ namespace MySocial.Infrastructure.Migrations
                     b.Property<DateTime>("CreatedAt")
                         .HasColumnType("datetime2");
 
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("bit");
+
                     b.Property<int>("PostId")
                         .HasColumnType("int");
 
@@ -200,6 +203,9 @@ namespace MySocial.Infrastructure.Migrations
 
                     b.Property<DateTime>("CreatedAt")
                         .HasColumnType("datetime2");
+
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("bit");
 
                     b.Property<string>("ReceiverId")
                         .IsRequired()
@@ -236,6 +242,9 @@ namespace MySocial.Infrastructure.Migrations
                     b.Property<DateTime>("CreatedAt")
                         .HasColumnType("datetime2");
 
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("bit");
+
                     b.Property<int>("PostId")
                         .HasColumnType("int");
 
@@ -245,8 +254,7 @@ namespace MySocial.Infrastructure.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("PostId")
-                        .IsUnique();
+                    b.HasIndex("PostId");
 
                     b.HasIndex("UserId");
 
@@ -267,6 +275,9 @@ namespace MySocial.Infrastructure.Migrations
 
                     b.Property<DateTime>("CreatedAt")
                         .HasColumnType("datetime2");
+
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("bit");
 
                     b.Property<string>("ReceiverId")
                         .IsRequired()
@@ -306,6 +317,9 @@ namespace MySocial.Infrastructure.Migrations
 
                     b.Property<string>("ImageUrl")
                         .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("bit");
 
                     b.Property<string>("UserId")
                         .IsRequired()
@@ -477,8 +491,8 @@ namespace MySocial.Infrastructure.Migrations
             modelBuilder.Entity("MySocial.Domain.Entities.Like", b =>
                 {
                     b.HasOne("MySocial.Domain.Entities.Post", null)
-                        .WithOne()
-                        .HasForeignKey("MySocial.Domain.Entities.Like", "PostId")
+                        .WithMany()
+                        .HasForeignKey("PostId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
