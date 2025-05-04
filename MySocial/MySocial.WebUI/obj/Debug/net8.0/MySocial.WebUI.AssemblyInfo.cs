@@ -15,7 +15,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("MySocial.WebUI")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0fa27bf4e1d4fdbbc441b898668df876e24034d9")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1ad29c084a0cb5d9255fed110f52c85e48f1e819")]
 [assembly: System.Reflection.AssemblyProductAttribute("MySocial.WebUI")]
 [assembly: System.Reflection.AssemblyTitleAttribute("MySocial.WebUI")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

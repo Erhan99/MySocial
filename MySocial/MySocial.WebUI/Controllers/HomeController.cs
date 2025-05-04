@@ -37,7 +37,6 @@ namespace MySocial.WebUI.Controllers
                 UserId = user.Id,
                 UserName = user.UserName,
                 profilePictureUrl = user.ProfilePictureUrl
-
             };
             return View(model);
         }
