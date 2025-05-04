@@ -2,6 +2,7 @@
 {
     public class PostRequest
     {
-        public string Content { get; set; }
+        public int PostId { get; set; } = -1;
+        public string? Content { get; set; }
     }
 }

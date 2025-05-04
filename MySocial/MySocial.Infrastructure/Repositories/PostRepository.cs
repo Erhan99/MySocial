@@ -76,9 +76,15 @@ namespace MySocial.Infrastructure.Repositories
             }
         }
 
-        public void UpdatePost(Post post)
+        public void UpdatePost(int postId, string content)
         {
-            throw new NotImplementedException();
+            Post post = _context.Posts.Where(p => p.Id == postId).FirstOrDefault();
+            if (post != null && post.IsDeleted == false)
+            {
+                post.Content = content;
+                post.CreatedAt = DateTime.Now;
+                _context.SaveChanges();
+            }
         }
     }
 }

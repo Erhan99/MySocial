@@ -1,30 +1,104 @@
 ﻿@using MySocial.Infrastructure.Identity
+@inject Microsoft.AspNetCore.Identity.UserManager<ApplicationUser> UserManager
+@inject Microsoft.AspNetCore.Antiforgery.IAntiforgery Antiforgery
 @{
 	ViewData["Title"] = "Home Page";
 	string logged = @UserManager.GetUserId(User);
+    var requestToken = Antiforgery.GetAndStoreTokens(Context).RequestToken;
 }
-@inject Microsoft.AspNetCore.Identity.UserManager<ApplicationUser> UserManager
-
 
 <div class="text-center">
     <section class="my-1">
         <form class="align-items-end" id="postForm">
             @Html.AntiForgeryToken()
-                <input type="text" class="form-control rounded-2 shadow-sm py-3" id="postContent" placeholder="What's hapenning?"/>
+                <input type="text" class="form-control rounded-pill shadow-sm py-3" id="postContent" placeholder="What's hapenning?"/>
                 <div class="d-flex justify-content-end mt-3">
                     <button type="submit" class="btn btn-primary px-3 rounded-2">Post</button>
                 </div>
             </form>
     </section>
+    <input id="RequestVerificationToken" type="hidden" value="@requestToken" />
 	<section class="mt-3" id="posts">
 		
 	</section>
 </div>
 <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 <script>
+    const postsSection = document.querySelector("#posts");
     const loggedUserId = "@logged";
     let posts = [];
-    document.addEventListener("DOMContentLoaded", async function () {
+
+    const card = (post) => {
+        return(
+               `<div class="card my-3 rounded-2">
+       <div class="d-flex justify-content-between rounded-3">
+          <div class="d-flex flex-row mb-3 align-items-center mx-3 mt-2">
+             <img src=${post.user.profilePictureUrl} alt="Profile Picture" class="rounded-circle me-2" width="50" height="50" />
+             <div class="d-flex align-items-center mb-1">
+        <strong class="me-2">${post.user.userName}</strong>
+        <span class="text-muted dot me-2">·</span>
+        <span class="text-muted timestamp">${new Date(post.createdAt).toLocaleString(undefined, {
+                   day: 'numeric',
+                   month: 'long',
+                   year: 'numeric',
+                   hour: 'numeric',
+                   minute: '2-digit'
+                   })}</span>
+      </div>
+          </div>
+          <div class="dropdown">
+             <button class="btn" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="black">
+                   <path d="M240-400q-33 0-56.5-23.5T160-480q0-33 23.5-56.5T240-560q33 0 56.5 23.5T320-480q0 33-23.5 56.5T240-400Zm240 0q-33 0-56.5-23.5T400-480q0-33 23.5-56.5T480-560q33 0 56.5 23.5T560-480q0 33-23.5 56.5T480-400Zm240 0q-33 0-56.5-23.5T640-480q0-33 23.5-56.5T720-560q33 0 56.5 23.5T800-480q0 33-23.5 56.5T720-400Z" />
+                </svg>
+             </button>
+             <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                   <button type="button" class="dropdown-item edit" data-post-id="${post.id}">Edit</button>
+                <form class="deletePostForm" data-post-id="${post.id}">
+                   <button type="submit" class="dropdown-item">Delete</button>
+                </form>
+             </div>
+          </div>
+       </div>
+       <div class="mb-3 px-3">
+          <div class="text-lg-start">
+          <div id="post-content-${post.id}">
+             <p>${post.content}</p>
+          </div>
+             <div class="my-3 d-flex flex-row gap-2">
+                <form class="likeForm" data-post-id="${post.id}">
+                   <button class="border-0 bg-transparent">
+                      <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="${post.usersLiked.includes(loggedUserId) ? " red" : "#e3e3e3" }">
+                         <path d="m480-120-58-52q-101-91-167-157T150-447.5Q111-500 95.5-544T80-634q0-94 63-157t157-63q52 0 99 22t81 62q34-40 81-62t99-22q94 0 157 63t63 157q0 46-15.5 90T810-447.5Q771-395 705-329T538-172l-58 52Z" />
+                      </svg>
+                   </button>
+                </form>
+                <p id="like-count-${post.id}">${post.likes}</p>
+             </div>
+          </div>
+       </div>
+    </div>`
+                )
+       }
+
+    // fetch and load posts
+    const FetchAndLoadPosts = async () => {
+
+       await axios.get("/post/GetPosts").then(response => {
+          posts = response.data.data;
+          console.log(posts)
+          posts.forEach(post => {
+             postsSection.innerHTML += card(post);
+          });
+          LikeButtonEventHandler();
+          AttachEditButtonHandler();
+          CancelEditButtonHandler();
+          ConfirmEditButtonHandler();
+          attachDeleteHandlers();
+       });
+    }
+
+    // like logic
        const LikeButtonEventHandler = async () => {
           document.querySelectorAll(".likeForm").forEach(button => {
              button.addEventListener("submit", async function (e) {
@@ -36,13 +110,13 @@
                 console.log("posts in like fase", posts)
                 const post = posts.find(p => p.id == postId);
                 let isLiked = post.usersLiked.includes(loggedUserId);
-                const token = this.querySelector('input[name="__RequestVerificationToken"]').value;
+
                 try {
                     if(isLiked){
-                        await axios.post("/Like/RemoveLike", { postId: parseInt(postId) }, { headers: {"RequestVerificationToken" : token}})
+                        await axios.post("/Like/RemoveLike", { postId: parseInt(postId) }, { headers: {"RequestVerificationToken" : document.getElementById("RequestVerificationToken").value}})
                     }
                     else{
-                        await axios.post("/Like/LikePost", { postId: parseInt(postId) }, {headers: {"RequestVerificationToken" : token}});
+                        await axios.post("/Like/LikePost", { postId: parseInt(postId) }, {headers: {"RequestVerificationToken" : document.getElementById("RequestVerificationToken").value}});
                     }
                    const likeState = !isLiked;
                    svg.setAttribute("fill", likeState ? "red" : "#e3e3e3");
@@ -60,105 +134,133 @@
           });
        };
 
-       const postsSection = document.querySelector("#posts");
 
-       await axios.get("/post/GetPosts").then(response => {
-          posts = response.data.data;
-          console.log(posts)
-          posts.forEach(post => {
-             postsSection.innerHTML += `
-                <div class="card my-3">
-                <div class="d-flex justify-content-between">
-                   <div class="d-flex flex-row mb-3 align-items-center mx-3 mt-2">
-                      <img src=${post.user.profilePictureUrl} alt="Profile Picture" class="rounded-circle me-2" width="50" height="50"/>
-                      <h5>${post.user.userName}</h5>
-                   </div>
-                       <div class="dropdown">
-      <button class="btn" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="black">
-            <path d="M240-400q-33 0-56.5-23.5T160-480q0-33 23.5-56.5T240-560q33 0 56.5 23.5T320-480q0 33-23.5 56.5T240-400Zm240 0q-33 0-56.5-23.5T400-480q0-33 23.5-56.5T480-560q33 0 56.5 23.5T560-480q0 33-23.5 56.5T480-400Zm240 0q-33 0-56.5-23.5T640-480q0-33 23.5-56.5T720-560q33 0 56.5 23.5T800-480q0 33-23.5 56.5T720-400Z"/>
-        </svg>
-      </button>
-      <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-        <a class="dropdown-item" href="#">Edit</a>
-        <a class="dropdown-item" href="#">Delete</a>
-      </div>
-    </div>
-                </div>
-                   <div class="mb-3 px-3">
-                      <div class="text-lg-start">
-                         <p>${post.content}</p>
-                         <div class="my-3 d-flex flex-row gap-2">
-                         <form class="likeForm" data-post-id="${post.id}">
-                            @Html.AntiForgeryToken()
-                            <button class="border-0 bg-transparent">
-                               <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="${post.usersLiked.includes(loggedUserId) ? "red" : "#e3e3e3"}">
-                                  <path d="m480-120-58-52q-101-91-167-157T150-447.5Q111-500 95.5-544T80-634q0-94 63-157t157-63q52 0 99 22t81 62q34-40 81-62t99-22q94 0 157 63t63 157q0 46-15.5 90T810-447.5Q771-395 705-329T538-172l-58 52Z" />
-                               </svg>
-                            </button>
-                          </form>
-                            <p id="like-count-${post.id}">${post.likes}</p>
-                         </div>
-                           <p><small class="text-muted">${new Date(post.createdAt).toLocaleString(undefined, {
-                               day: 'numeric',
-                               month: 'long',
-                               year: 'numeric',
-                               hour: 'numeric',
-                               minute: '2-digit'
-                            })}</small></p>
-                      </div>
-                   </div>
-                </div>`;
-          });
-          LikeButtonEventHandler();
-       });
-
-       document.querySelector("#postForm").addEventListener("submit", function (e) {
-          e.preventDefault();
+    // add a post
+       const addPost = async(e) => {
+           e.preventDefault();
           const content = document.querySelector("#postContent").value;
-          const token = this.querySelector('input[name="__RequestVerificationToken"]').value;
-
           try {
              axios.post("/post/addPost", {
                 Content: content
              }, {
                  headers: {
-                     "RequestVerificationToken" : token
+                     "RequestVerificationToken" : document.getElementById("RequestVerificationToken").value
                  }
              }).then(response => {
                 const post = response.data.data;
                 console.log("post for post", post)
-                postsSection.innerHTML = `
-                   <div class="card my-3">
-                      <div class="d-flex flex-row mb-3 align-items-center mx-3 mt-2">
-                         <img src=${post.user.profilePictureUrl} alt="Profile Picture" class="rounded-circle me-2" width="50" height="50"/>
-                         <h5>${post.user.userName}</h5>
-                      </div>
-                      <div class="mb-3 px-3">
-                         <div class="text-lg-start">
-                            <p>${post.content}</p>
-                            <div class="my-3 d-flex flex-row gap-2">
-                               <form class="likeForm" data-post-id="${post.id}">
-                                @Html.AntiForgeryToken()
-                            <button class="border-0 bg-transparent">
-                               <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="${post.usersLiked.includes(loggedUserId) ? "red" : "#e3e3e3"}">
-                                  <path d="m480-120-58-52q-101-91-167-157T150-447.5Q111-500 95.5-544T80-634q0-94 63-157t157-63q52 0 99 22t81 62q34-40 81-62t99-22q94 0 157 63t63 157q0 46-15.5 90T810-447.5Q771-395 705-329T538-172l-58 52Z" />
-                               </svg>
-                            </button>
-                          </form>
-                               <p id="like-count-${post.id}">${post.likes}</p>
-                            </div>
-                            <p><small class="text-muted">${new Date(post.createdAt).toLocaleString()}</small></p>
-                         </div>
-                      </div>
-                   </div>
-                ` + postsSection.innerHTML;
+                postsSection.innerHTML = card(post) + postsSection.innerHTML;
                 posts.push(post)
                 LikeButtonEventHandler();
              });
           } catch (error) {
              console.error("Error adding post", error);
           }
-       });
-    });
+       }
+
+       // remove a post
+       const deletePost = async (e) => {
+           e.preventDefault();
+           try{
+               const postId = e.currentTarget.dataset.postId
+               axios.post("/post/RemovePost", {
+                   PostId: parseInt(postId)
+               },
+               {
+                   headers: {
+                       'RequestVerificationToken': document.getElementById("RequestVerificationToken").value
+                   }
+               }
+               );
+               const card = e.currentTarget.closest(".card");
+               card.remove();
+               posts.filter(p => p.id != postId);
+           }catch(error){
+               console.error("Delete post failed", error)
+           }
+       };
+
+       const attachDeleteHandlers = () => {
+           const deleteForms = document.querySelectorAll(".deletePostForm");
+
+           deleteForms.forEach(form => {
+               form.removeEventListener("submit", deletePost)
+               form.addEventListener("submit", deletePost)
+           }
+           );
+       };
+
+       const EditButtonClick = (e) => {
+           e.preventDefault();
+           const postId = e.currentTarget.dataset.postId;
+           const contentArea = document.querySelector(`#post-content-${postId}`);
+           const prevContent = contentArea.querySelector("p").innerHTML;
+           contentArea.innerHTML = `
+                   <form class="align-items-end">
+                    <input type="text" class="form-control rounded-2 shadow-sm py-3" id="editContent" value="${prevContent}"/>
+                    <div class="d-flex justify-content-end gap-1 mt-2">
+                        <button type="button" class="btn btn-primary px-3 rounded-2 cancel" data-post-id="${postId}">Cancel</button>
+                        <button type="submit" class="btn btn-primary px-3 rounded-2 edit-2" data-post-id="${postId}">Edit</button>
+                    </div>
+                   </form>`;     
+                   CancelEditButtonHandler();
+                   ConfirmEditButtonHandler();
+       }
+
+       const AttachEditButtonHandler = () => {
+           const editButtons = document.querySelectorAll(".edit");
+           editButtons.forEach(btn => {
+               btn.addEventListener("click", EditButtonClick)
+           });
+       };
+
+       const CancelEditButtonClick = (e) => {
+           e.preventDefault()
+           const postId = e.currentTarget.dataset.postId
+           const contentArea = document.querySelector(`#post-content-${postId}`)
+           const content = posts.find(p => p.id == postId).content
+           contentArea.innerHTML = `
+                   <p>${content}</p>`;
+       };
+
+       const CancelEditButtonHandler = () => {
+           const cancelButtons = document.querySelectorAll(".cancel");
+           cancelButtons.forEach(btn => {
+               btn.addEventListener("click", CancelEditButtonClick)
+           });
+       };
+
+       const ConfirmEditButtonClick = (e) => {
+           e.preventDefault();
+           try{
+               const postId = e.currentTarget.dataset.postId
+               const content = document.querySelector("#editContent").value
+               console.log(content)
+               axios.post("/post/EditPost", {
+                   PostId: parseInt(postId),
+                   Content: content
+               },
+               {
+                   headers: {
+                       'RequestVerificationToken': document.getElementById("RequestVerificationToken").value
+                   }
+               }
+               );
+               const contentArea = document.querySelector(`#post-content-${postId}`);
+               contentArea.innerHTML = `
+                   <p>${content}</p>`;
+           }catch(error){
+               console.error("Edit post failed", error)
+           }
+       };
+
+       const ConfirmEditButtonHandler = () => {
+           const editButtons = document.querySelectorAll(".edit-2");
+           editButtons.forEach(btn => {
+               btn.addEventListener("click", ConfirmEditButtonClick)
+           });
+       };
+       // events
+       document.addEventListener("DOMContentLoaded", FetchAndLoadPosts);
+       document.querySelector("#postForm").addEventListener("submit", addPost);
 </script>

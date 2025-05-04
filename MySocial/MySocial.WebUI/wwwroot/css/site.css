@@ -25,6 +25,7 @@ body {
     margin-bottom: 60px;
     height: 100%;
     overflow-x: hidden;
+    background-color: #F0F2F5;
 }
 
 .navButton:hover {
