@@ -45,11 +45,9 @@
             </div>
         </nav>
     </header>
-        <div class="container">
-            <main role="main" class="pb-3 container pt-5">
+            <main role="main" class="pb-3 container">
                 @RenderBody()
             </main>
-        </div>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     @await RenderSectionAsync("Scripts", required: false)

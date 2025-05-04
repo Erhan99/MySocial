@@ -32,7 +32,8 @@ namespace MySocial.Infrastructure.Repositories
                                 user.ProfilePictureUrl
                             },
                             Likes = _context.Likes.Count(l => l.PostId == post.Id && l.IsDeleted == false),
-                            UsersLiked = _context.Likes.Where(l => l.PostId == post.Id && l.IsDeleted == false).Select(l => l.UserId).ToList()
+                            UsersLiked = _context.Likes.Where(l => l.PostId == post.Id && l.IsDeleted == false).Select(l => l.UserId).ToList(),
+                            Comments = _context.Comments.Where(c => c.PostId == post.Id).ToList()
                         };
             return posts.ToList();
         }
@@ -56,7 +57,8 @@ namespace MySocial.Infrastructure.Repositories
                                 user.ProfilePictureUrl
                             },
                             Likes = _context.Likes.Count(l => l.PostId == p.Id && l.IsDeleted == false),
-                            UsersLiked = _context.Likes.Where(l => l.PostId == p.Id).Select(l => l.UserId).ToList()
+                            UsersLiked = _context.Likes.Where(l => l.PostId == p.Id).Select(l => l.UserId).ToList(),
+                            Comments = _context.Comments.Where(c => c.PostId == p.Id).ToList()
                         }).FirstOrDefault();
             return post;
         }

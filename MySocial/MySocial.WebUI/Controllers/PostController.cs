@@ -6,6 +6,7 @@ using MySocial.Application.Interfaces.Repositories;
 using MySocial.Domain.Entities;
 using MySocial.Infrastructure.Identity;
 using MySocial.WebUI.Models;
+using MySocial.WebUI.ViewModel;
 using System.Security.Claims;
 
 namespace MySocial.WebUI.Controllers
@@ -90,6 +91,11 @@ namespace MySocial.WebUI.Controllers
                 return BadRequest(ex.Message);
             }
             return Ok(new { success = true, data = _postRepository.GetPostById(request.PostId) });
+        }
+
+        public IActionResult Detail(int postId)
+        {
+            return View(postId);
         }
     }
 }

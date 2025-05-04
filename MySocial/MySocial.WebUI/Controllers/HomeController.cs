@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.Mvc;
 using MySocial.Application.Interfaces.Repositories;
 using MySocial.Infrastructure.Identity;
 using MySocial.WebUI.Models;
+using MySocial.WebUI.ViewModel;
 using System.Diagnostics;
 
 namespace MySocial.WebUI.Controllers
@@ -24,9 +25,21 @@ namespace MySocial.WebUI.Controllers
         }
 
         [Authorize]
-        public IActionResult Index()
+        public async Task<IActionResult> Index()
         {
-            return View();
+            var user = await _userManager.GetUserAsync(User);
+            if (user == null)
+            {
+                return NotFound();
+            }
+            var model = new PostViewModel
+            {
+                UserId = user.Id,
+                UserName = user.UserName,
+                profilePictureUrl = user.ProfilePictureUrl
+
+            };
+            return View(model);
         }
 
         public IActionResult Privacy()

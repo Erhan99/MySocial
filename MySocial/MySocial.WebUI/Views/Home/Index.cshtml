@@ -1,19 +1,22 @@
 ﻿@using MySocial.Infrastructure.Identity
-@inject Microsoft.AspNetCore.Identity.UserManager<ApplicationUser> UserManager
+@model MySocial.WebUI.ViewModel.PostViewModel
 @inject Microsoft.AspNetCore.Antiforgery.IAntiforgery Antiforgery
 @{
 	ViewData["Title"] = "Home Page";
-	string logged = @UserManager.GetUserId(User);
+	string logged = Model.UserId;
     var requestToken = Antiforgery.GetAndStoreTokens(Context).RequestToken;
 }
 
 <div class="text-center">
-    <section class="my-1">
+    <section class="my-1 container bg-white p-3 rounded-3" style="max-width:600px;">
         <form class="align-items-end" id="postForm">
             @Html.AntiForgeryToken()
-                <input type="text" class="form-control rounded-pill shadow-sm py-3" id="postContent" placeholder="What's hapenning?"/>
+            <div class="d-flex">
+                <img src="@Model.profilePictureUrl" alt="Profile Picture" class="rounded-circle me-2" width="50" height="50" />
+                <input type="text" class="form-control rounded-pill shadow-sm py-3" id="postContent" placeholder="What's on your mind, @Model.UserName?" style="background-color: #F0F2F5;" />
+            </div>
                 <div class="d-flex justify-content-end mt-3">
-                    <button type="submit" class="btn btn-primary px-3 rounded-2">Post</button>
+                    <button type="submit" class="btn btn-primary px-3 rounded-pill">Post</button>
                 </div>
             </form>
     </section>
@@ -30,54 +33,65 @@
 
     const card = (post) => {
         return(
-               `<div class="card my-3 rounded-2">
-       <div class="d-flex justify-content-between rounded-3">
-          <div class="d-flex flex-row mb-3 align-items-center mx-3 mt-2">
-             <img src=${post.user.profilePictureUrl} alt="Profile Picture" class="rounded-circle me-2" width="50" height="50" />
-             <div class="d-flex align-items-center mb-1">
-        <strong class="me-2">${post.user.userName}</strong>
-        <span class="text-muted dot me-2">·</span>
-        <span class="text-muted timestamp">${new Date(post.createdAt).toLocaleString(undefined, {
-                   day: 'numeric',
-                   month: 'long',
-                   year: 'numeric',
-                   hour: 'numeric',
-                   minute: '2-digit'
-                   })}</span>
-      </div>
-          </div>
-          <div class="dropdown">
-             <button class="btn" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                   `<div class="container bg-white my-3 rounded-1 shadow-sm post" style="max-width:600px;">
+      <div class="d-flex align-items-start p-3">
+        <img src="${post.user.profilePictureUrl}" alt="Profile Picture" class="rounded-circle me-3" width="50" height="50" />
+
+        <div class="flex-grow-1">
+          <div class="d-flex justify-content-between align-items-center">
+            <div>
+              <strong class="me-2">${post.user.userName}</strong>
+              <span class="text-muted me-2">·</span>
+              <small class="text-muted timestamp">
+                ${new Date(post.createdAt).toLocaleString(undefined, {
+                  day: 'numeric',
+                  month: 'long',
+                  year: 'numeric',
+                  hour: 'numeric',
+                  minute: '2-digit'
+                })}
+              </small>
+            </div>
+
+            <div class="dropdown ">
+              <button class="btn" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="black">
-                   <path d="M240-400q-33 0-56.5-23.5T160-480q0-33 23.5-56.5T240-560q33 0 56.5 23.5T320-480q0 33-23.5 56.5T240-400Zm240 0q-33 0-56.5-23.5T400-480q0-33 23.5-56.5T480-560q33 0 56.5 23.5T560-480q0 33-23.5 56.5T480-400Zm240 0q-33 0-56.5-23.5T640-480q0-33 23.5-56.5T720-560q33 0 56.5 23.5T800-480q0 33-23.5 56.5T720-400Z" />
+                  <path d="M240-400q-33 0-56.5-23.5T160-480q0-33 23.5-56.5T240-560q33 0 56.5 23.5T320-480q0 33-23.5 56.5T240-400Zm240 0q-33 0-56.5-23.5T400-480q0-33 23.5-56.5T480-560q33 0 56.5 23.5T560-480q0 33-23.5 56.5T480-400Zm240 0q-33 0-56.5-23.5T640-480q0-33 23.5-56.5T720-560q33 0 56.5 23.5T800-480q0 33-23.5 56.5T720-400Z" />
                 </svg>
-             </button>
-             <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                   <button type="button" class="dropdown-item edit" data-post-id="${post.id}">Edit</button>
+              </button>
+              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <button type="button" class="dropdown-item edit" data-post-id="${post.id}">Edit</button>
                 <form class="deletePostForm" data-post-id="${post.id}">
-                   <button type="submit" class="dropdown-item">Delete</button>
+                  <button type="submit" class="dropdown-item">Delete</button>
                 </form>
-             </div>
+              </div>
+            </div>
           </div>
-       </div>
-       <div class="mb-3 px-3">
-          <div class="text-lg-start">
-          <div id="post-content-${post.id}">
-             <p>${post.content}</p>
+
+          <div id="post-content-${post.id}" class="text-xl-start mb-2">
+            <p class="mb-2">${post.content}</p>
           </div>
-             <div class="my-3 d-flex flex-row gap-2">
-                <form class="likeForm" data-post-id="${post.id}">
-                   <button class="border-0 bg-transparent">
-                      <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="${post.usersLiked.includes(loggedUserId) ? " red" : "#e3e3e3" }">
-                         <path d="m480-120-58-52q-101-91-167-157T150-447.5Q111-500 95.5-544T80-634q0-94 63-157t157-63q52 0 99 22t81 62q34-40 81-62t99-22q94 0 157 63t63 157q0 46-15.5 90T810-447.5Q771-395 705-329T538-172l-58 52Z" />
-                      </svg>
-                   </button>
-                </form>
-                <p id="like-count-${post.id}">${post.likes}</p>
-             </div>
+
+          <div class="d-flex align-items-center gap-3 mt-3">
+            <form class="likeForm" data-post-id="${post.id}">
+              <button class="border-0 bg-transparent p-0">
+                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="${post.usersLiked.includes(loggedUserId) ? 'red' : '#e3e3e3'}">
+                  <path d="m480-120-58-52q-101-91-167-157T150-447.5Q111-500 95.5-544T80-634q0-94 63-157t157-63q52 0 99 22t81 62q34-40 81-62t99-22q94 0 157 63t63 157q0 46-15.5 90T810-447.5Q771-395 705-329T538-172l-58 52Z" />
+                </svg>
+                            <span id="like-count-${post.id}">${post.likes}</span>
+              </button>
+            </form>
+            <a class="nav-link link-dark text-dark" style="cursor: pointer;" href="/Post/Detail?postId=${post.id}">
+                                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="black" class="align-middle d-inline-block me-2 mb-1">
+                                    <path d="M240-400h320v-80H240v80Zm0-120h480v-80H240v80Zm0-120h480v-80H240v80ZM80-80v-720q0-33 23.5-56.5T160-880h640q33 0 56.5 23.5T880-800v480q0 33-23.5 56.5T800-240H240L80-80Zm126-240h594v-480H160v525l46-45Zm-46 0v-480 480Z" />
+                                </svg>
+                                <span id="comment-count-${post.id}">${post.comments.length}</span>
+                            </a>
           </div>
-       </div>
-    </div>`
+        </div>
+      </div>
+    </div>
+    `
                 )
        }
 
@@ -107,7 +121,6 @@
                 const svg = this.querySelector("svg");
                 const postId = this.dataset.postId;
                 const countEl = document.getElementById(`like-count-${postId}`);
-                console.log("posts in like fase", posts)
                 const post = posts.find(p => p.id == postId);
                 let isLiked = post.usersLiked.includes(loggedUserId);
 
@@ -148,10 +161,13 @@
                  }
              }).then(response => {
                 const post = response.data.data;
-                console.log("post for post", post)
                 postsSection.innerHTML = card(post) + postsSection.innerHTML;
                 posts.push(post)
                 LikeButtonEventHandler();
+                AttachEditButtonHandler();
+                CancelEditButtonHandler();
+                ConfirmEditButtonHandler();
+                attachDeleteHandlers();
              });
           } catch (error) {
              console.error("Error adding post", error);
@@ -172,7 +188,7 @@
                    }
                }
                );
-               const card = e.currentTarget.closest(".card");
+               const card = e.currentTarget.closest(".post");
                card.remove();
                posts.filter(p => p.id != postId);
            }catch(error){
@@ -235,7 +251,6 @@
            try{
                const postId = e.currentTarget.dataset.postId
                const content = document.querySelector("#editContent").value
-               console.log(content)
                axios.post("/post/EditPost", {
                    PostId: parseInt(postId),
                    Content: content
@@ -249,6 +264,10 @@
                const contentArea = document.querySelector(`#post-content-${postId}`);
                contentArea.innerHTML = `
                    <p>${content}</p>`;
+               const post = posts.find(p => p.id == postId)
+               if(post){
+                   post.content = content;
+               };
            }catch(error){
                console.error("Edit post failed", error)
            }
