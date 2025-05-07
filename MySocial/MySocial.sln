@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MySocial.Infrastructure", "
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MySocial.WebUI", "MySocial.WebUI\MySocial.WebUI.csproj", "{4E108D0D-27F1-4DC5-B93A-A66AB33730DE}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MySocial.WebAPI", "MySocial.WebAPI\MySocial.WebAPI.csproj", "{B49E37BE-CD0D-4653-8DC4-FBDA31F9BCB2}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{4E108D0D-27F1-4DC5-B93A-A66AB33730DE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4E108D0D-27F1-4DC5-B93A-A66AB33730DE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4E108D0D-27F1-4DC5-B93A-A66AB33730DE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B49E37BE-CD0D-4653-8DC4-FBDA31F9BCB2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B49E37BE-CD0D-4653-8DC4-FBDA31F9BCB2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B49E37BE-CD0D-4653-8DC4-FBDA31F9BCB2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B49E37BE-CD0D-4653-8DC4-FBDA31F9BCB2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

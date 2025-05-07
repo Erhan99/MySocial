@@ -1,4 +1,6 @@
-﻿using MySocial.Application.DTOs;
+﻿using MySocial.Application.DTOs.User;
+using MySocial.Application.DTOs.Post;
+using MySocial.Application.DTOs.Comment;
 using MySocial.Application.Interfaces.Repositories;
 using MySocial.Domain.Entities;
 using MySocial.Infrastructure.Data;
@@ -14,30 +16,30 @@ namespace MySocial.Infrastructure.Repositories
             _context = context;
         }
 
-        public IEnumerable<PostDto> GetPosts()
+        public IEnumerable<PostDTO> GetPosts()
         {
             var users = _context.Users;
             return _context.Posts
                 .Where(post => !post.IsDeleted)
                 .OrderByDescending(post => post.CreatedAt)
-                .Select(p => new PostDto
+                .Select(p => new PostDTO
                 {
                     Id = p.Id,
                     Content = p.Content,
                     CreatedAt = p.CreatedAt,
-                    User = new UserDto
+                    User = new UserDTO
                     {
                         Id = p.UserId,
                         UserName = users.Where(u => u.Id == p.UserId).Select(u => u.UserName).FirstOrDefault(),
                         ProfilePictureUrl = users.Where(u => u.Id == p.UserId).Select(u => u.ProfilePictureUrl).FirstOrDefault()
                     },
                     UsersLiked = _context.Likes.Where(l => l.PostId == p.Id && !l.IsDeleted).Select(l => l.UserId).ToList(),
-                    Comments = _context.Comments.Where(c => c.PostId == p.Id && !c.IsDeleted).Select(c => new CommentDto
+                    Comments = _context.Comments.Where(c => c.PostId == p.Id && !c.IsDeleted).Select(c => new CommentDTO
                     {
                         Id = c.Id,
-                        Text = c.Content,
+                        Content = c.Content,
                         CreatedAt = c.CreatedAt,
-                        User = new UserDto
+                        User = new UserDTO
                         {
                             Id = c.UserId,
                             UserName = users.Where(u => u.Id == c.UserId).Select(u => u.UserName).FirstOrDefault(),
@@ -47,29 +49,37 @@ namespace MySocial.Infrastructure.Repositories
                 });
         }
 
-        public Object GetPostById(int postId)
+        public PostDTO GetPostById(int postId)
         {
-            var post = (from p in _context.Posts
-                        join user in _context.Users
-                        on p.UserId equals user.Id
-                        where p.Id == postId && p.IsDeleted == false
-                        select new
+            var users = _context.Users;
+            return _context.Posts
+                .Where(post => !post.IsDeleted && post.Id == postId)
+                .OrderByDescending(post => post.CreatedAt)
+                .Select(p => new PostDTO
+                {
+                    Id = p.Id,
+                    Content = p.Content,
+                    CreatedAt = p.CreatedAt,
+                    User = new UserDTO
+                    {
+                        Id = p.UserId,
+                        UserName = users.Where(u => u.Id == p.UserId).Select(u => u.UserName).FirstOrDefault(),
+                        ProfilePictureUrl = users.Where(u => u.Id == p.UserId).Select(u => u.ProfilePictureUrl).FirstOrDefault()
+                    },
+                    UsersLiked = _context.Likes.Where(l => l.PostId == p.Id && !l.IsDeleted).Select(l => l.UserId).ToList(),
+                    Comments = _context.Comments.Where(c => c.PostId == p.Id && !c.IsDeleted).Select(c => new CommentDTO
+                    {
+                        Id = c.Id,
+                        Content = c.Content,
+                        CreatedAt = c.CreatedAt,
+                        User = new UserDTO
                         {
-                            p.Id,
-                            p.Content,
-                            p.CreatedAt,
-                            User = new
-                            {
-                                user.Id,
-                                user.UserName,
-                                user.Email,
-                                user.ProfilePictureUrl
-                            },
-                            Likes = _context.Likes.Count(l => l.PostId == p.Id && l.IsDeleted == false),
-                            UsersLiked = _context.Likes.Where(l => l.PostId == p.Id).Select(l => l.UserId).ToList(),
-                            Comments = _context.Comments.Where(c => c.PostId == p.Id).ToList()
-                        }).FirstOrDefault();
-            return post;
+                            Id = c.UserId,
+                            UserName = users.Where(u => u.Id == c.UserId).Select(u => u.UserName).FirstOrDefault(),
+                            ProfilePictureUrl = users.Where(u => u.Id == c.UserId).Select(u => u.ProfilePictureUrl).FirstOrDefault()
+                        },
+                    }).ToList()
+                }).FirstOrDefault();
         }
         public void AddPost(Post post)
         {

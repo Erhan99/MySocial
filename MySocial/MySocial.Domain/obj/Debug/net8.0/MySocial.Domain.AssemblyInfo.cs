@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("MySocial.Domain")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0cf731f6910ad42bccf5d72f895c5143dbccb417")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+606ed5f7e2daf76ec5b8b9effea565b7943ac20a")]
 [assembly: System.Reflection.AssemblyProductAttribute("MySocial.Domain")]
 [assembly: System.Reflection.AssemblyTitleAttribute("MySocial.Domain")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

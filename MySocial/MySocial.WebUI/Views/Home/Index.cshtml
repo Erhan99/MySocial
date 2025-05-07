@@ -10,7 +10,6 @@
 <div class="text-center">
     <section class="my-1 container bg-white p-3 rounded-3" style="max-width:600px;">
         <form class="align-items-end" id="postForm">
-            @Html.AntiForgeryToken()
             <div class="d-flex">
                 <img src="@Model.profilePictureUrl" alt="Profile Picture" class="rounded-circle me-2" width="50" height="50" />
                 <input type="text" class="form-control rounded-pill shadow-sm py-3" id="postContent" placeholder="What's on your mind, @Model.UserName?" style="background-color: #F0F2F5;" />
@@ -27,6 +26,7 @@
 </div>
 <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 <script>
+    const baseUrl = "https://localhost:7164/api/";
     const postsSection = document.querySelector("#posts");
     const loggedUserId = "@logged";
     let posts = [];
@@ -98,8 +98,9 @@
     // fetch and load posts
     const FetchAndLoadPosts = async () => {
 
-       await axios.get("/post/GetPosts").then(response => {
-          posts = response.data.data;
+       await axios.get(baseUrl + "post/").then(response => {
+           console.log(response);
+          posts = response.data;
           console.log(posts)
           posts.forEach(post => {
              postsSection.innerHTML += card(post);

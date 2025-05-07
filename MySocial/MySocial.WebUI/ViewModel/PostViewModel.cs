@@ -7,5 +7,6 @@ namespace MySocial.WebUI.ViewModel
         public string UserId { get; set; }
         public string UserName { get; set; }
         public string profilePictureUrl {  get; set; }
+        public int postId { get; set; } = -1;
     }
 }

@@ -21,6 +21,7 @@ builder.Services.AddDefaultIdentity<ApplicationUser>(options =>
 
 builder.Services.AddScoped<IPostRepository, PostRepository>();
 builder.Services.AddScoped<ILikeInterface, LikeRepository>();
+builder.Services.AddScoped<ICommentRepository, CommentRepository>();
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

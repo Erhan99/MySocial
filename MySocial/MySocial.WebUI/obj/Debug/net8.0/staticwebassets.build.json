@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "VZKsMe/dmyCZ8Mu5W+/leqVVDcRTxBB/huR0PM6prKg=",
+  "Hash": "2cc3+Znat6O5uemnJw337/MxkEX8ipoIM0dj3cIwF/k=",
   "Source": "MySocial.WebUI",
   "BasePath": "_content/MySocial.WebUI",
   "Mode": "Default",
@@ -1333,8 +1333,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "avonywuwdh",
-      "Integrity": "pp85qLyUuFxsvTzAgEyGGyODlCL8t2NjdfE3i0KS1u4=",
+      "Fingerprint": "zpmtp836kp",
+      "Integrity": "uV7KbIAU3ADLlsGH7qlDgPi37nW07GTCfOQFsqck+rI=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\site.css"
@@ -2749,51 +2749,6 @@
   ],
   "Endpoints": [
     {
-      "Route": "css/site.avonywuwdh.css",
-      "AssetFile": "C:\\Users\\ERHAN\\Documents\\GitHub\\MySocial\\MySocial\\MySocial.WebUI\\wwwroot\\css\\site.css",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "579"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"pp85qLyUuFxsvTzAgEyGGyODlCL8t2NjdfE3i0KS1u4=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Sun, 04 May 2025 00:10:19 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "avonywuwdh"
-        },
-        {
-          "Name": "label",
-          "Value": "css/site.css"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-pp85qLyUuFxsvTzAgEyGGyODlCL8t2NjdfE3i0KS1u4="
-        }
-      ]
-    },
-    {
       "Route": "css/site.css",
       "AssetFile": "C:\\Users\\ERHAN\\Documents\\GitHub\\MySocial\\MySocial\\MySocial.WebUI\\wwwroot\\css\\site.css",
       "Selectors": [],
@@ -2804,7 +2759,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "579"
+          "Value": "583"
         },
         {
           "Name": "Content-Type",
@@ -2812,11 +2767,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"pp85qLyUuFxsvTzAgEyGGyODlCL8t2NjdfE3i0KS1u4=\""
+          "Value": "\"uV7KbIAU3ADLlsGH7qlDgPi37nW07GTCfOQFsqck+rI=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 04 May 2025 00:10:19 GMT"
+          "Value": "Mon, 05 May 2025 17:34:50 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2826,7 +2781,52 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-pp85qLyUuFxsvTzAgEyGGyODlCL8t2NjdfE3i0KS1u4="
+          "Value": "sha256-uV7KbIAU3ADLlsGH7qlDgPi37nW07GTCfOQFsqck+rI="
+        }
+      ]
+    },
+    {
+      "Route": "css/site.zpmtp836kp.css",
+      "AssetFile": "C:\\Users\\ERHAN\\Documents\\GitHub\\MySocial\\MySocial\\MySocial.WebUI\\wwwroot\\css\\site.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "583"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"uV7KbIAU3ADLlsGH7qlDgPi37nW07GTCfOQFsqck+rI=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 05 May 2025 17:34:50 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "zpmtp836kp"
+        },
+        {
+          "Name": "label",
+          "Value": "css/site.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-uV7KbIAU3ADLlsGH7qlDgPi37nW07GTCfOQFsqck+rI="
         }
       ]
     },
