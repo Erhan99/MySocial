@@ -3,6 +3,7 @@ using MySocial.Application.DTOs.Comment;
 using MySocial.Application.DTOs.Post;
 using MySocial.Application.Interfaces.Repositories;
 using MySocial.Domain.Entities;
+using MySocial.Infrastructure.Repositories;
 using System.Security.Claims;
 
 namespace MySocial.WebAPI.Controllers
@@ -29,7 +30,7 @@ namespace MySocial.WebAPI.Controllers
         }
 
         [HttpPost]
-        public IActionResult AddComment(CommentDTO request)
+        public IActionResult Create(CreateCommentDTO request)
         {
             if (string.IsNullOrEmpty(request.Content))
             {
@@ -39,11 +40,38 @@ namespace MySocial.WebAPI.Controllers
             {
                 Content = request.Content,
                 CreatedAt = DateTime.Now,
-                UserId = User.FindFirstValue(ClaimTypes.NameIdentifier),
-                PostId = request.Id,
+                UserId = request.UserId,
+                PostId = request.PostId,
             };
             _commentRepository.AddComment(comment);
-            return CreatedAtAction(nameof(GetById), new { id = request.Id }, _commentRepository.GetCommentById(request.Id));
+            return CreatedAtAction(nameof(GetById), new { id = comment.Id }, _commentRepository.GetCommentById(comment.Id));
+        }
+
+        [HttpPut("remove/{id}")]
+        public IActionResult Remove(int id)
+        {
+            if (id == null)
+            {
+                return NotFound();
+            }
+            _commentRepository.DeleteComment(id);
+
+            return CreatedAtAction(nameof(GetById), new { id = id }, _commentRepository.GetCommentById(id));
+        }
+
+        [HttpPut("{id}")]
+        public IActionResult Edit(int id, UpdateCommentDTO request)
+        {
+            if (string.IsNullOrWhiteSpace(request.Content))
+            {
+                return BadRequest("Post content can't be null or empty");
+            }
+            if (id == null)
+            {
+                return NotFound();
+            }
+            _commentRepository.UpdateComment(id, request.Content);
+            return CreatedAtAction(nameof(GetById), new { id = id }, _commentRepository.GetCommentById(id));
         }
     }
 }

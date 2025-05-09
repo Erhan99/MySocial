@@ -26,6 +26,46 @@
             "description": "OK"
           }
         }
+      },
+      "put": {
+        "tags": [
+          "Comment"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateCommentDTO"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateCommentDTO"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateCommentDTO"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
       }
     },
     "/api/Comment": {
@@ -37,21 +77,44 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/CommentDTO"
+                "$ref": "#/components/schemas/CreateCommentDTO"
               }
             },
             "text/json": {
               "schema": {
-                "$ref": "#/components/schemas/CommentDTO"
+                "$ref": "#/components/schemas/CreateCommentDTO"
               }
             },
             "application/*+json": {
               "schema": {
-                "$ref": "#/components/schemas/CommentDTO"
+                "$ref": "#/components/schemas/CreateCommentDTO"
               }
             }
           }
         },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Comment/remove/{id}": {
+      "put": {
+        "tags": [
+          "Comment"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
         "responses": {
           "200": {
             "description": "OK"
@@ -249,10 +312,10 @@
   },
   "components": {
     "schemas": {
-      "CommentDTO": {
+      "CreateCommentDTO": {
         "type": "object",
         "properties": {
-          "id": {
+          "postId": {
             "type": "integer",
             "format": "int32"
           },
@@ -260,12 +323,9 @@
             "type": "string",
             "nullable": true
           },
-          "createdAt": {
+          "userId": {
             "type": "string",
-            "format": "date-time"
-          },
-          "user": {
-            "$ref": "#/components/schemas/UserDTO"
+            "nullable": true
           }
         },
         "additionalProperties": false
@@ -298,7 +358,7 @@
         },
         "additionalProperties": false
       },
-      "UpdatePostDTO": {
+      "UpdateCommentDTO": {
         "type": "object",
         "properties": {
           "content": {
@@ -308,18 +368,10 @@
         },
         "additionalProperties": false
       },
-      "UserDTO": {
+      "UpdatePostDTO": {
         "type": "object",
         "properties": {
-          "id": {
-            "type": "string",
-            "nullable": true
-          },
-          "userName": {
-            "type": "string",
-            "nullable": true
-          },
-          "profilePictureUrl": {
+          "content": {
             "type": "string",
             "nullable": true
           }

@@ -16,7 +16,9 @@
 <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 <script>
     let postData; 
-     const loggedUserId = "@logged";
+    let comments;
+    const baseUrl = "https://localhost:7164/api/";
+    const loggedUserId = "@logged";
     const PostCard = (post) => {
         return(
                    `<div class="container bg-white my-3 rounded-1 shadow-sm post" style="max-width:600px;">
@@ -37,20 +39,6 @@
                   minute: '2-digit'
                 })}
               </small>
-            </div>
-
-            <div class="dropdown ">
-              <button class="btn" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="black">
-                  <path d="M240-400q-33 0-56.5-23.5T160-480q0-33 23.5-56.5T240-560q33 0 56.5 23.5T320-480q0 33-23.5 56.5T240-400Zm240 0q-33 0-56.5-23.5T400-480q0-33 23.5-56.5T480-560q33 0 56.5 23.5T560-480q0 33-23.5 56.5T480-400Zm240 0q-33 0-56.5-23.5T640-480q0-33 23.5-56.5T720-560q33 0 56.5 23.5T800-480q0 33-23.5 56.5T720-400Z" />
-                </svg>
-              </button>
-              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                <button type="button" class="dropdown-item edit" data-post-id="${post.id}">Edit</button>
-                <form class="deletePostForm" data-post-id="${post.id}">
-                  <button type="submit" class="dropdown-item">Delete</button>
-                </form>
-              </div>
             </div>
           </div>
 
@@ -100,7 +88,7 @@
        };
 
     const CommentCard = (comment) => {
-           return( `    <div class="container bg-white my-3 rounded-1 shadow-sm post" style="max-width:600px;">
+           return( `    <div class="container bg-white my-3 rounded-1 shadow-sm comment" style="max-width:600px;">
       <div class="d-flex align-items-start p-3">
         <img src="/${comment.user.profilePictureUrl}" alt="Profile Picture" class="rounded-circle me-3" width="50" height="50" />
 
@@ -127,16 +115,16 @@
                 </svg>
               </button>
               <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                <button type="button" class="dropdown-item edit" data-post-id="${comment.id}">Edit</button>
-                <form class="deletePostForm" data-post-id="${comment.id}">
+                <button type="button" class="dropdown-item edit" data-comment-id="${comment.id}">Edit</button>
+                <form class="deleteCommentForm" data-comment-id="${comment.id}">
                   <button type="submit" class="dropdown-item">Delete</button>
                 </form>
               </div>
             </div>
           </div>
 
-          <div id="post-content-${comment.id}" class="text-xl-start mb-2">
-            <p class="mb-2">${comment.text}</p>
+          <div id="comment-content-${comment.id}" class="text-xl-start mb-2">
+            <p class="mb-2">${comment.content}</p>
           </div>
       </div>
     </div> 
@@ -145,16 +133,20 @@
     //fetch the post
     const FetchPost = async() => {
         try{
-            const response = await axios.post("/post/GetPostsById", {
-                postId : @postId
-            })
-            postData = response.data.data
+            const response = await axios.get(baseUrl + `post/@postId`)
+            postData = response.data
             document.querySelector("#postArea").innerHTML += PostCard(postData)
             const commentsArea = document.querySelector("#commentsArea")
-            postData.comments.forEach(c => {
+            comments = postData.comments
+            comments.forEach(c => {
                             commentsArea.innerHTML = CommentCard(c) + commentsArea.innerHTML
             })
             document.querySelector("#replyForm1").addEventListener("submit", PostComment)
+            LikeButtonEventHandler();
+            attachDeleteHandlers();
+            AttachEditButtonHandler();
+                CancelEditButtonHandler();
+                ConfirmEditButtonHandler();
         }catch(error){
             console.log("error fetching post", error)
         }
@@ -165,23 +157,163 @@
         e.preventDefault();
         try{
             const content = document.querySelector("#PostCommentContent1").value;
-            console.log(postData.id)
-            const response = await axios.post("/comment/AddComment", {
+            const response = await axios.post(baseUrl + `comment`, {
                 PostId : parseInt(postData.id),
-                Content : content
+                Content : content,
+                UserId: loggedUserId,
             },{
                  headers: {
                      "RequestVerificationToken" : document.getElementById("RequestVerificationToken").value
                  }
              });
-             const commentsArea = document.querySelector("#commentsArea")
-             console.log("k", response.data.data)
-             commentsArea.innerHTML = CommentCard(response.data.data) + commentsArea.innerHTML
-            console.log(response)
+             const commentsArea = document.querySelector("#commentsArea");
+             commentsArea.innerHTML = CommentCard(response.data) + commentsArea.innerHTML;
+             attachDeleteHandlers();
         }catch(error){
             console.log("error posting comment", error)
         }
     }
+
+    // like logic
+       const LikeButtonEventHandler = async () => {
+          document.querySelectorAll(".likeForm").forEach(button => {
+             button.addEventListener("submit", async function (e) {
+                e.preventDefault();
+
+                const svg = this.querySelector("svg");
+                const postId = this.dataset.postId;
+                const countEl = document.getElementById(`like-count-${postId}`);
+                let isLiked = postData.usersLiked.includes(loggedUserId);
+
+                try {
+                    if(isLiked){
+                        await axios.put(baseUrl + "Like/", { postId: parseInt(postId), userId: loggedUserId }, { headers: {"RequestVerificationToken" : document.getElementById("RequestVerificationToken").value}})
+                    }
+                    else{
+                        await axios.post(baseUrl + "Like/", { postId: parseInt(postId), userId: loggedUserId }, {headers: {"RequestVerificationToken" : document.getElementById("RequestVerificationToken").value}});
+                    }
+                   const likeState = !isLiked;
+                   svg.setAttribute("fill", likeState ? "red" : "#e3e3e3");
+                   let currentLikes = parseInt(countEl.textContent);
+                   countEl.textContent = likeState ? currentLikes + 1 : currentLikes - 1;
+                   if (likeState && !postData.usersLiked.includes(loggedUserId)) {
+                      postData.usersLiked.push(loggedUserId);
+                   } else if (!likeState){
+                      postData.usersLiked = postData.usersLiked.filter(id => id !== loggedUserId);
+                   }
+                } catch (error) {
+                   console.error("Error liking post", error);
+                }
+             });
+          });
+       };
+
+       // remove a post
+       const deleteComment = async (e) => {
+           e.preventDefault();
+           try{
+               const commentId = e.currentTarget.dataset.commentId
+               axios.put(baseUrl + `comment/remove/${commentId}`,
+               {
+                   headers: {
+                       'RequestVerificationToken': document.getElementById("RequestVerificationToken").value
+                   }
+               }
+               );
+               const card = e.currentTarget.closest(".comment");
+               card.remove();
+               comments.filter(c => c.id != commentId);
+           }catch(error){
+               console.error("Delete comment failed", error)
+           }
+       };
+
+       const attachDeleteHandlers = () => {
+           const deleteForms = document.querySelectorAll(".deleteCommentForm");
+
+           deleteForms.forEach(form => {
+               form.removeEventListener("submit", deleteComment)
+               form.addEventListener("submit", deleteComment)
+           }
+           );
+       };
+
+       const EditButtonClick = (e) => {
+           e.preventDefault();
+           const commentId = e.currentTarget.dataset.commentId;
+           const contentArea = document.querySelector(`#comment-content-${commentId}`);
+           const prevContent = contentArea.querySelector("p").innerHTML;
+           contentArea.innerHTML = `
+                   <form class="align-items-end">
+                    <input type="text" class="form-control rounded-2 shadow-sm py-3" id="editContent" value="${prevContent}"/>
+                    <div class="d-flex justify-content-end gap-1 mt-2">
+                        <button type="button" class="btn btn-primary px-3 rounded-2 cancel" data-comment-id="${commentId}">Cancel</button>
+                        <button type="submit" class="btn btn-primary px-3 rounded-2 edit-2" data-comment-id="${commentId}">Edit</button>
+                    </div>
+                   </form>`;
+                   CancelEditButtonHandler();
+                   ConfirmEditButtonHandler();
+                   AttachEditButtonHandler();
+                CancelEditButtonHandler();
+                ConfirmEditButtonHandler();
+       }
+
+       const AttachEditButtonHandler = () => {
+           const editButtons = document.querySelectorAll(".edit");
+           editButtons.forEach(btn => {
+               btn.addEventListener("click", EditButtonClick)
+           });
+       };
+
+       const CancelEditButtonClick = (e) => {
+           e.preventDefault()
+           const commentId = e.currentTarget.dataset.commentId
+           const contentArea = document.querySelector(`#comment-content-${commentId}`)
+           const content = comments.find(c => c.id == commentId).content
+           contentArea.innerHTML = `
+                   <p>${content}</p>`;
+       };
+
+       const CancelEditButtonHandler = () => {
+           const cancelButtons = document.querySelectorAll(".cancel");
+           cancelButtons.forEach(btn => {
+               btn.addEventListener("click", CancelEditButtonClick)
+           });
+       };
+
+       // edit
+       const ConfirmEditButtonClick = (e) => {
+           e.preventDefault();
+           try{
+               const commentId = e.currentTarget.dataset.commentId
+               const content = document.querySelector("#editContent").value
+               axios.put(baseUrl + `comment/${commentId}`, {
+                   Content: content
+               },
+               {
+                   headers: {
+                       'RequestVerificationToken': document.getElementById("RequestVerificationToken").value
+                   }
+               }
+               );
+               const contentArea = document.querySelector(`#comment-content-${commentId}`);
+               contentArea.innerHTML = `
+                   <p>${content}</p>`;
+               const comment = comments.find(c => c.id == commentId)
+               if(comment){
+                   comment.content = content;
+               };
+           }catch(error){
+               console.error("Edit comment failed", error)
+           }
+       };
+
+       const ConfirmEditButtonHandler = () => {
+           const editButtons = document.querySelectorAll(".edit-2");
+           editButtons.forEach(btn => {
+               btn.addEventListener("click", ConfirmEditButtonClick)
+           });
+       };
 
     document.addEventListener("DOMContentLoaded", FetchPost)
 </script>

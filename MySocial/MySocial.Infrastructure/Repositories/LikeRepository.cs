@@ -27,15 +27,13 @@ namespace MySocial.Infrastructure.Repositories
             return _context.Likes.Where(l => l.PostId == postId && l.IsDeleted == false);
 
         }
-        
+
         public void RemoveLike(int postId, string userId)
         {
             Like like = _context.Likes.Where(l => l.UserId == userId && l.PostId == postId && l.IsDeleted == false).FirstOrDefault();
-            if (like != null)
-            {
-                like.IsDeleted = true;
-                _context.SaveChanges();
-            }
+
+            like.IsDeleted = true;
+            _context.SaveChanges();
         }
     }
 }

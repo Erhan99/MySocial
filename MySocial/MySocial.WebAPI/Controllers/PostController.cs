@@ -54,7 +54,7 @@ namespace MySocial.WebAPI.Controllers
         }
 
         [HttpPut("remove/{id}")]
-        public IActionResult RemovePost(int id)
+        public IActionResult Remove(int id)
         {
             if (id == null)
             {
@@ -67,7 +67,7 @@ namespace MySocial.WebAPI.Controllers
         }
 
         [HttpPut("{id}")]
-        public IActionResult EditPost(int id, UpdatePostDTO request)
+        public IActionResult Edit(int id, UpdatePostDTO request)
         {
             if (string.IsNullOrWhiteSpace(request.Content))
             {

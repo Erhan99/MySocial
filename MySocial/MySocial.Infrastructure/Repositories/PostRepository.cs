@@ -1,6 +1,6 @@
-﻿using MySocial.Application.DTOs.User;
+﻿using MySocial.Application.DTOs.Comment;
 using MySocial.Application.DTOs.Post;
-using MySocial.Application.DTOs.Comment;
+using MySocial.Application.DTOs.User;
 using MySocial.Application.Interfaces.Repositories;
 using MySocial.Domain.Entities;
 using MySocial.Infrastructure.Data;
@@ -89,23 +89,17 @@ namespace MySocial.Infrastructure.Repositories
 
         public void DeletePost(int postId)
         {
-           Post post = _context.Posts.Where(p => p.Id == postId).FirstOrDefault();
-            if (post != null && post.IsDeleted == false)
-            {
-                post.IsDeleted = true;
-                _context.SaveChanges();
-            }
+            Post post = _context.Posts.Where(p => p.Id == postId).FirstOrDefault();
+            post.IsDeleted = true;
+            _context.SaveChanges();
         }
 
         public void UpdatePost(int postId, string content)
         {
             Post post = _context.Posts.Where(p => p.Id == postId).FirstOrDefault();
-            if (post != null && post.IsDeleted == false)
-            {
-                post.Content = content;
-                post.CreatedAt = DateTime.Now;
-                _context.SaveChanges();
-            }
+            post.Content = content;
+            post.CreatedAt = DateTime.Now;
+            _context.SaveChanges();
         }
     }
 }

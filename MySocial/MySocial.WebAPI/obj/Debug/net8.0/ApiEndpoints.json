@@ -1,7 +1,7 @@
 [
   {
     "ContainingType": "MySocial.WebAPI.Controllers.CommentController",
-    "Method": "AddComment",
+    "Method": "Create",
     "RelativePath": "api/Comment",
     "HttpMethod": "POST",
     "IsController": true,
@@ -9,7 +9,7 @@
     "Parameters": [
       {
         "Name": "request",
-        "Type": "MySocial.Application.DTOs.Comment.CommentDTO",
+        "Type": "MySocial.Application.DTOs.Comment.CreateCommentDTO",
         "IsRequired": true
       }
     ],
@@ -20,6 +20,43 @@
     "Method": "GetById",
     "RelativePath": "api/Comment/{id}",
     "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MySocial.WebAPI.Controllers.CommentController",
+    "Method": "Edit",
+    "RelativePath": "api/Comment/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "request",
+        "Type": "MySocial.Application.DTOs.Comment.UpdateCommentDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MySocial.WebAPI.Controllers.CommentController",
+    "Method": "Remove",
+    "RelativePath": "api/Comment/remove/{id}",
+    "HttpMethod": "PUT",
     "IsController": true,
     "Order": 0,
     "Parameters": [
@@ -107,7 +144,7 @@
   },
   {
     "ContainingType": "MySocial.WebAPI.Controllers.PostController",
-    "Method": "EditPost",
+    "Method": "Edit",
     "RelativePath": "api/Post/{id}",
     "HttpMethod": "PUT",
     "IsController": true,
@@ -128,7 +165,7 @@
   },
   {
     "ContainingType": "MySocial.WebAPI.Controllers.PostController",
-    "Method": "RemovePost",
+    "Method": "Remove",
     "RelativePath": "api/Post/remove/{id}",
     "HttpMethod": "PUT",
     "IsController": true,
