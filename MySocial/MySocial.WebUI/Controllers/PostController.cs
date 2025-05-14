@@ -15,12 +15,10 @@ namespace MySocial.WebUI.Controllers
 {
     public class PostController : Controller
     {
-        private readonly IPostRepository _postRepository;
         private readonly UserManager<ApplicationUser> _userManager;
 
         public PostController(IPostRepository postRepository, UserManager<ApplicationUser> userManager)
         {
-            _postRepository = postRepository;
             _userManager = userManager;
         }
 

@@ -11,17 +11,11 @@ namespace MySocial.WebUI.Controllers
 {
     public class HomeController : Controller
     {
-        private readonly ILogger<HomeController> _logger;
-        private readonly IPostRepository _postRepository;
         private readonly UserManager<ApplicationUser> _userManager;
-        private readonly ILikeInterface _likeRepository;
 
-        public HomeController(ILogger<HomeController> logger, IPostRepository postRepository, UserManager<ApplicationUser> userManager, ILikeInterface likeRepository)
+        public HomeController(ILogger<HomeController> logger, UserManager<ApplicationUser> userManager)
         {
-            _logger = logger;
-            _postRepository = postRepository;
             _userManager = userManager;
-            _likeRepository = likeRepository;
         }
 
         [Authorize]

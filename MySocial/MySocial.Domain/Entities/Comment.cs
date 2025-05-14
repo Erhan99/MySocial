@@ -16,5 +16,6 @@ namespace MySocial.Domain.Entities
         public string UserId { get; set; }
         public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
         public bool IsDeleted { get; set; } = false;
+        public bool IsModified { get; set; } = false;
     }
 }
