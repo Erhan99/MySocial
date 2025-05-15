@@ -3,11 +3,13 @@ using MySocial.Application.Interfaces.Repositories;
 using MySocial.Infrastructure.Data;
 using MySocial.Infrastructure.Identity;
 using MySocial.Infrastructure.Repositories;
+using MySocial.WebUI.Hubs;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+builder.Services.AddSignalR();
 
 string connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
 builder.Services.AddDbContext<MSDbContext>(options => options.UseSqlServer(connectionString));
@@ -22,6 +24,7 @@ builder.Services.AddDefaultIdentity<ApplicationUser>(options =>
 builder.Services.AddScoped<IPostRepository, PostRepository>();
 builder.Services.AddScoped<ILikeInterface, LikeRepository>();
 builder.Services.AddScoped<ICommentRepository, CommentRepository>();
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -45,5 +48,6 @@ app.MapControllerRoute(
     pattern: "{controller=Home}/{action=Index}/{id?}");
 
 app.MapRazorPages();
+app.MapHub<ChatHub>("/chatHub");
 
 app.Run();

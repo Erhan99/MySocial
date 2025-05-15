@@ -20,6 +20,7 @@ builder.Services.AddDbContext<MSDbContext>(options => options.UseSqlServer(conne
 builder.Services.AddScoped<IPostRepository, PostRepository>();
 builder.Services.AddScoped<ILikeInterface, LikeRepository>();
 builder.Services.AddScoped<ICommentRepository, CommentRepository>();
+builder.Services.AddScoped<IMessageRepository, MessageRepository>();
 builder.Services.AddCors(options =>
 {
     options.AddPolicy("AllowUI", policy =>

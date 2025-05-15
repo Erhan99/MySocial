@@ -42,7 +42,6 @@ C:\Users\ERHAN\Documents\GitHub\MySocial\MySocial\MySocial.WebAPI\bin\Debug\net8
 C:\Users\ERHAN\Documents\GitHub\MySocial\MySocial\MySocial.WebAPI\bin\Debug\net8.0\System.ClientModel.dll
 C:\Users\ERHAN\Documents\GitHub\MySocial\MySocial\MySocial.WebAPI\bin\Debug\net8.0\System.Configuration.ConfigurationManager.dll
 C:\Users\ERHAN\Documents\GitHub\MySocial\MySocial\MySocial.WebAPI\bin\Debug\net8.0\System.Drawing.Common.dll
-C:\Users\ERHAN\Documents\GitHub\MySocial\MySocial\MySocial.WebAPI\bin\Debug\net8.0\System.Formats.Asn1.dll
 C:\Users\ERHAN\Documents\GitHub\MySocial\MySocial\MySocial.WebAPI\bin\Debug\net8.0\System.IdentityModel.Tokens.Jwt.dll
 C:\Users\ERHAN\Documents\GitHub\MySocial\MySocial\MySocial.WebAPI\bin\Debug\net8.0\System.Memory.Data.dll
 C:\Users\ERHAN\Documents\GitHub\MySocial\MySocial\MySocial.WebAPI\bin\Debug\net8.0\System.Runtime.Caching.dll
@@ -93,3 +92,4 @@ C:\Users\ERHAN\Documents\GitHub\MySocial\MySocial\MySocial.WebAPI\obj\Debug\net8
 C:\Users\ERHAN\Documents\GitHub\MySocial\MySocial\MySocial.WebAPI\obj\Debug\net8.0\MySocial.WebAPI.genruntimeconfig.cache
 C:\Users\ERHAN\Documents\GitHub\MySocial\MySocial\MySocial.WebAPI\obj\Debug\net8.0\ref\MySocial.WebAPI.dll
 C:\Users\ERHAN\Documents\GitHub\MySocial\MySocial\MySocial.WebAPI\bin\Debug\net8.0\FluentValidation.dll
+C:\Users\ERHAN\Documents\GitHub\MySocial\MySocial\MySocial.WebAPI\bin\Debug\net8.0\libman.json
