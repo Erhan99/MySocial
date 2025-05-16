@@ -40,6 +40,13 @@ namespace MySocial.WebAPI.Controllers
             return Ok(message);
         }
 
+        [HttpGet("MessagedUser/{CurrentUserId}")]
+        public IActionResult GetLastMessageUser(string CurrentUserId)
+        {
+            var messages = _messageRepository.GetMessagedUsers(CurrentUserId);
+            return Ok(messages);
+        }
+
         [HttpPost]
         public IActionResult Create(CreateMessageDTO dto)
         {

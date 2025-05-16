@@ -1,4 +1,8 @@
-﻿<!DOCTYPE html>
+﻿@{
+    string iconColor = "white";
+    string currentController = ViewContext.RouteData.Values["Controller"]?.ToString();
+}
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8" />
@@ -16,30 +20,30 @@
         @if (User.Identity.IsAuthenticated)
         {
             <div class="d-flex flex-column flex-shrink-0 p-3 shadow-sm bg-light position-fixed" style="width: 25%; border-right: 1px solid #F4F5F5; height: 100%;">
+                <a class="align-items-center pb-3 mb-3 link-dark text-dark text-decoration-none d-flex justify-content-center" asp-controller="Home" asp-action="Index">
+                    <h1 class=" fw-bold">MySocial</h1>
+                </a>
                 <nav class="d-flex flex-column flex-grow-1">
-                    <a class="align-items-center pb-3 mb-3 link-dark text-dark text-decoration-none">
-                        <h3 class=" fw-bold">MySocial</h3>
-                    </a>
                     <ul class="nav nav-pills flex-column mb-auto">
                         <li class="nav-item">
-                            <a class="nav-link active fs-5 " asp-controller="Home" asp-action="Index">
-                                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3" class="align-middle d-inline-block me-2 mb-1">
+                            <a class="nav-link fs-5 @(currentController == "Home" || currentController == "Post" ? "active" : "text-dark navButton")" asp-controller="Home" asp-action="Index">
+                                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="@(currentController == "Home" || currentController == "Post" ? "#FFFFFF" : "black")" class="align-middle d-inline-block me-2 mb-1">
                                     <path d="M240-200h120v-240h240v240h120v-360L480-740 240-560v360Zm-80 80v-480l320-240 320 240v480H520v-240h-80v240H160Zm320-350Z" />
                                 </svg>
                                 Home
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link link-dark text-dark fs-5 navButton">
-                                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="black" class="align-middle d-inline-block me-2 mb-1">
+                            <a class="nav-link fs-5 @(currentController == "Message" ? "active" : "text-dark navButton")" asp-controller="Message" asp-action="Index">
+                                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="@(currentController == "Message" ? "#FFFFFF" : "black")" class="align-middle d-inline-block me-2 mb-1">
                                     <path d="M240-400h320v-80H240v80Zm0-120h480v-80H240v80Zm0-120h480v-80H240v80ZM80-80v-720q0-33 23.5-56.5T160-880h640q33 0 56.5 23.5T880-800v480q0 33-23.5 56.5T800-240H240L80-80Zm126-240h594v-480H160v525l46-45Zm-46 0v-480 480Z" />
                                 </svg>
                                 Messages
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link link-dark text-dark fs-5 navButton">
-                                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#black" class="align-middle d-inline-block me-2 mb-1">
+                            <a class="nav-link fs-5 @(currentController == "Notification" ? "active" : "text-dark navButton")">
+                                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="@(currentController == "Notification" ? "#FFFFFF" : "black")" class="align-middle d-inline-block me-2 mb-1">
                                     <path d="M160-200v-80h80v-280q0-83 50-147.5T420-792v-28q0-25 17.5-42.5T480-880q25 0 42.5 17.5T540-820v28q80 20 130 84.5T720-560v280h80v80H160Zm320-300Zm0 420q-33 0-56.5-23.5T400-160h160q0 33-23.5 56.5T480-80ZM320-280h320v-280q0-66-47-113t-113-47q-66 0-113 47t-47 113v280Z" />
                                 </svg>
                                 Notifications

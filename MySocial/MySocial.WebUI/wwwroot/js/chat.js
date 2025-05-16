@@ -7,7 +7,7 @@ const card = (message) => {
     return (
         `<div class="container bg-white my-3 rounded-1 shadow-sm post" style="max-width:600px;">
       <div class="d-flex align-items-start p-3">
-        <img src="${message.sender.profilePictureUrl}" alt="Profile Picture" class="rounded-circle me-3" width="50" height="50" />
+        <img src="/${message.sender.profilePictureUrl}" alt="Profile Picture" class="rounded-circle me-3" width="50" height="50" />
 
         <div class="flex-grow-1">
           <div class="d-flex justify-content-between align-items-center">

@@ -1,36 +1,93 @@
-﻿@model MySocial.WebUI.ViewModel.PostViewModel
+﻿@inject Microsoft.AspNetCore.Antiforgery.IAntiforgery Antiforgery
+@model MySocial.WebUI.ViewModel.PostViewModel
 @{
     ViewData["title"] = "Messages";
+    var requestToken = Antiforgery.GetAndStoreTokens(Context).RequestToken;
 }
-<div class="container">
-    <div class="row p-1">
-        <div class="col-5">
-            <input type="hidden" id="UserId" value="@Model.UserId"/>
-            <input type="hidden" id="userInput" value="@Model.UserName" />
-            <input type="hidden" id="ReceiverId" value="@Model.ReceiverId" />
+<div class="container py-5">
+    <div class="search-wrapper">
+        <div class="search-box">
+            <input id="UserSearchInput" type="text" class="search-input form-control" placeholder="Search users to chat">
+
+            <div class="suggestions">
             </div>
-    </div>
-    <div class="row p-1">
-        <div class="col-1">Message</div>
-        <div class="col-5"><input type="text" class="w-100" id="messageInput" /></div>
-    </div>
-    <div class="row p-1">
-        <div class="col-6 text-end">
-            <input type="button" id="sendButton" value="Send Message" />
         </div>
-    </div>
-    <div class="row p-1">
-        <div class="col-6">
-            <hr />
-        </div>
-    </div>
-    <div class="row p-1">
-        <div class="col-6">
-            <section id="messagesList"></section>
+        <div class="mt-4">
+            <h1 class="">Chats</h1>
+            <br />
+            <div id="chat-list">
+
+            </div>
+            <p>No chats available, message a user.</p>
         </div>
     </div>
 </div>
+<input id="RequestVerificationToken" type="hidden" value="@requestToken" />
 <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-<script src="~/js/signalr/dist/browser/signalr.js"></script>
-<script src="~/js/chat.js"></script>
+<script>
+    const baseUrl = "https://localhost:7164/api/";
+    let users;
+    let lastMessages;
+    const UserSearchInput = document.querySelector("#UserSearchInput")
+    const suggestions = document.querySelector(".suggestions")
 
+    const FetchUsers = async() => {
+        try{
+            const response = await axios.get(baseUrl + "user/", {
+                 headers: {
+                     "RequestVerificationToken" : document.getElementById("RequestVerificationToken").value
+                 }
+             })
+
+             users = response.data.filter(user => user.id != "@Model.UserId");
+             console.log(users)
+
+        }catch(error){
+            console.log("error fetching users: " + users )
+        }
+    }
+    const SuggestionItem = (user) =>{
+    return (
+    `
+    <div class="suggestion-item">
+    <i class="fas fa-fire"></i>
+    ${user.userName}
+    </div>
+    `
+    )
+    }
+
+const FetchMessages = async () => {
+        try {
+                    const response = await axios.get(baseUrl + `Message/MessagedUser/@Model.UserId`, {
+                     headers: {
+                         "RequestVerificationToken" : document.getElementById("RequestVerificationToken").value
+                     }
+            });
+            console.log(response.data)
+                lastMessages = response.data
+        } catch (error) {
+            console.log("error fetching messages " + error);
+        }
+    };
+
+    const SearchUser = () => {
+        const query = UserSearchInput.value.toLowerCase();
+        suggestions.innerHTML = ""
+
+        if(query.length < 1) return;
+
+        const matches = users.filter(u => u.userName.toLowerCase().includes(query));
+
+        if (matches.length === 0) {
+            suggestions.innerHTML = `<div class="suggestion-item text-muted">No matches found</div>`;
+        } else {
+            matches.forEach(user => {
+                suggestions.innerHTML += SuggestionItem(user);
+            });
+        }
+    };
+    UserSearchInput.addEventListener("keydown", SearchUser)
+        document.addEventListener("DOMContentLoaded", FetchUsers)
+                document.addEventListener("DOMContentLoaded", FetchMessages)
+</script>

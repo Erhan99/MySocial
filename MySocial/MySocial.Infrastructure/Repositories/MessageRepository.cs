@@ -78,6 +78,41 @@ namespace MySocial.Infrastructure.Repositories
             return message;
         }
 
+        public IEnumerable<GetLastMessageUserDTO> GetMessagedUsers(string currentUserId)
+        {
+            var users = _context.Users.ToList();
+
+            var messages = _context.Messages
+                .Where(m => m.SenderId == currentUserId || m.ReceiverId == currentUserId)
+                .AsEnumerable() 
+                .Select(m => new
+                {
+                    Message = m,
+                    PartnerId = m.SenderId == currentUserId ? m.ReceiverId : m.SenderId
+                })
+                .GroupBy(x => x.PartnerId)
+                .Select(g => g.OrderByDescending(x => x.Message.CreatedAt).First())
+                .ToList();
+
+            var result = messages.Select(x =>
+            {
+                var user = users.FirstOrDefault(u => u.Id == x.PartnerId);
+                return new GetLastMessageUserDTO
+                {
+                    Receiver = new UserDTO
+                    {
+                        Id = user.Id,
+                        UserName = user.UserName,
+                        ProfilePictureUrl = user.ProfilePictureUrl
+                    },
+                    Content = x.Message.Content,
+                    CreatedAt = x.Message.CreatedAt
+                };
+            }).OrderByDescending(m => m.CreatedAt).ToList();
+
+            return result;
+        }
+
         public void CreateMessage(Message message)
         {
             _context.Messages.Add(message);

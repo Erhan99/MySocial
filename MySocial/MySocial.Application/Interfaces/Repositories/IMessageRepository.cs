@@ -13,5 +13,6 @@ namespace MySocial.Application.Interfaces.Repositories
         public List<MessageDTO> getMessagesBySenderAndReceiver(string user1, string user2);
         public void CreateMessage(Message message);
         public MessageDTO getMessageById(int id);
+        public IEnumerable<GetLastMessageUserDTO> GetMessagedUsers(string userId);
     }
 }
