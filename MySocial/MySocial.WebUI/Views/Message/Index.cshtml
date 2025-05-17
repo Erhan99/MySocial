@@ -13,12 +13,10 @@
             </div>
         </div>
         <div class="mt-4">
-            <h1 class="">Chats</h1>
-            <br />
-            <div id="chat-list">
-
+            <h1>Chats</h1>
+            <div id="chatList">
+                <p>No chats available, message a user.</p>
             </div>
-            <p>No chats available, message a user.</p>
         </div>
     </div>
 </div>
@@ -49,15 +47,48 @@
     const SuggestionItem = (user) =>{
     return (
     `
+            <a href="/Message/Chat?receiverId=${user.id}" class="text-decoration-none text-body">
     <div class="suggestion-item">
     <i class="fas fa-fire"></i>
     ${user.userName}
     </div>
+    </a>
     `
     )
     }
 
+        const ChatCard = (comment) => {
+               return( `
+                           <a href="/Message/Chat?receiverId=${comment.receiver.id}" class="text-decoration-none text-body">
+               <div class="container bg-white my-3 rounded-1 shadow-sm chat" style="max-width:600px;">
+          <div class="d-flex align-items-start p-3">
+            <img src="/${comment.receiver.profilePictureUrl}" alt="Profile Picture" class="rounded-circle me-3" width="50" height="50" />
+
+            <div class="flex-grow-1">
+              <div class="d-flex justify-content-between align-items-center">
+                <div>
+                  <strong class="me-2">${comment.receiver.userName}</strong>
+                  
+                  <small class="text-muted timestamp">
+                    ${new Date(comment.createdAt).toLocaleString(undefined, {
+                      day: 'numeric',
+                      month: 'long',
+                      year: 'numeric'
+                    })}
+                  </small>
+                                    <div class="text-xl-start mb-2">
+                    <p class="mb-2">${comment.content}</p>
+                  </div>
+                </div>
+          </div>
+        </div> 
+          </div>
+              </a>
+          `)
+        }
+
 const FetchMessages = async () => {
+    const ChatList = document.querySelector("#chatList");
         try {
                     const response = await axios.get(baseUrl + `Message/MessagedUser/@Model.UserId`, {
                      headers: {
@@ -65,7 +96,11 @@ const FetchMessages = async () => {
                      }
             });
             console.log(response.data)
-                lastMessages = response.data
+                lastMessages = response.data;
+                    ChatList.innerHTML = "";
+                lastMessages.forEach(m => {
+                        ChatList.innerHTML += ChatCard(m)
+                })
         } catch (error) {
             console.log("error fetching messages " + error);
         }

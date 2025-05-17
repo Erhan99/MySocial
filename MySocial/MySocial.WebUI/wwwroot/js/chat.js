@@ -42,7 +42,7 @@ const FetchMessages = async () => {
         const response = await axios.get(baseUrl + "message", {
             params: {
                 userId1: user,
-                userId2: "0e341ce0-d69b-4e32-a7a2-e76535e3b08f"
+                userId2: receiver
             }
         });
         console.log(response.data)
@@ -62,7 +62,7 @@ const CreateMessage = async (content) => {
     try {
         const response = await axios.post(baseUrl + "message", {
             Content: content,
-            ReceiverId: "0e341ce0-d69b-4e32-a7a2-e76535e3b08f",
+            ReceiverId: receiver,
             SenderId: user
         });
         const message = response.data

@@ -24,7 +24,7 @@ namespace MySocial.WebUI.Controllers
             };     
             return View(model);  
         }
-        public async Task<IActionResult> Chat()
+        public async Task<IActionResult> Chat(string receiverId)
         {
             var user = await _userManager.GetUserAsync(User);
             if (user == null)
@@ -35,7 +35,8 @@ namespace MySocial.WebUI.Controllers
             {
                 UserId = user.Id,
                 UserName = user.UserName,
-                profilePictureUrl = user.ProfilePictureUrl
+                profilePictureUrl = user.ProfilePictureUrl,
+                ReceiverId = receiverId
             };
             return View(model);
         }
