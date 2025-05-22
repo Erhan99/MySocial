@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Hosting;
 using MySocial.Application.DTOs.Message;
 using MySocial.Application.Interfaces.Repositories;
@@ -7,6 +8,7 @@ using MySocial.Infrastructure.Repositories;
 
 namespace MySocial.WebAPI.Controllers
 {
+    [Authorize]
     [Route("api/[controller]")]
     [ApiController]
     public class MessageController : ControllerBase

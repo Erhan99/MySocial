@@ -1,6 +1,7 @@
 ﻿@using MySocial.Infrastructure.Identity
 @model MySocial.WebUI.ViewModel.PostViewModel
 @inject Microsoft.AspNetCore.Antiforgery.IAntiforgery Antiforgery
+
 @{
 	ViewData["Title"] = "Home Page";
 	string logged = Model.UserId;
@@ -31,7 +32,7 @@
     const loggedUserId = "@logged";
     let posts = [];
 
-    const card = (post) => {
+    const card = (post, canEdit) => {
         return(
                    `<div class="container bg-white my-3 rounded-1 shadow-sm post" style="max-width:600px;">
       <div class="d-flex align-items-start p-3">
@@ -53,6 +54,7 @@
               </small>
             </div>
 
+            ${canEdit ? `
             <div class="dropdown ">
               <button class="btn" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 <svg xmlns="http:www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="black">
@@ -66,8 +68,9 @@
                 </form>
               </div>
             </div>
+            `: ""}
           </div>
-
+          
           <div id="post-content-${post.id}" class="text-xl-start mb-2">
             <p class="mb-2">${post.content}</p>
           </div>
@@ -96,21 +99,30 @@
        }
 
     // fetch and load posts
-    const FetchAndLoadPosts = async () => {
+        const FetchAndLoadPosts = async () => {
+        try {
+            const response = await axios.get(baseUrl + "post/");
+            posts = response.data;
 
-       await axios.get(baseUrl + "post/").then(response => {
-           console.log(response);
-          posts = response.data;
-          console.log(posts)
-          posts.forEach(post => {
-             postsSection.innerHTML += card(post);
-          });
-          LikeButtonEventHandler();
-          AttachEditButtonHandler();
-          CancelEditButtonHandler();
-          ConfirmEditButtonHandler();
-          attachDeleteHandlers();
-       });
+            for (const post of posts) {
+                let canEdit = false;
+                try {
+                        const authRes = await axios.get(baseUrl + `post/authorization/CanEdit/${post.id}`);
+                    canEdit = authRes.data.authorized;
+                } catch (error) {
+                    console.error("Authorization failed", error);
+                }
+                postsSection.innerHTML += card(post, canEdit);
+            }
+
+            LikeButtonEventHandler();
+            AttachEditButtonHandler();
+            CancelEditButtonHandler();
+            ConfirmEditButtonHandler();
+            attachDeleteHandlers();
+        } catch (error) {
+            console.error("Error fetching posts: " + error);
+        }
     }
 
     // like logic

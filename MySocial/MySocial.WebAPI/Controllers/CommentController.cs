@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using MySocial.Application.DTOs.Comment;
 using MySocial.Application.DTOs.Post;
 using MySocial.Application.Interfaces.Repositories;
@@ -8,6 +9,7 @@ using System.Security.Claims;
 
 namespace MySocial.WebAPI.Controllers
 {
+    [Authorize]
     [Route("api/[controller]")]
     [ApiController]
     public class CommentController : ControllerBase

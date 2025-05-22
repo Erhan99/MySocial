@@ -93,3 +93,4 @@ C:\Users\ERHAN\Documents\GitHub\MySocial\MySocial\MySocial.WebAPI\obj\Debug\net8
 C:\Users\ERHAN\Documents\GitHub\MySocial\MySocial\MySocial.WebAPI\obj\Debug\net8.0\ref\MySocial.WebAPI.dll
 C:\Users\ERHAN\Documents\GitHub\MySocial\MySocial\MySocial.WebAPI\bin\Debug\net8.0\FluentValidation.dll
 C:\Users\ERHAN\Documents\GitHub\MySocial\MySocial\MySocial.WebAPI\bin\Debug\net8.0\libman.json
+C:\Users\ERHAN\Documents\GitHub\MySocial\MySocial\MySocial.WebAPI\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll

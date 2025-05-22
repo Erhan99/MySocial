@@ -1,5 +1,37 @@
 [
   {
+    "ContainingType": "MySocial.WebAPI.Controllers.AuthenticationController",
+    "Method": "Login",
+    "RelativePath": "api/Authentication/login",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "model",
+        "Type": "MySocial.Application.DTOs.Auth.UserLoginDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MySocial.WebAPI.Controllers.AuthenticationController",
+    "Method": "Register",
+    "RelativePath": "api/Authentication/register",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "model",
+        "Type": "MySocial.Application.DTOs.Auth.RegisterUserDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "MySocial.WebAPI.Controllers.CommentController",
     "Method": "Create",
     "RelativePath": "api/Comment",
@@ -227,6 +259,22 @@
       {
         "Name": "request",
         "Type": "MySocial.Application.DTOs.Post.UpdatePostDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MySocial.WebAPI.Controllers.PostController",
+    "Method": "CanEditPost",
+    "RelativePath": "api/Post/authorization/CanEdit/{postId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "postId",
+        "Type": "System.Int32",
         "IsRequired": true
       }
     ],
