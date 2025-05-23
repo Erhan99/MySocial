@@ -3,8 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\ERHAN\\Documents\\GitHub\\MySocial\\MySocial\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{B49E37BE-CD0D-4653-8DC4-FBDA31F9BCB2}|MySocial.WebAPI\\MySocial.WebAPI.csproj|c:\\users\\erhan\\documents\\github\\mysocial\\mysocial\\mysocial.webapi\\controllers\\authenticationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B49E37BE-CD0D-4653-8DC4-FBDA31F9BCB2}|MySocial.WebAPI\\MySocial.WebAPI.csproj|solutionrelative:mysocial.webapi\\controllers\\authenticationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{B49E37BE-CD0D-4653-8DC4-FBDA31F9BCB2}|MySocial.WebAPI\\MySocial.WebAPI.csproj|c:\\users\\erhan\\documents\\github\\mysocial\\mysocial\\mysocial.webapi\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B49E37BE-CD0D-4653-8DC4-FBDA31F9BCB2}|MySocial.WebAPI\\MySocial.WebAPI.csproj|solutionrelative:mysocial.webapi\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B49E37BE-CD0D-4653-8DC4-FBDA31F9BCB2}|MySocial.WebAPI\\MySocial.WebAPI.csproj|c:\\users\\erhan\\documents\\github\\mysocial\\mysocial\\mysocial.webapi\\controllers\\postcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B49E37BE-CD0D-4653-8DC4-FBDA31F9BCB2}|MySocial.WebAPI\\MySocial.WebAPI.csproj|solutionrelative:mysocial.webapi\\controllers\\postcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{B49E37BE-CD0D-4653-8DC4-FBDA31F9BCB2}|MySocial.WebAPI\\MySocial.WebAPI.csproj|c:\\users\\erhan\\documents\\github\\mysocial\\mysocial\\mysocial.webapi\\controllers\\commentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -19,20 +23,12 @@
       "RelativeMoniker": "D:0:0:{B49E37BE-CD0D-4653-8DC4-FBDA31F9BCB2}|MySocial.WebAPI\\MySocial.WebAPI.csproj|solutionrelative:mysocial.webapi\\controllers\\messagecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B49E37BE-CD0D-4653-8DC4-FBDA31F9BCB2}|MySocial.WebAPI\\MySocial.WebAPI.csproj|c:\\users\\erhan\\documents\\github\\mysocial\\mysocial\\mysocial.webapi\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B49E37BE-CD0D-4653-8DC4-FBDA31F9BCB2}|MySocial.WebAPI\\MySocial.WebAPI.csproj|solutionrelative:mysocial.webapi\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{4E108D0D-27F1-4DC5-B93A-A66AB33730DE}|MySocial.WebUI\\MySocial.WebUI.csproj|c:\\users\\erhan\\documents\\github\\mysocial\\mysocial\\mysocial.webui\\views\\post\\detail.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{4E108D0D-27F1-4DC5-B93A-A66AB33730DE}|MySocial.WebUI\\MySocial.WebUI.csproj|solutionrelative:mysocial.webui\\views\\post\\detail.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B49E37BE-CD0D-4653-8DC4-FBDA31F9BCB2}|MySocial.WebAPI\\MySocial.WebAPI.csproj|c:\\users\\erhan\\documents\\github\\mysocial\\mysocial\\mysocial.webapi\\controllers\\postcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B49E37BE-CD0D-4653-8DC4-FBDA31F9BCB2}|MySocial.WebAPI\\MySocial.WebAPI.csproj|solutionrelative:mysocial.webapi\\controllers\\postcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B49E37BE-CD0D-4653-8DC4-FBDA31F9BCB2}|MySocial.WebAPI\\MySocial.WebAPI.csproj|c:\\users\\erhan\\documents\\github\\mysocial\\mysocial\\mysocial.webapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{B49E37BE-CD0D-4653-8DC4-FBDA31F9BCB2}|MySocial.WebAPI\\MySocial.WebAPI.csproj|solutionrelative:mysocial.webapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4E108D0D-27F1-4DC5-B93A-A66AB33730DE}|MySocial.WebUI\\MySocial.WebUI.csproj|c:\\users\\erhan\\documents\\github\\mysocial\\mysocial\\mysocial.webui\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{4E108D0D-27F1-4DC5-B93A-A66AB33730DE}|MySocial.WebUI\\MySocial.WebUI.csproj|solutionrelative:mysocial.webui\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+      "AbsoluteMoniker": "D:0:0:{4E108D0D-27F1-4DC5-B93A-A66AB33730DE}|MySocial.WebUI\\MySocial.WebUI.csproj|c:\\users\\erhan\\documents\\github\\mysocial\\mysocial\\mysocial.webui\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{4E108D0D-27F1-4DC5-B93A-A66AB33730DE}|MySocial.WebUI\\MySocial.WebUI.csproj|solutionrelative:mysocial.webui\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{B49E37BE-CD0D-4653-8DC4-FBDA31F9BCB2}|MySocial.WebAPI\\MySocial.WebAPI.csproj|c:\\users\\erhan\\documents\\github\\mysocial\\mysocial\\mysocial.webapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -43,36 +39,28 @@
       "RelativeMoniker": "D:0:0:{4E108D0D-27F1-4DC5-B93A-A66AB33730DE}|MySocial.WebUI\\MySocial.WebUI.csproj|solutionrelative:mysocial.webui\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4E108D0D-27F1-4DC5-B93A-A66AB33730DE}|MySocial.WebUI\\MySocial.WebUI.csproj|c:\\users\\erhan\\documents\\github\\mysocial\\mysocial\\mysocial.webui\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{4E108D0D-27F1-4DC5-B93A-A66AB33730DE}|MySocial.WebUI\\MySocial.WebUI.csproj|solutionrelative:mysocial.webui\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1EF97ECE-0476-447A-9D9F-84D502245BB6}|MySocial.Application\\MySocial.Application.csproj|c:\\users\\erhan\\documents\\github\\mysocial\\mysocial\\mysocial.application\\dtos\\auth\\registeruserdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1EF97ECE-0476-447A-9D9F-84D502245BB6}|MySocial.Application\\MySocial.Application.csproj|solutionrelative:mysocial.application\\dtos\\auth\\registeruserdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1EF97ECE-0476-447A-9D9F-84D502245BB6}|MySocial.Application\\MySocial.Application.csproj|c:\\users\\erhan\\documents\\github\\mysocial\\mysocial\\mysocial.application\\dtos\\auth\\userlogindto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1EF97ECE-0476-447A-9D9F-84D502245BB6}|MySocial.Application\\MySocial.Application.csproj|solutionrelative:mysocial.application\\dtos\\auth\\userlogindto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{B49E37BE-CD0D-4653-8DC4-FBDA31F9BCB2}|MySocial.WebAPI\\MySocial.WebAPI.csproj|c:\\users\\erhan\\documents\\github\\mysocial\\mysocial\\mysocial.webapi\\handlers\\ispostauthorhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B49E37BE-CD0D-4653-8DC4-FBDA31F9BCB2}|MySocial.WebAPI\\MySocial.WebAPI.csproj|solutionrelative:mysocial.webapi\\handlers\\ispostauthorhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1EF97ECE-0476-447A-9D9F-84D502245BB6}|MySocial.Application\\MySocial.Application.csproj|c:\\users\\erhan\\documents\\github\\mysocial\\mysocial\\mysocial.application\\dtos\\post\\postdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1EF97ECE-0476-447A-9D9F-84D502245BB6}|MySocial.Application\\MySocial.Application.csproj|solutionrelative:mysocial.application\\dtos\\post\\postdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{B49E37BE-CD0D-4653-8DC4-FBDA31F9BCB2}|MySocial.WebAPI\\MySocial.WebAPI.csproj|c:\\users\\erhan\\documents\\github\\mysocial\\mysocial\\mysocial.webapi\\requirements\\ispostauthorrequirement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B49E37BE-CD0D-4653-8DC4-FBDA31F9BCB2}|MySocial.WebAPI\\MySocial.WebAPI.csproj|solutionrelative:mysocial.webapi\\requirements\\ispostauthorrequirement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B49E37BE-CD0D-4653-8DC4-FBDA31F9BCB2}|MySocial.WebAPI\\MySocial.WebAPI.csproj|c:\\users\\erhan\\documents\\github\\mysocial\\mysocial\\mysocial.webapi\\mysocial.webapi.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}",
-      "RelativeMoniker": "D:0:0:{B49E37BE-CD0D-4653-8DC4-FBDA31F9BCB2}|MySocial.WebAPI\\MySocial.WebAPI.csproj|solutionrelative:mysocial.webapi\\mysocial.webapi.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}"
+      "AbsoluteMoniker": "D:0:0:{B49E37BE-CD0D-4653-8DC4-FBDA31F9BCB2}|MySocial.WebAPI\\MySocial.WebAPI.csproj|c:\\users\\erhan\\documents\\github\\mysocial\\mysocial\\mysocial.webapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{B49E37BE-CD0D-4653-8DC4-FBDA31F9BCB2}|MySocial.WebAPI\\MySocial.WebAPI.csproj|solutionrelative:mysocial.webapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4E108D0D-27F1-4DC5-B93A-A66AB33730DE}|MySocial.WebUI\\MySocial.WebUI.csproj|c:\\users\\erhan\\documents\\github\\mysocial\\mysocial\\mysocial.webui\\views\\post\\detail.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{4E108D0D-27F1-4DC5-B93A-A66AB33730DE}|MySocial.WebUI\\MySocial.WebUI.csproj|solutionrelative:mysocial.webui\\views\\post\\detail.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{4E108D0D-27F1-4DC5-B93A-A66AB33730DE}|MySocial.WebUI\\MySocial.WebUI.csproj|c:\\users\\erhan\\documents\\github\\mysocial\\mysocial\\mysocial.webui\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{4E108D0D-27F1-4DC5-B93A-A66AB33730DE}|MySocial.WebUI\\MySocial.WebUI.csproj|solutionrelative:mysocial.webui\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1EF97ECE-0476-447A-9D9F-84D502245BB6}|MySocial.Application\\MySocial.Application.csproj|c:\\users\\erhan\\documents\\github\\mysocial\\mysocial\\mysocial.application\\dtos\\post\\postdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1EF97ECE-0476-447A-9D9F-84D502245BB6}|MySocial.Application\\MySocial.Application.csproj|solutionrelative:mysocial.application\\dtos\\post\\postdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B49E37BE-CD0D-4653-8DC4-FBDA31F9BCB2}|MySocial.WebAPI\\MySocial.WebAPI.csproj|c:\\users\\erhan\\documents\\github\\mysocial\\mysocial\\mysocial.webapi\\mysocial.webapi.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}",
+      "RelativeMoniker": "D:0:0:{B49E37BE-CD0D-4653-8DC4-FBDA31F9BCB2}|MySocial.WebAPI\\MySocial.WebAPI.csproj|solutionrelative:mysocial.webapi\\mysocial.webapi.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{4E108D0D-27F1-4DC5-B93A-A66AB33730DE}|MySocial.WebUI\\MySocial.WebUI.csproj|c:\\users\\erhan\\documents\\github\\mysocial\\mysocial\\mysocial.webui\\views\\message\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
@@ -158,7 +146,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 8,
+          "SelectedChildIndex": 33,
           "Children": [
             {
               "$type": "Bookmark",
@@ -170,33 +158,33 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "CommentController.cs",
               "DocumentMoniker": "C:\\Users\\ERHAN\\Documents\\GitHub\\MySocial\\MySocial\\MySocial.WebAPI\\Controllers\\CommentController.cs",
               "RelativeDocumentMoniker": "MySocial.WebAPI\\Controllers\\CommentController.cs",
               "ToolTip": "C:\\Users\\ERHAN\\Documents\\GitHub\\MySocial\\MySocial\\MySocial.WebAPI\\Controllers\\CommentController.cs*",
               "RelativeToolTip": "MySocial.WebAPI\\Controllers\\CommentController.cs*",
-              "ViewState": "AgIAADIAAAAAAAAAAAAwwAsAAAAPAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-22T21:35:07.089Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "LikeController.cs",
               "DocumentMoniker": "C:\\Users\\ERHAN\\Documents\\GitHub\\MySocial\\MySocial\\MySocial.WebAPI\\Controllers\\LikeController.cs",
               "RelativeDocumentMoniker": "MySocial.WebAPI\\Controllers\\LikeController.cs",
               "ToolTip": "C:\\Users\\ERHAN\\Documents\\GitHub\\MySocial\\MySocial\\MySocial.WebAPI\\Controllers\\LikeController.cs*",
               "RelativeToolTip": "MySocial.WebAPI\\Controllers\\LikeController.cs*",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAgAAAAPAAAAAAAAAA==",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAcAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-22T21:33:57.85Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 11,
               "Title": "appsettings.json",
               "DocumentMoniker": "C:\\Users\\ERHAN\\Documents\\GitHub\\MySocial\\MySocial\\MySocial.WebAPI\\appsettings.json",
               "RelativeDocumentMoniker": "MySocial.WebAPI\\appsettings.json",
@@ -204,12 +192,11 @@
               "RelativeToolTip": "MySocial.WebAPI\\appsettings.json",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-05-22T21:27:02.547Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-22T21:27:02.547Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 12,
               "Title": "appsettings.json",
               "DocumentMoniker": "C:\\Users\\ERHAN\\Documents\\GitHub\\MySocial\\MySocial\\MySocial.WebUI\\appsettings.json",
               "RelativeDocumentMoniker": "MySocial.WebUI\\appsettings.json",
@@ -217,51 +204,11 @@
               "RelativeToolTip": "MySocial.WebUI\\appsettings.json",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAVAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-05-22T21:25:06.567Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-22T21:25:06.567Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "UserLoginDto.cs",
-              "DocumentMoniker": "C:\\Users\\ERHAN\\Documents\\GitHub\\MySocial\\MySocial\\MySocial.Application\\DTOs\\Auth\\UserLoginDto.cs",
-              "RelativeDocumentMoniker": "MySocial.Application\\DTOs\\Auth\\UserLoginDto.cs",
-              "ToolTip": "C:\\Users\\ERHAN\\Documents\\GitHub\\MySocial\\MySocial\\MySocial.Application\\DTOs\\Auth\\UserLoginDto.cs",
-              "RelativeToolTip": "MySocial.Application\\DTOs\\Auth\\UserLoginDto.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAkAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-22T21:13:46.439Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "RegisterUserDto.cs",
-              "DocumentMoniker": "C:\\Users\\ERHAN\\Documents\\GitHub\\MySocial\\MySocial\\MySocial.Application\\DTOs\\Auth\\RegisterUserDto.cs",
-              "RelativeDocumentMoniker": "MySocial.Application\\DTOs\\Auth\\RegisterUserDto.cs",
-              "ToolTip": "C:\\Users\\ERHAN\\Documents\\GitHub\\MySocial\\MySocial\\MySocial.Application\\DTOs\\Auth\\RegisterUserDto.cs",
-              "RelativeToolTip": "MySocial.Application\\DTOs\\Auth\\RegisterUserDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAEAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-22T21:13:02.42Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "AuthenticationController.cs",
-              "DocumentMoniker": "C:\\Users\\ERHAN\\Documents\\GitHub\\MySocial\\MySocial\\MySocial.WebAPI\\Controllers\\AuthenticationController.cs",
-              "RelativeDocumentMoniker": "MySocial.WebAPI\\Controllers\\AuthenticationController.cs",
-              "ToolTip": "C:\\Users\\ERHAN\\Documents\\GitHub\\MySocial\\MySocial\\MySocial.WebAPI\\Controllers\\AuthenticationController.cs",
-              "RelativeToolTip": "MySocial.WebAPI\\Controllers\\AuthenticationController.cs",
-              "ViewState": "AgIAABgAAAAAAAAAAAAswCIAAAAkAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-22T21:10:11.307Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 13,
               "Title": "PostDTO.cs",
               "DocumentMoniker": "C:\\Users\\ERHAN\\Documents\\GitHub\\MySocial\\MySocial\\MySocial.Application\\DTOs\\Post\\PostDTO.cs",
               "RelativeDocumentMoniker": "MySocial.Application\\DTOs\\Post\\PostDTO.cs",
@@ -269,12 +216,11 @@
               "RelativeToolTip": "MySocial.Application\\DTOs\\Post\\PostDTO.cs",
               "ViewState": "AgIAAAMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-22T20:22:14.515Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-22T20:22:14.515Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 14,
               "Title": "MySocial.WebAPI.http",
               "DocumentMoniker": "C:\\Users\\ERHAN\\Documents\\GitHub\\MySocial\\MySocial\\MySocial.WebAPI\\MySocial.WebAPI.http",
               "RelativeDocumentMoniker": "MySocial.WebAPI\\MySocial.WebAPI.http",
@@ -282,25 +228,24 @@
               "RelativeToolTip": "MySocial.WebAPI\\MySocial.WebAPI.http",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003502|",
-              "WhenOpened": "2025-05-22T20:00:26.037Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-22T20:00:26.037Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 9,
               "Title": "IsPostAuthorHandler.cs",
               "DocumentMoniker": "C:\\Users\\ERHAN\\Documents\\GitHub\\MySocial\\MySocial\\MySocial.WebAPI\\Handlers\\IsPostAuthorHandler.cs",
               "RelativeDocumentMoniker": "MySocial.WebAPI\\Handlers\\IsPostAuthorHandler.cs",
               "ToolTip": "C:\\Users\\ERHAN\\Documents\\GitHub\\MySocial\\MySocial\\MySocial.WebAPI\\Handlers\\IsPostAuthorHandler.cs",
               "RelativeToolTip": "MySocial.WebAPI\\Handlers\\IsPostAuthorHandler.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAA6wBYAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAIAAAAAAAAAAAAIwAoAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-22T18:57:38.016Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 10,
               "Title": "IsPostAuthorRequirement.cs",
               "DocumentMoniker": "C:\\Users\\ERHAN\\Documents\\GitHub\\MySocial\\MySocial\\MySocial.WebAPI\\Requirements\\IsPostAuthorRequirement.cs",
               "RelativeDocumentMoniker": "MySocial.WebAPI\\Requirements\\IsPostAuthorRequirement.cs",
@@ -313,33 +258,33 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 1,
               "Title": "PostController.cs",
               "DocumentMoniker": "C:\\Users\\ERHAN\\Documents\\GitHub\\MySocial\\MySocial\\MySocial.WebAPI\\Controllers\\PostController.cs",
               "RelativeDocumentMoniker": "MySocial.WebAPI\\Controllers\\PostController.cs",
               "ToolTip": "C:\\Users\\ERHAN\\Documents\\GitHub\\MySocial\\MySocial\\MySocial.WebAPI\\Controllers\\PostController.cs*",
               "RelativeToolTip": "MySocial.WebAPI\\Controllers\\PostController.cs*",
-              "ViewState": "AgIAAAUAAAAAAAAAAAAAwAsAAAAPAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB4AAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-22T18:22:04.132Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 8,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\ERHAN\\Documents\\GitHub\\MySocial\\MySocial\\MySocial.WebUI\\Program.cs",
               "RelativeDocumentMoniker": "MySocial.WebUI\\Program.cs",
               "ToolTip": "C:\\Users\\ERHAN\\Documents\\GitHub\\MySocial\\MySocial\\MySocial.WebUI\\Program.cs",
               "RelativeToolTip": "MySocial.WebUI\\Program.cs",
-              "ViewState": "AgIAABgAAAAAAAAAAAAAACsAAAAXAAAAAAAAAA==",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-22T17:45:57.018Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 20,
               "Title": "UserDTO.cs",
               "DocumentMoniker": "C:\\Users\\ERHAN\\Documents\\GitHub\\MySocial\\MySocial\\MySocial.Application\\DTOs\\User\\UserDTO.cs",
               "RelativeDocumentMoniker": "MySocial.Application\\DTOs\\User\\UserDTO.cs",
@@ -347,12 +292,11 @@
               "RelativeToolTip": "MySocial.Application\\DTOs\\User\\UserDTO.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-17T12:28:44.945Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-17T12:28:44.945Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 16,
               "Title": "PostViewModel.cs",
               "DocumentMoniker": "C:\\Users\\ERHAN\\Documents\\GitHub\\MySocial\\MySocial\\MySocial.WebUI\\ViewModel\\PostViewModel.cs",
               "RelativeDocumentMoniker": "MySocial.WebUI\\ViewModel\\PostViewModel.cs",
@@ -360,25 +304,24 @@
               "RelativeToolTip": "MySocial.WebUI\\ViewModel\\PostViewModel.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-17T12:25:44.065Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-17T12:25:44.065Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 6,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\Users\\ERHAN\\Documents\\GitHub\\MySocial\\MySocial\\MySocial.WebUI\\Views\\Home\\Index.cshtml",
               "RelativeDocumentMoniker": "MySocial.WebUI\\Views\\Home\\Index.cshtml",
               "ToolTip": "C:\\Users\\ERHAN\\Documents\\GitHub\\MySocial\\MySocial\\MySocial.WebUI\\Views\\Home\\Index.cshtml",
               "RelativeToolTip": "MySocial.WebUI\\Views\\Home\\Index.cshtml",
-              "ViewState": "AgIAAGUAAAAAAAAAAAAjwG0AAABpAAAAAAAAAA==",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAAACAAAAATAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2025-05-17T12:11:20.081Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 26,
+              "DocumentIndex": 23,
               "Title": "site.css",
               "DocumentMoniker": "C:\\Users\\ERHAN\\Documents\\GitHub\\MySocial\\MySocial\\MySocial.WebUI\\wwwroot\\css\\site.css",
               "RelativeDocumentMoniker": "MySocial.WebUI\\wwwroot\\css\\site.css",
@@ -386,12 +329,11 @@
               "RelativeToolTip": "MySocial.WebUI\\wwwroot\\css\\site.css",
               "ViewState": "AgIAAEgAAAAAAAAAAIBJwHgAAAAhAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2025-05-17T12:10:18.174Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-17T12:10:18.174Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 5,
               "Title": "Detail.cshtml",
               "DocumentMoniker": "C:\\Users\\ERHAN\\Documents\\GitHub\\MySocial\\MySocial\\MySocial.WebUI\\Views\\Post\\Detail.cshtml",
               "RelativeDocumentMoniker": "MySocial.WebUI\\Views\\Post\\Detail.cshtml",
@@ -404,20 +346,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "MessageController.cs",
               "DocumentMoniker": "C:\\Users\\ERHAN\\Documents\\GitHub\\MySocial\\MySocial\\MySocial.WebAPI\\Controllers\\MessageController.cs",
               "RelativeDocumentMoniker": "MySocial.WebAPI\\Controllers\\MessageController.cs",
               "ToolTip": "C:\\Users\\ERHAN\\Documents\\GitHub\\MySocial\\MySocial\\MySocial.WebAPI\\Controllers\\MessageController.cs*",
               "RelativeToolTip": "MySocial.WebAPI\\Controllers\\MessageController.cs*",
-              "ViewState": "AgIAAAIAAAAAAAAAAAAkwAoAAAAPAAAAAAAAAA==",
+              "ViewState": "AgIAAAIAAAAAAAAAAAAkwAkAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-16T22:00:08.693Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 28,
+              "DocumentIndex": 25,
               "Title": "IMessageRepository.cs",
               "DocumentMoniker": "C:\\Users\\ERHAN\\Documents\\GitHub\\MySocial\\MySocial\\MySocial.Application\\Interfaces\\Repositories\\IMessageRepository.cs",
               "RelativeDocumentMoniker": "MySocial.Application\\Interfaces\\Repositories\\IMessageRepository.cs",
@@ -425,12 +367,11 @@
               "RelativeToolTip": "MySocial.Application\\Interfaces\\Repositories\\IMessageRepository.cs",
               "ViewState": "AgIAAAUAAAAAAAAAAAAkwBEAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-16T21:39:11.367Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-16T21:39:11.367Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 27,
+              "DocumentIndex": 24,
               "Title": "MessageRepository.cs",
               "DocumentMoniker": "C:\\Users\\ERHAN\\Documents\\GitHub\\MySocial\\MySocial\\MySocial.Infrastructure\\Repositories\\MessageRepository.cs",
               "RelativeDocumentMoniker": "MySocial.Infrastructure\\Repositories\\MessageRepository.cs",
@@ -438,12 +379,11 @@
               "RelativeToolTip": "MySocial.Infrastructure\\Repositories\\MessageRepository.cs",
               "ViewState": "AgIAAFwAAAAAAAAAAAAiwFIAAAAVAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-16T17:37:02.992Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-16T17:37:02.992Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 30,
+              "DocumentIndex": 27,
               "Title": "GetMessageDTO.cs",
               "DocumentMoniker": "C:\\Users\\ERHAN\\Documents\\GitHub\\MySocial\\MySocial\\MySocial.Application\\DTOs\\Message\\GetMessageDTO.cs",
               "RelativeDocumentMoniker": "MySocial.Application\\DTOs\\Message\\GetMessageDTO.cs",
@@ -451,12 +391,11 @@
               "RelativeToolTip": "MySocial.Application\\DTOs\\Message\\GetMessageDTO.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-16T21:36:20.478Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-16T21:36:20.478Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 29,
+              "DocumentIndex": 26,
               "Title": "MessageDTO.cs",
               "DocumentMoniker": "C:\\Users\\ERHAN\\Documents\\GitHub\\MySocial\\MySocial\\MySocial.Application\\DTOs\\Message\\MessageDTO.cs",
               "RelativeDocumentMoniker": "MySocial.Application\\DTOs\\Message\\MessageDTO.cs",
@@ -464,12 +403,11 @@
               "RelativeToolTip": "MySocial.Application\\DTOs\\Message\\MessageDTO.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAbAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-16T21:36:50.759Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-16T21:36:50.759Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 21,
               "Title": "GetLastMessageUserDTO.cs",
               "DocumentMoniker": "C:\\Users\\ERHAN\\Documents\\GitHub\\MySocial\\MySocial\\MySocial.Application\\DTOs\\Message\\GetLastMessageUserDTO.cs",
               "RelativeDocumentMoniker": "MySocial.Application\\DTOs\\Message\\GetLastMessageUserDTO.cs",
@@ -477,12 +415,11 @@
               "RelativeToolTip": "MySocial.Application\\DTOs\\Message\\GetLastMessageUserDTO.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAArAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-16T21:36:09.873Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-16T21:36:09.873Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 33,
+              "DocumentIndex": 30,
               "Title": "_Layout.cshtml",
               "DocumentMoniker": "C:\\Users\\ERHAN\\Documents\\GitHub\\MySocial\\MySocial\\MySocial.WebUI\\Views\\Shared\\_Layout.cshtml",
               "RelativeDocumentMoniker": "MySocial.WebUI\\Views\\Shared\\_Layout.cshtml",
@@ -490,12 +427,11 @@
               "RelativeToolTip": "MySocial.WebUI\\Views\\Shared\\_Layout.cshtml",
               "ViewState": "AgIAAA8AAAAAAAAAAIBJwB0AAAC/AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-05-16T20:14:15.198Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-16T20:14:15.198Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 19,
               "Title": "Chat.cshtml",
               "DocumentMoniker": "C:\\Users\\ERHAN\\Documents\\GitHub\\MySocial\\MySocial\\MySocial.WebUI\\Views\\Message\\Chat.cshtml",
               "RelativeDocumentMoniker": "MySocial.WebUI\\Views\\Message\\Chat.cshtml",
@@ -503,12 +439,11 @@
               "RelativeToolTip": "MySocial.WebUI\\Views\\Message\\Chat.cshtml",
               "ViewState": "AgIAAAwAAAAAAAAAAAAAABUAAAAZAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-05-16T18:18:31.057Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-16T18:18:31.057Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 17,
               "Title": "HomeController.cs",
               "DocumentMoniker": "C:\\Users\\ERHAN\\Documents\\GitHub\\MySocial\\MySocial\\MySocial.WebUI\\Controllers\\HomeController.cs",
               "RelativeDocumentMoniker": "MySocial.WebUI\\Controllers\\HomeController.cs",
@@ -516,12 +451,11 @@
               "RelativeToolTip": "MySocial.WebUI\\Controllers\\HomeController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-16T17:50:03.978Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-16T17:50:03.978Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 34,
+              "DocumentIndex": 31,
               "Title": "PostController.cs",
               "DocumentMoniker": "C:\\Users\\ERHAN\\Documents\\GitHub\\MySocial\\MySocial\\MySocial.WebUI\\Controllers\\PostController.cs",
               "RelativeDocumentMoniker": "MySocial.WebUI\\Controllers\\PostController.cs",
@@ -529,12 +463,11 @@
               "RelativeToolTip": "MySocial.WebUI\\Controllers\\PostController.cs",
               "ViewState": "AgIAAAwAAAAAAAAAAIBJwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-16T17:50:01.067Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-16T17:50:01.067Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
+              "DocumentIndex": 22,
               "Title": "MessageController.cs",
               "DocumentMoniker": "C:\\Users\\ERHAN\\Documents\\GitHub\\MySocial\\MySocial\\MySocial.WebUI\\Controllers\\MessageController.cs",
               "RelativeDocumentMoniker": "MySocial.WebUI\\Controllers\\MessageController.cs",
@@ -542,12 +475,11 @@
               "RelativeToolTip": "MySocial.WebUI\\Controllers\\MessageController.cs",
               "ViewState": "AgIAABAAAAAAAAAAAAAgwCEAAAApAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-16T17:47:54.857Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-16T17:47:54.857Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 15,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\Users\\ERHAN\\Documents\\GitHub\\MySocial\\MySocial\\MySocial.WebUI\\Views\\Message\\Index.cshtml",
               "RelativeDocumentMoniker": "MySocial.WebUI\\Views\\Message\\Index.cshtml",
@@ -555,25 +487,24 @@
               "RelativeToolTip": "MySocial.WebUI\\Views\\Message\\Index.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAACwAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-05-16T17:46:45.831Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-16T17:46:45.831Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 7,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\ERHAN\\Documents\\GitHub\\MySocial\\MySocial\\MySocial.WebAPI\\Program.cs",
               "RelativeDocumentMoniker": "MySocial.WebAPI\\Program.cs",
               "ToolTip": "C:\\Users\\ERHAN\\Documents\\GitHub\\MySocial\\MySocial\\MySocial.WebAPI\\Program.cs",
               "RelativeToolTip": "MySocial.WebAPI\\Program.cs",
-              "ViewState": "AgIAACUAAAAAAAAAAAAmwCwAAAABAAAAAAAAAA==",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-16T17:44:11.503Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 35,
+              "DocumentIndex": 32,
               "Title": "IUserRepository.cs",
               "DocumentMoniker": "C:\\Users\\ERHAN\\Documents\\GitHub\\MySocial\\MySocial\\MySocial.Application\\Interfaces\\Repositories\\IUserRepository.cs",
               "RelativeDocumentMoniker": "MySocial.Application\\Interfaces\\Repositories\\IUserRepository.cs",
@@ -581,12 +512,11 @@
               "RelativeToolTip": "MySocial.Application\\Interfaces\\Repositories\\IUserRepository.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAkAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-16T17:42:05.266Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-16T17:42:05.266Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 36,
+              "DocumentIndex": 33,
               "Title": "CommentRepository.cs",
               "DocumentMoniker": "C:\\Users\\ERHAN\\Documents\\GitHub\\MySocial\\MySocial\\MySocial.Infrastructure\\Repositories\\CommentRepository.cs",
               "RelativeDocumentMoniker": "MySocial.Infrastructure\\Repositories\\CommentRepository.cs",
@@ -594,12 +524,11 @@
               "RelativeToolTip": "MySocial.Infrastructure\\Repositories\\CommentRepository.cs",
               "ViewState": "AgIAACMAAAAAAAAAAAAwwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-16T17:36:57.729Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-16T17:36:57.729Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 31,
+              "DocumentIndex": 28,
               "Title": "UserRepository.cs",
               "DocumentMoniker": "C:\\Users\\ERHAN\\Documents\\GitHub\\MySocial\\MySocial\\MySocial.Infrastructure\\Repositories\\UserRepository.cs",
               "RelativeDocumentMoniker": "MySocial.Infrastructure\\Repositories\\UserRepository.cs",
@@ -607,25 +536,24 @@
               "RelativeToolTip": "MySocial.Infrastructure\\Repositories\\UserRepository.cs",
               "ViewState": "AgIAAAoAAAAAAAAAAAAuwB4AAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-16T17:36:21.48Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-16T17:36:21.48Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 0,
               "Title": "UserController.cs",
               "DocumentMoniker": "C:\\Users\\ERHAN\\Documents\\GitHub\\MySocial\\MySocial\\MySocial.WebAPI\\Controllers\\UserController.cs",
               "RelativeDocumentMoniker": "MySocial.WebAPI\\Controllers\\UserController.cs",
               "ToolTip": "C:\\Users\\ERHAN\\Documents\\GitHub\\MySocial\\MySocial\\MySocial.WebAPI\\Controllers\\UserController.cs*",
               "RelativeToolTip": "MySocial.WebAPI\\Controllers\\UserController.cs*",
-              "ViewState": "AgIAAAcAAAAAAAAAAAAAAAoAAAAPAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-16T17:35:37.153Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 32,
+              "DocumentIndex": 29,
               "Title": "_LoginPartial.cshtml",
               "DocumentMoniker": "C:\\Users\\ERHAN\\Documents\\GitHub\\MySocial\\MySocial\\MySocial.WebUI\\Views\\Shared\\_LoginPartial.cshtml",
               "RelativeDocumentMoniker": "MySocial.WebUI\\Views\\Shared\\_LoginPartial.cshtml",
@@ -633,12 +561,11 @@
               "RelativeToolTip": "MySocial.WebUI\\Views\\Shared\\_LoginPartial.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-05-16T20:14:11.561Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-16T20:14:11.561Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 18,
               "Title": "chat.js",
               "DocumentMoniker": "C:\\Users\\ERHAN\\Documents\\GitHub\\MySocial\\MySocial\\MySocial.WebUI\\wwwroot\\js\\chat.js",
               "RelativeDocumentMoniker": "MySocial.WebUI\\wwwroot\\js\\chat.js",
@@ -646,8 +573,7 @@
               "RelativeToolTip": "MySocial.WebUI\\wwwroot\\js\\chat.js",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAEAAAAAhAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2025-05-16T18:18:46.687Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-16T18:18:46.687Z"
             }
           ]
         }

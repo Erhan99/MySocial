@@ -1,3 +1,4 @@
+using Microsoft.AspNetCore.DataProtection;
 using Microsoft.EntityFrameworkCore;
 using MySocial.Application.Interfaces.Repositories;
 using MySocial.Infrastructure.Data;
@@ -11,6 +12,11 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllersWithViews();
 builder.Services.AddSignalR();
 
+var keysFolder = new DirectoryInfo(@"C:\MySocial\Keys");
+builder.Services.AddDataProtection()
+    .PersistKeysToFileSystem(keysFolder)
+    .SetApplicationName("MySocial");
+
 string connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
 builder.Services.AddDbContext<MSDbContext>(options => options.UseSqlServer(connectionString));
 
@@ -20,6 +26,13 @@ builder.Services.AddDefaultIdentity<ApplicationUser>(options =>
     options.User.RequireUniqueEmail = true;
     options.SignIn.RequireConfirmedAccount = false;
 }).AddEntityFrameworkStores<MSDbContext>();
+
+builder.Services.ConfigureApplicationCookie(options =>
+{
+    options.Cookie.Name = ".AspNetCore.Identity.Application";
+    options.Cookie.SameSite = SameSiteMode.None;
+    options.Cookie.SecurePolicy = CookieSecurePolicy.Always;
+});
 
 builder.Services.AddScoped<IPostRepository, PostRepository>();
 builder.Services.AddScoped<ILikeInterface, LikeRepository>();

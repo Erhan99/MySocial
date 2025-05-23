@@ -107,7 +107,9 @@
             for (const post of posts) {
                 let canEdit = false;
                 try {
-                        const authRes = await axios.get(baseUrl + `post/authorization/CanEdit/${post.id}`);
+                        const authRes = await axios.get(baseUrl + `post/authorization/CanEdit/${post.id}`, {
+                withCredentials: true
+            });
                     canEdit = authRes.data.authorized;
                 } catch (error) {
                     console.error("Authorization failed", error);

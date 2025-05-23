@@ -8,7 +8,6 @@ using MySocial.Infrastructure.Identity;
 
 namespace MySocial.WebAPI.Controllers
 {
-    [Authorize]
     [Route("api/[controller]")]
     [ApiController]
     public class UserController : ControllerBase

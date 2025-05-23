@@ -8,7 +8,6 @@ using MySocial.Infrastructure.Repositories;
 
 namespace MySocial.WebAPI.Controllers
 {
-    [Authorize]
     [Route("api/[controller]")]
     [ApiController]
     public class MessageController : ControllerBase

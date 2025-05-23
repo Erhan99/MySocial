@@ -9,7 +9,6 @@ using System.Security.Claims;
 
 namespace MySocial.WebAPI.Controllers
 {
-    [Authorize]
     [Route("api/[controller]")]
     [ApiController]
     public class PostController : ControllerBase

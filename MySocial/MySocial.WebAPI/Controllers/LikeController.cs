@@ -6,7 +6,6 @@ using MySocial.Application.Interfaces.Repositories;
 
 namespace MySocial.WebAPI.Controllers
 {
-    [Authorize]
     [Route("api/[controller]")]
     [ApiController]
     public class LikeController : ControllerBase
