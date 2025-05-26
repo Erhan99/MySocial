@@ -1,43 +1,53 @@
 ﻿"use strict";
 
+const loggedUserId = localStorage.getItem("Logged");
 const baseUrl = "https://localhost:7164/api/";
 var messages = [];
 
 const card = (message) => {
-    return (
-        `<div class="container bg-white my-3 rounded-1 shadow-sm post" style="max-width:600px;">
-      <div class="d-flex align-items-start p-3">
-        <img src="/${message.sender.profilePictureUrl}" alt="Profile Picture" class="rounded-circle me-3" width="50" height="50" />
+    const isMe = message.sender.id === loggedUserId;
+    const bgClass = isMe ? 'bg-primary text-white' : 'bg-light text-dark';
+    const marginClass = isMe ? 'ms-auto' : 'me-auto';
+    const dateTextColor = isMe ? 'text-white ' : 'text-muted';
 
-        <div class="flex-grow-1">
-          <div class="d-flex justify-content-between align-items-center">
-            <div>
-              <strong class="me-2">${message.sender.userName}</strong>
-              <span class="text-muted me-2">·</span>
-              <small class="text-muted timestamp">
-                ${new Date(message.createdAt).toLocaleString(undefined, {
-            day: 'numeric',
-            month: 'long',
-            year: 'numeric',
-            hour: 'numeric',
-            minute: '2-digit'
-        })}
-              </small>
-            </div>
+    return `
+    <div class="d-flex my-3 px-3">
+      <div class="p-3 rounded-pill shadow-sm ${bgClass} w-auto ${marginClass}">
+        <div id="post-content-${message.id}" class="d-flex gap-1">
+          <p class="mb-0">${message.content}</p>
+          <small class="timestamp ${dateTextColor} mt-2 ms-2">
+          ${new Date(message.createdAt).toLocaleString(undefined, {
+              hour: 'numeric',
+              minute: '2-digit'
+          })}
+        </small>
         </div>
-                  <div id="post-content-${message.id}" class="text-xl-start mb-2">
-            <p class="mb-2">${message.content}</p>
-          </div>
       </div>
     </div>
-    `
-    )
-}
+  `;
+};
+
+const formatDay = (isoString) =>
+    new Date(isoString).toLocaleDateString(undefined, {
+        weekday: 'long',
+        day: 'numeric',
+        month: 'long',
+        year: 'numeric',
+    });
+
+const renderDateSeparator = (dayString) => `
+  <div class="text-center my-3">
+    <small class="bg-secondary text-white rounded-pill px-3 py-1">
+      ${dayString}
+    </small>
+  </div>
+`;
 
 const FetchMessages = async () => {
     const user = document.querySelector("#UserId").value;
     const receiver = document.querySelector("#ReceiverId").value;
-    const messageList = document.getElementById("messagesList")
+    const messageList = document.getElementById("messagesList");
+    let previousDay = null;
     try {
         const response = await axios.get(baseUrl + "message", {
             params: {
@@ -45,9 +55,13 @@ const FetchMessages = async () => {
                 userId2: receiver
             }
         });
-        console.log(response.data)
         messages = response.data
         messages.forEach(message => {
+            const currentDay = formatDay(message.createdAt);
+            if (currentDay != previousDay) {
+                messageList.innerHTML += renderDateSeparator(currentDay);
+                previousDay = currentDay;
+            }
             messageList.innerHTML += card(message)
         });
     } catch (error) {

@@ -8,7 +8,7 @@
     var requestToken = Antiforgery.GetAndStoreTokens(Context).RequestToken;
 }
 
-<div class="text-center">
+<div class="text-center py-1">
     <section class="my-1 container bg-white p-3 rounded-3" style="max-width:600px;">
         <form class="align-items-end" id="postForm">
             <div class="d-flex">
@@ -30,6 +30,7 @@
     const baseUrl = "https://localhost:7164/api/";
     const postsSection = document.querySelector("#posts");
     const loggedUserId = "@logged";
+    localStorage.setItem("Logged", loggedUserId);
     let posts = [];
 
     const card = (post, canEdit) => {
@@ -177,7 +178,7 @@
                  }
              }).then(response => {
                 const post = response.data;
-                postsSection.innerHTML = card(post) + postsSection.innerHTML;
+                postsSection.innerHTML = card(post, true) + postsSection.innerHTML;
                 posts.push(post)
                 LikeButtonEventHandler();
                 AttachEditButtonHandler();

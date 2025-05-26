@@ -1,12 +1,20 @@
 {
   "Version": 1,
-  "Hash": "vOgJp/iyc/0Q0WbGX2UnOPwXD+YlkxqoZrojX4Qm320=",
+  "Hash": "5p2rJjWY73i5x6Oa3uiFKNrsDJNk+shSu/4YebsB3WQ=",
   "Source": "MySocial.WebAPI",
   "BasePath": "_content/MySocial.WebAPI",
   "Mode": "Default",
   "ManifestType": "Build",
   "ReferencedProjectsConfiguration": [],
-  "DiscoveryPatterns": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "MySocial.WebAPI\\wwwroot",
+      "Source": "MySocial.WebAPI",
+      "ContentRoot": "C:\\Users\\ERHAN\\Documents\\GitHub\\MySocial\\MySocial\\MySocial.WebAPI\\wwwroot\\",
+      "BasePath": "_content/MySocial.WebAPI",
+      "Pattern": "**"
+    }
+  ],
   "Assets": [],
   "Endpoints": []
 }

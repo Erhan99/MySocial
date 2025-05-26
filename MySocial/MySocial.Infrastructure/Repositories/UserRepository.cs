@@ -29,5 +29,19 @@ namespace MySocial.Infrastructure.Repositories
             if (users == null) return null;
             return users;
         }
+
+        public UserDTO FindById(string id)
+        {
+            var user = _context.Users.Select(x => new UserDTO
+            {
+                Id = x.Id,
+                UserName = x.UserName,
+                ProfilePictureUrl = x.ProfilePictureUrl
+            }).FirstOrDefault(x => x.Id == id);
+
+            if (user == null) return null;
+
+            return user;
+        }
     }
 }

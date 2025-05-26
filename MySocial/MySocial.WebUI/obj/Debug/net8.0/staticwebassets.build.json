@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "4tHnUgpkQOP+GBnA43RH020iWATzOz7FxpO4RFtsSyw=",
+  "Hash": "wSCUVSANJq1+w8Bd+90qUC7ZubHqrJwIqWpef8LCAKg=",
   "Source": "MySocial.WebUI",
   "BasePath": "_content/MySocial.WebUI",
   "Mode": "Default",
@@ -1361,6 +1361,27 @@
       "OriginalItemSpec": "wwwroot\\favicon.ico"
     },
     {
+      "Identity": "C:\\Users\\ERHAN\\Documents\\GitHub\\MySocial\\MySocial\\MySocial.WebUI\\wwwroot\\icons\\arrow_back_icon.svg",
+      "SourceId": "MySocial.WebUI",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\ERHAN\\Documents\\GitHub\\MySocial\\MySocial\\MySocial.WebUI\\wwwroot\\",
+      "BasePath": "_content/MySocial.WebUI",
+      "RelativePath": "icons/arrow_back_icon#[.{fingerprint}]?.svg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "igosafx5nb",
+      "Integrity": "Ll/wBCXwqlWD70dkvjgs25OE4CdYKNkHK51fg4YPzNQ=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\icons\\arrow_back_icon.svg"
+    },
+    {
       "Identity": "C:\\Users\\ERHAN\\Documents\\GitHub\\MySocial\\MySocial\\MySocial.WebUI\\wwwroot\\icons\\default_profile_icon.svg",
       "SourceId": "MySocial.WebUI",
       "SourceType": "Discovered",
@@ -1422,6 +1443,27 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\icons\\home_icon.svg"
+    },
+    {
+      "Identity": "C:\\Users\\ERHAN\\Documents\\GitHub\\MySocial\\MySocial\\MySocial.WebUI\\wwwroot\\icons\\image_icon.svg",
+      "SourceId": "MySocial.WebUI",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\ERHAN\\Documents\\GitHub\\MySocial\\MySocial\\MySocial.WebUI\\wwwroot\\",
+      "BasePath": "_content/MySocial.WebUI",
+      "RelativePath": "icons/image_icon#[.{fingerprint}]?.svg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "s8qk17cezj",
+      "Integrity": "JOHB+3HhkCXShl++CXTHW5hJcWaKIZWdBxPbxlJ0xuE=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\icons\\image_icon.svg"
     },
     {
       "Identity": "C:\\Users\\ERHAN\\Documents\\GitHub\\MySocial\\MySocial\\MySocial.WebUI\\wwwroot\\icons\\logout_icon.svg",
@@ -1508,6 +1550,27 @@
       "OriginalItemSpec": "wwwroot\\icons\\profile_icon.svg"
     },
     {
+      "Identity": "C:\\Users\\ERHAN\\Documents\\GitHub\\MySocial\\MySocial\\MySocial.WebUI\\wwwroot\\icons\\send_icon.svg",
+      "SourceId": "MySocial.WebUI",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\ERHAN\\Documents\\GitHub\\MySocial\\MySocial\\MySocial.WebUI\\wwwroot\\",
+      "BasePath": "_content/MySocial.WebUI",
+      "RelativePath": "icons/send_icon#[.{fingerprint}]?.svg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "ay69d1xqdo",
+      "Integrity": "cuzugekIBVEKWQlSkUIHMEVFT6hfd35PthfXtYsRsVM=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\icons\\send_icon.svg"
+    },
+    {
       "Identity": "C:\\Users\\ERHAN\\Documents\\GitHub\\MySocial\\MySocial\\MySocial.WebUI\\wwwroot\\icons\\settings_icon.svg",
       "SourceId": "MySocial.WebUI",
       "SourceType": "Discovered",
@@ -1543,8 +1606,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "3xw6byknbr",
-      "Integrity": "J5/Eai2UY0Qc5f6XRPIKpJ2GFZGtQw2HMrPJSht6BTU=",
+      "Fingerprint": "53srvevqv6",
+      "Integrity": "8a1v6kiXd2sDj/Z/nccxSk2qjn12uuxbYg/Rnl9PP24=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\js\\chat.js"
@@ -2808,6 +2871,27 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
+    },
+    {
+      "Identity": "C:\\Users\\ERHAN\\Documents\\GitHub\\MySocial\\MySocial\\MySocial.WebUI\\wwwroot\\uploads\\download_04e0.jpg",
+      "SourceId": "MySocial.WebUI",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\ERHAN\\Documents\\GitHub\\MySocial\\MySocial\\MySocial.WebUI\\wwwroot\\",
+      "BasePath": "_content/MySocial.WebUI",
+      "RelativePath": "uploads/download_04e0#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "ofn2uo9pdv",
+      "Integrity": "JPH2buxkviJVWPauSd30xpZRRBMeEnVmYvpCVx/SurM=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\download_04e0.jpg"
     }
   ],
   "Endpoints": [
@@ -2972,6 +3056,88 @@
         {
           "Name": "integrity",
           "Value": "sha256-Jtxf9L+5ITKRc1gIRl4VbUpGkRNfOBXjYTdhJD4facM="
+        }
+      ]
+    },
+    {
+      "Route": "icons/arrow_back_icon.igosafx5nb.svg",
+      "AssetFile": "C:\\Users\\ERHAN\\Documents\\GitHub\\MySocial\\MySocial\\MySocial.WebUI\\wwwroot\\icons\\arrow_back_icon.svg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "189"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/svg+xml"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"Ll/wBCXwqlWD70dkvjgs25OE4CdYKNkHK51fg4YPzNQ=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 24 May 2025 18:27:36 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "igosafx5nb"
+        },
+        {
+          "Name": "label",
+          "Value": "icons/arrow_back_icon.svg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-Ll/wBCXwqlWD70dkvjgs25OE4CdYKNkHK51fg4YPzNQ="
+        }
+      ]
+    },
+    {
+      "Route": "icons/arrow_back_icon.svg",
+      "AssetFile": "C:\\Users\\ERHAN\\Documents\\GitHub\\MySocial\\MySocial\\MySocial.WebUI\\wwwroot\\icons\\arrow_back_icon.svg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "189"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/svg+xml"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"Ll/wBCXwqlWD70dkvjgs25OE4CdYKNkHK51fg4YPzNQ=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 24 May 2025 18:27:36 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-Ll/wBCXwqlWD70dkvjgs25OE4CdYKNkHK51fg4YPzNQ="
         }
       ]
     },
@@ -3218,6 +3384,88 @@
         {
           "Name": "integrity",
           "Value": "sha256-Ka0GPXwDCEbP9CbZppy8EpQfQan8htcJ5mqIcNBdXH0="
+        }
+      ]
+    },
+    {
+      "Route": "icons/image_icon.s8qk17cezj.svg",
+      "AssetFile": "C:\\Users\\ERHAN\\Documents\\GitHub\\MySocial\\MySocial\\MySocial.WebUI\\wwwroot\\icons\\image_icon.svg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "327"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/svg+xml"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"JOHB+3HhkCXShl++CXTHW5hJcWaKIZWdBxPbxlJ0xuE=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 24 May 2025 18:07:17 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "s8qk17cezj"
+        },
+        {
+          "Name": "label",
+          "Value": "icons/image_icon.svg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-JOHB+3HhkCXShl++CXTHW5hJcWaKIZWdBxPbxlJ0xuE="
+        }
+      ]
+    },
+    {
+      "Route": "icons/image_icon.svg",
+      "AssetFile": "C:\\Users\\ERHAN\\Documents\\GitHub\\MySocial\\MySocial\\MySocial.WebUI\\wwwroot\\icons\\image_icon.svg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "327"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/svg+xml"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"JOHB+3HhkCXShl++CXTHW5hJcWaKIZWdBxPbxlJ0xuE=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 24 May 2025 18:07:17 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-JOHB+3HhkCXShl++CXTHW5hJcWaKIZWdBxPbxlJ0xuE="
         }
       ]
     },
@@ -3546,6 +3794,88 @@
         {
           "Name": "integrity",
           "Value": "sha256-JW3erHJkHKaLSD1frKPCb/lgjIdb4G6hf9LWILQYlAE="
+        }
+      ]
+    },
+    {
+      "Route": "icons/send_icon.ay69d1xqdo.svg",
+      "AssetFile": "C:\\Users\\ERHAN\\Documents\\GitHub\\MySocial\\MySocial\\MySocial.WebUI\\wwwroot\\icons\\send_icon.svg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "215"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/svg+xml"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"cuzugekIBVEKWQlSkUIHMEVFT6hfd35PthfXtYsRsVM=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 26 May 2025 12:39:40 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "ay69d1xqdo"
+        },
+        {
+          "Name": "label",
+          "Value": "icons/send_icon.svg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-cuzugekIBVEKWQlSkUIHMEVFT6hfd35PthfXtYsRsVM="
+        }
+      ]
+    },
+    {
+      "Route": "icons/send_icon.svg",
+      "AssetFile": "C:\\Users\\ERHAN\\Documents\\GitHub\\MySocial\\MySocial\\MySocial.WebUI\\wwwroot\\icons\\send_icon.svg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "215"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/svg+xml"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"cuzugekIBVEKWQlSkUIHMEVFT6hfd35PthfXtYsRsVM=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 26 May 2025 12:39:40 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-cuzugekIBVEKWQlSkUIHMEVFT6hfd35PthfXtYsRsVM="
         }
       ]
     },
@@ -5852,7 +6182,7 @@
       ]
     },
     {
-      "Route": "js/chat.3xw6byknbr.js",
+      "Route": "js/chat.53srvevqv6.js",
       "AssetFile": "C:\\Users\\ERHAN\\Documents\\GitHub\\MySocial\\MySocial\\MySocial.WebUI\\wwwroot\\js\\chat.js",
       "Selectors": [],
       "ResponseHeaders": [
@@ -5862,7 +6192,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "3679"
+          "Value": "4054"
         },
         {
           "Name": "Content-Type",
@@ -5870,11 +6200,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"J5/Eai2UY0Qc5f6XRPIKpJ2GFZGtQw2HMrPJSht6BTU=\""
+          "Value": "\"8a1v6kiXd2sDj/Z/nccxSk2qjn12uuxbYg/Rnl9PP24=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 17 May 2025 12:30:53 GMT"
+          "Value": "Mon, 26 May 2025 14:53:19 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -5884,7 +6214,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "3xw6byknbr"
+          "Value": "53srvevqv6"
         },
         {
           "Name": "label",
@@ -5892,7 +6222,7 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-J5/Eai2UY0Qc5f6XRPIKpJ2GFZGtQw2HMrPJSht6BTU="
+          "Value": "sha256-8a1v6kiXd2sDj/Z/nccxSk2qjn12uuxbYg/Rnl9PP24="
         }
       ]
     },
@@ -5907,7 +6237,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "3679"
+          "Value": "4054"
         },
         {
           "Name": "Content-Type",
@@ -5915,11 +6245,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"J5/Eai2UY0Qc5f6XRPIKpJ2GFZGtQw2HMrPJSht6BTU=\""
+          "Value": "\"8a1v6kiXd2sDj/Z/nccxSk2qjn12uuxbYg/Rnl9PP24=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 17 May 2025 12:30:53 GMT"
+          "Value": "Mon, 26 May 2025 14:53:19 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -5929,7 +6259,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-J5/Eai2UY0Qc5f6XRPIKpJ2GFZGtQw2HMrPJSht6BTU="
+          "Value": "sha256-8a1v6kiXd2sDj/Z/nccxSk2qjn12uuxbYg/Rnl9PP24="
         }
       ]
     },
@@ -11014,6 +11344,88 @@
         {
           "Name": "integrity",
           "Value": "sha256-BpVlbXcJQSEK5FdBYvWsG1WrWrC+aIyLKNna6WOTUek="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/download_04e0.jpg",
+      "AssetFile": "C:\\Users\\ERHAN\\Documents\\GitHub\\MySocial\\MySocial\\MySocial.WebUI\\wwwroot\\uploads\\download_04e0.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "24879"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"JPH2buxkviJVWPauSd30xpZRRBMeEnVmYvpCVx/SurM=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 24 May 2025 17:11:35 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-JPH2buxkviJVWPauSd30xpZRRBMeEnVmYvpCVx/SurM="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/download_04e0.ofn2uo9pdv.jpg",
+      "AssetFile": "C:\\Users\\ERHAN\\Documents\\GitHub\\MySocial\\MySocial\\MySocial.WebUI\\wwwroot\\uploads\\download_04e0.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "24879"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"JPH2buxkviJVWPauSd30xpZRRBMeEnVmYvpCVx/SurM=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 24 May 2025 17:11:35 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "ofn2uo9pdv"
+        },
+        {
+          "Name": "label",
+          "Value": "uploads/download_04e0.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-JPH2buxkviJVWPauSd30xpZRRBMeEnVmYvpCVx/SurM="
         }
       ]
     }

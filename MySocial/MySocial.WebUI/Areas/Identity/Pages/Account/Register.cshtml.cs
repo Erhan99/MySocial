@@ -23,13 +23,15 @@ namespace MySocial.WebUI.Areas.Identity.Pages.Account
         private readonly IUserEmailStore<ApplicationUser> _emailStore;
         private readonly ILogger<RegisterModel> _logger;
         private readonly IEmailSender _emailSender;
+        private readonly IWebHostEnvironment _hostingEnvironment;
 
         public RegisterModel(
             UserManager<ApplicationUser> userManager,
             IUserStore<ApplicationUser> userStore,
             SignInManager<ApplicationUser> signInManager,
             ILogger<RegisterModel> logger,
-            IEmailSender emailSender)
+            IEmailSender emailSender,
+            IWebHostEnvironment hostingEnvironment)
         {
             _userManager = userManager;
             _userStore = userStore;
@@ -37,6 +39,7 @@ namespace MySocial.WebUI.Areas.Identity.Pages.Account
             _signInManager = signInManager;
             _logger = logger;
             _emailSender = emailSender;
+            _hostingEnvironment = hostingEnvironment;
         }
 
         /// <summary>
@@ -93,8 +96,8 @@ namespace MySocial.WebUI.Areas.Identity.Pages.Account
             [Compare("Password", ErrorMessage = "The password and confirmation password do not match.")]
             public string ConfirmPassword { get; set; }
 
-            [Display(Name = "Profile Picture")]
-            public string ProfilePictureUrl { get; set; }
+            [Display(Name = "Profile Picture (optional)")]
+            public IFormFile ProfilePicture { get; set; }
 
             [Required]
             [Display(Name = "Username")]
@@ -118,6 +121,16 @@ namespace MySocial.WebUI.Areas.Identity.Pages.Account
 
                 await _userStore.SetUserNameAsync(user, Input.Username, CancellationToken.None);
                 await _emailStore.SetEmailAsync(user, Input.Email, CancellationToken.None);
+                if (Input.ProfilePicture != null)
+                {
+                    var uniqueFileName = GetUniqueFileName(Input.ProfilePicture.FileName);
+                    var uploads = Path.Combine(_hostingEnvironment.WebRootPath, "uploads");
+                    var filePath = Path.Combine(uploads, uniqueFileName);
+                    Input.ProfilePicture.CopyTo(new FileStream(filePath, FileMode.Create));
+
+                    user.ProfilePictureUrl = "/uploads/" + uniqueFileName;
+                }
+
                 var result = await _userManager.CreateAsync(user, Input.Password);
 
                 if (result.Succeeded)
@@ -154,6 +167,15 @@ namespace MySocial.WebUI.Areas.Identity.Pages.Account
 
             // If we got this far, something failed, redisplay form
             return Page();
+        }
+
+        private string GetUniqueFileName(string fileName)
+        {
+            fileName = Path.GetFileName(fileName);
+            return Path.GetFileNameWithoutExtension(fileName)
+                      + "_"
+                      + Guid.NewGuid().ToString().Substring(0, 4)
+                      + Path.GetExtension(fileName);
         }
 
         private ApplicationUser CreateUser()

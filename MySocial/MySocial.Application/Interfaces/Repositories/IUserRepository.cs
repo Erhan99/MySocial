@@ -10,5 +10,6 @@ namespace MySocial.Application.Interfaces.Repositories
     public interface IUserRepository
     {
         public IEnumerable<UserDTO> GetAll();
+        public UserDTO FindById(string id);
     }
 }

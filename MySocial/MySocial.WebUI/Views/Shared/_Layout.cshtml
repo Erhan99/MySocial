@@ -16,11 +16,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
 <body class="d-flex flex-column">
-    <div class="d-flex">
-        @if (User.Identity.IsAuthenticated)
-        {
-            <div class="d-flex flex-column flex-shrink-0 p-3 shadow-sm bg-light position-fixed" style="width: 25%; border-right: 1px solid #F4F5F5; height: 100%;">
-                <a class="align-items-center pb-3 mb-3 link-dark text-dark text-decoration-none d-flex justify-content-center" asp-controller="Home" asp-action="Index">
+    <div class="container-fluid">
+        <div class="row">
+            <aside class="col-3 vh-100 position-fixed bg-light border-end">
+                <a class="align-items-center pb-3 mb-3 link-dark text-dark py-4 text-decoration-none d-flex justify-content-center" asp-controller="Home" asp-action="Index">
                     <h1 class=" fw-bold">MySocial</h1>
                 </a>
                 <nav class="d-flex flex-column flex-grow-1">
@@ -54,14 +53,13 @@
                         <partial name="_LoginPartial" />
                     </ul>
                 </nav>
-            </div>
-        }
-        <div class="@(User.Identity.IsAuthenticated ? null : "flex-grow-1")" style="@(User.Identity.IsAuthenticated ? "width: 50%; margin-left: 25%;" : null)">
-            <main role="main" class="pb-3 container pt-5">
+            </aside>
+            <main role="main" class="col-9 offset-3 d-flex flex-column vh-100 p-0">
                 @RenderBody()
             </main>
         </div>
     </div>
+
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     @await RenderSectionAsync("Scripts", required: false)
