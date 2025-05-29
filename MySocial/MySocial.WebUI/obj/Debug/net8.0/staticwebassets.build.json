@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "wSCUVSANJq1+w8Bd+90qUC7ZubHqrJwIqWpef8LCAKg=",
+  "Hash": "4inr9rcfrYEJUUHZNPeBMx3/vs8qd3K+hBrWar1KjFQ=",
   "Source": "MySocial.WebUI",
   "BasePath": "_content/MySocial.WebUI",
   "Mode": "Default",
@@ -1333,8 +1333,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "pnz1692om2",
-      "Integrity": "xRR9aPOez3QKmt0X/wDqvTBUp/Vg/eL8Kjv/sXkiQdU=",
+      "Fingerprint": "i6igihj7w1",
+      "Integrity": "Cubz12+tv3VOzSXy/dqFB36uVz0x3Gc1WrSzR9Xs3v0=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\site.css"
@@ -1611,27 +1611,6 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\js\\chat.js"
-    },
-    {
-      "Identity": "C:\\Users\\ERHAN\\Documents\\GitHub\\MySocial\\MySocial\\MySocial.WebUI\\wwwroot\\js\\home.js",
-      "SourceId": "MySocial.WebUI",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\ERHAN\\Documents\\GitHub\\MySocial\\MySocial\\MySocial.WebUI\\wwwroot\\",
-      "BasePath": "_content/MySocial.WebUI",
-      "RelativePath": "js/home#[.{fingerprint}]?.js",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "AssetMergeBehavior": "",
-      "AssetMergeSource": "",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "Fingerprint": "o6qmz1xomo",
-      "Integrity": "8Bo3TpyB49uJs6QpQMTWpUR2hJhqEpbkK/E/GW7tYpU=",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\js\\home.js"
     },
     {
       "Identity": "C:\\Users\\ERHAN\\Documents\\GitHub\\MySocial\\MySocial\\MySocial.WebUI\\wwwroot\\js\\signalr\\dist\\browser\\signalr.js",
@@ -2873,6 +2852,174 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
     },
     {
+      "Identity": "C:\\Users\\ERHAN\\Documents\\GitHub\\MySocial\\MySocial\\MySocial.WebUI\\wwwroot\\uploads\\39niprghbdnc1_7a19.webp",
+      "SourceId": "MySocial.WebUI",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\ERHAN\\Documents\\GitHub\\MySocial\\MySocial\\MySocial.WebUI\\wwwroot\\",
+      "BasePath": "_content/MySocial.WebUI",
+      "RelativePath": "uploads/39niprghbdnc1_7a19#[.{fingerprint}]?.webp",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "3epyw5eyhv",
+      "Integrity": "C2lGLMhfpo0+5KUIk2vJ8n+ka9KVoTZZvs9Ia/W/nTQ=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\39niprghbdnc1_7a19.webp"
+    },
+    {
+      "Identity": "C:\\Users\\ERHAN\\Documents\\GitHub\\MySocial\\MySocial\\MySocial.WebUI\\wwwroot\\uploads\\39niprghbdnc1_cc0c.webp",
+      "SourceId": "MySocial.WebUI",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\ERHAN\\Documents\\GitHub\\MySocial\\MySocial\\MySocial.WebUI\\wwwroot\\",
+      "BasePath": "_content/MySocial.WebUI",
+      "RelativePath": "uploads/39niprghbdnc1_cc0c#[.{fingerprint}]?.webp",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "3epyw5eyhv",
+      "Integrity": "C2lGLMhfpo0+5KUIk2vJ8n+ka9KVoTZZvs9Ia/W/nTQ=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\39niprghbdnc1_cc0c.webp"
+    },
+    {
+      "Identity": "C:\\Users\\ERHAN\\Documents\\GitHub\\MySocial\\MySocial\\MySocial.WebUI\\wwwroot\\uploads\\39niprghbdnc1_d3fc.webp",
+      "SourceId": "MySocial.WebUI",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\ERHAN\\Documents\\GitHub\\MySocial\\MySocial\\MySocial.WebUI\\wwwroot\\",
+      "BasePath": "_content/MySocial.WebUI",
+      "RelativePath": "uploads/39niprghbdnc1_d3fc#[.{fingerprint}]?.webp",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "3epyw5eyhv",
+      "Integrity": "C2lGLMhfpo0+5KUIk2vJ8n+ka9KVoTZZvs9Ia/W/nTQ=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\39niprghbdnc1_d3fc.webp"
+    },
+    {
+      "Identity": "C:\\Users\\ERHAN\\Documents\\GitHub\\MySocial\\MySocial\\MySocial.WebUI\\wwwroot\\uploads\\39niprghbdnc1_e51c.webp",
+      "SourceId": "MySocial.WebUI",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\ERHAN\\Documents\\GitHub\\MySocial\\MySocial\\MySocial.WebUI\\wwwroot\\",
+      "BasePath": "_content/MySocial.WebUI",
+      "RelativePath": "uploads/39niprghbdnc1_e51c#[.{fingerprint}]?.webp",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "3epyw5eyhv",
+      "Integrity": "C2lGLMhfpo0+5KUIk2vJ8n+ka9KVoTZZvs9Ia/W/nTQ=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\39niprghbdnc1_e51c.webp"
+    },
+    {
+      "Identity": "C:\\Users\\ERHAN\\Documents\\GitHub\\MySocial\\MySocial\\MySocial.WebUI\\wwwroot\\uploads\\39niprghbdnc1_ee06.webp",
+      "SourceId": "MySocial.WebUI",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\ERHAN\\Documents\\GitHub\\MySocial\\MySocial\\MySocial.WebUI\\wwwroot\\",
+      "BasePath": "_content/MySocial.WebUI",
+      "RelativePath": "uploads/39niprghbdnc1_ee06#[.{fingerprint}]?.webp",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "3epyw5eyhv",
+      "Integrity": "C2lGLMhfpo0+5KUIk2vJ8n+ka9KVoTZZvs9Ia/W/nTQ=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\39niprghbdnc1_ee06.webp"
+    },
+    {
+      "Identity": "C:\\Users\\ERHAN\\Documents\\GitHub\\MySocial\\MySocial\\MySocial.WebUI\\wwwroot\\uploads\\39niprghbdnc1_ffb4.webp",
+      "SourceId": "MySocial.WebUI",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\ERHAN\\Documents\\GitHub\\MySocial\\MySocial\\MySocial.WebUI\\wwwroot\\",
+      "BasePath": "_content/MySocial.WebUI",
+      "RelativePath": "uploads/39niprghbdnc1_ffb4#[.{fingerprint}]?.webp",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "3epyw5eyhv",
+      "Integrity": "C2lGLMhfpo0+5KUIk2vJ8n+ka9KVoTZZvs9Ia/W/nTQ=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\39niprghbdnc1_ffb4.webp"
+    },
+    {
+      "Identity": "C:\\Users\\ERHAN\\Documents\\GitHub\\MySocial\\MySocial\\MySocial.WebUI\\wwwroot\\uploads\\dogo_2036.jpg",
+      "SourceId": "MySocial.WebUI",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\ERHAN\\Documents\\GitHub\\MySocial\\MySocial\\MySocial.WebUI\\wwwroot\\",
+      "BasePath": "_content/MySocial.WebUI",
+      "RelativePath": "uploads/dogo_2036#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "06yinangr7",
+      "Integrity": "eMx6o2jcOmw+oWCCYzgVCpyI+/J8YbeWTyCemt0SSbc=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\dogo_2036.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\ERHAN\\Documents\\GitHub\\MySocial\\MySocial\\MySocial.WebUI\\wwwroot\\uploads\\dogo_5ffa.jpg",
+      "SourceId": "MySocial.WebUI",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\ERHAN\\Documents\\GitHub\\MySocial\\MySocial\\MySocial.WebUI\\wwwroot\\",
+      "BasePath": "_content/MySocial.WebUI",
+      "RelativePath": "uploads/dogo_5ffa#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "06yinangr7",
+      "Integrity": "eMx6o2jcOmw+oWCCYzgVCpyI+/J8YbeWTyCemt0SSbc=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\dogo_5ffa.jpg"
+    },
+    {
       "Identity": "C:\\Users\\ERHAN\\Documents\\GitHub\\MySocial\\MySocial\\MySocial.WebUI\\wwwroot\\uploads\\download_04e0.jpg",
       "SourceId": "MySocial.WebUI",
       "SourceType": "Discovered",
@@ -2892,6 +3039,27 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\uploads\\download_04e0.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\ERHAN\\Documents\\GitHub\\MySocial\\MySocial\\MySocial.WebUI\\wwwroot\\uploads\\images_6586.jfif",
+      "SourceId": "MySocial.WebUI",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\ERHAN\\Documents\\GitHub\\MySocial\\MySocial\\MySocial.WebUI\\wwwroot\\",
+      "BasePath": "_content/MySocial.WebUI",
+      "RelativePath": "uploads/images_6586#[.{fingerprint}]?.jfif",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "j8ni4vm5zp",
+      "Integrity": "3bkYLF7f7NWAPkbEfi1fs2sYtFq4gpuEGhJfhGcmV84=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\images_6586.jfif"
     }
   ],
   "Endpoints": [
@@ -2906,7 +3074,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "2480"
+          "Value": "2622"
         },
         {
           "Name": "Content-Type",
@@ -2914,11 +3082,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"xRR9aPOez3QKmt0X/wDqvTBUp/Vg/eL8Kjv/sXkiQdU=\""
+          "Value": "\"Cubz12+tv3VOzSXy/dqFB36uVz0x3Gc1WrSzR9Xs3v0=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 17 May 2025 12:14:44 GMT"
+          "Value": "Thu, 29 May 2025 18:56:13 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2928,12 +3096,12 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-xRR9aPOez3QKmt0X/wDqvTBUp/Vg/eL8Kjv/sXkiQdU="
+          "Value": "sha256-Cubz12+tv3VOzSXy/dqFB36uVz0x3Gc1WrSzR9Xs3v0="
         }
       ]
     },
     {
-      "Route": "css/site.pnz1692om2.css",
+      "Route": "css/site.i6igihj7w1.css",
       "AssetFile": "C:\\Users\\ERHAN\\Documents\\GitHub\\MySocial\\MySocial\\MySocial.WebUI\\wwwroot\\css\\site.css",
       "Selectors": [],
       "ResponseHeaders": [
@@ -2943,7 +3111,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "2480"
+          "Value": "2622"
         },
         {
           "Name": "Content-Type",
@@ -2951,11 +3119,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"xRR9aPOez3QKmt0X/wDqvTBUp/Vg/eL8Kjv/sXkiQdU=\""
+          "Value": "\"Cubz12+tv3VOzSXy/dqFB36uVz0x3Gc1WrSzR9Xs3v0=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 17 May 2025 12:14:44 GMT"
+          "Value": "Thu, 29 May 2025 18:56:13 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2965,7 +3133,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "pnz1692om2"
+          "Value": "i6igihj7w1"
         },
         {
           "Name": "label",
@@ -2973,7 +3141,7 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-xRR9aPOez3QKmt0X/wDqvTBUp/Vg/eL8Kjv/sXkiQdU="
+          "Value": "sha256-Cubz12+tv3VOzSXy/dqFB36uVz0x3Gc1WrSzR9Xs3v0="
         }
       ]
     },
@@ -6260,88 +6428,6 @@
         {
           "Name": "integrity",
           "Value": "sha256-8a1v6kiXd2sDj/Z/nccxSk2qjn12uuxbYg/Rnl9PP24="
-        }
-      ]
-    },
-    {
-      "Route": "js/home.js",
-      "AssetFile": "C:\\Users\\ERHAN\\Documents\\GitHub\\MySocial\\MySocial\\MySocial.WebUI\\wwwroot\\js\\home.js",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "5"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/javascript"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"8Bo3TpyB49uJs6QpQMTWpUR2hJhqEpbkK/E/GW7tYpU=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Fri, 02 May 2025 18:43:55 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-8Bo3TpyB49uJs6QpQMTWpUR2hJhqEpbkK/E/GW7tYpU="
-        }
-      ]
-    },
-    {
-      "Route": "js/home.o6qmz1xomo.js",
-      "AssetFile": "C:\\Users\\ERHAN\\Documents\\GitHub\\MySocial\\MySocial\\MySocial.WebUI\\wwwroot\\js\\home.js",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "5"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/javascript"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"8Bo3TpyB49uJs6QpQMTWpUR2hJhqEpbkK/E/GW7tYpU=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Fri, 02 May 2025 18:43:55 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "o6qmz1xomo"
-        },
-        {
-          "Name": "label",
-          "Value": "js/home.js"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-8Bo3TpyB49uJs6QpQMTWpUR2hJhqEpbkK/E/GW7tYpU="
         }
       ]
     },
@@ -11348,6 +11434,662 @@
       ]
     },
     {
+      "Route": "uploads/39niprghbdnc1_7a19.3epyw5eyhv.webp",
+      "AssetFile": "C:\\Users\\ERHAN\\Documents\\GitHub\\MySocial\\MySocial\\MySocial.WebUI\\wwwroot\\uploads\\39niprghbdnc1_7a19.webp",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "39476"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/webp"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"C2lGLMhfpo0+5KUIk2vJ8n+ka9KVoTZZvs9Ia/W/nTQ=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 29 May 2025 17:14:20 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "3epyw5eyhv"
+        },
+        {
+          "Name": "label",
+          "Value": "uploads/39niprghbdnc1_7a19.webp"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-C2lGLMhfpo0+5KUIk2vJ8n+ka9KVoTZZvs9Ia/W/nTQ="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/39niprghbdnc1_7a19.webp",
+      "AssetFile": "C:\\Users\\ERHAN\\Documents\\GitHub\\MySocial\\MySocial\\MySocial.WebUI\\wwwroot\\uploads\\39niprghbdnc1_7a19.webp",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "39476"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/webp"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"C2lGLMhfpo0+5KUIk2vJ8n+ka9KVoTZZvs9Ia/W/nTQ=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 29 May 2025 17:14:20 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-C2lGLMhfpo0+5KUIk2vJ8n+ka9KVoTZZvs9Ia/W/nTQ="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/39niprghbdnc1_cc0c.3epyw5eyhv.webp",
+      "AssetFile": "C:\\Users\\ERHAN\\Documents\\GitHub\\MySocial\\MySocial\\MySocial.WebUI\\wwwroot\\uploads\\39niprghbdnc1_cc0c.webp",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "39476"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/webp"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"C2lGLMhfpo0+5KUIk2vJ8n+ka9KVoTZZvs9Ia/W/nTQ=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 29 May 2025 17:15:13 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "3epyw5eyhv"
+        },
+        {
+          "Name": "label",
+          "Value": "uploads/39niprghbdnc1_cc0c.webp"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-C2lGLMhfpo0+5KUIk2vJ8n+ka9KVoTZZvs9Ia/W/nTQ="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/39niprghbdnc1_cc0c.webp",
+      "AssetFile": "C:\\Users\\ERHAN\\Documents\\GitHub\\MySocial\\MySocial\\MySocial.WebUI\\wwwroot\\uploads\\39niprghbdnc1_cc0c.webp",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "39476"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/webp"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"C2lGLMhfpo0+5KUIk2vJ8n+ka9KVoTZZvs9Ia/W/nTQ=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 29 May 2025 17:15:13 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-C2lGLMhfpo0+5KUIk2vJ8n+ka9KVoTZZvs9Ia/W/nTQ="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/39niprghbdnc1_d3fc.3epyw5eyhv.webp",
+      "AssetFile": "C:\\Users\\ERHAN\\Documents\\GitHub\\MySocial\\MySocial\\MySocial.WebUI\\wwwroot\\uploads\\39niprghbdnc1_d3fc.webp",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "39476"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/webp"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"C2lGLMhfpo0+5KUIk2vJ8n+ka9KVoTZZvs9Ia/W/nTQ=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 29 May 2025 17:06:50 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "3epyw5eyhv"
+        },
+        {
+          "Name": "label",
+          "Value": "uploads/39niprghbdnc1_d3fc.webp"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-C2lGLMhfpo0+5KUIk2vJ8n+ka9KVoTZZvs9Ia/W/nTQ="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/39niprghbdnc1_d3fc.webp",
+      "AssetFile": "C:\\Users\\ERHAN\\Documents\\GitHub\\MySocial\\MySocial\\MySocial.WebUI\\wwwroot\\uploads\\39niprghbdnc1_d3fc.webp",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "39476"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/webp"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"C2lGLMhfpo0+5KUIk2vJ8n+ka9KVoTZZvs9Ia/W/nTQ=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 29 May 2025 17:06:50 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-C2lGLMhfpo0+5KUIk2vJ8n+ka9KVoTZZvs9Ia/W/nTQ="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/39niprghbdnc1_e51c.3epyw5eyhv.webp",
+      "AssetFile": "C:\\Users\\ERHAN\\Documents\\GitHub\\MySocial\\MySocial\\MySocial.WebUI\\wwwroot\\uploads\\39niprghbdnc1_e51c.webp",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "39476"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/webp"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"C2lGLMhfpo0+5KUIk2vJ8n+ka9KVoTZZvs9Ia/W/nTQ=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 29 May 2025 17:15:57 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "3epyw5eyhv"
+        },
+        {
+          "Name": "label",
+          "Value": "uploads/39niprghbdnc1_e51c.webp"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-C2lGLMhfpo0+5KUIk2vJ8n+ka9KVoTZZvs9Ia/W/nTQ="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/39niprghbdnc1_e51c.webp",
+      "AssetFile": "C:\\Users\\ERHAN\\Documents\\GitHub\\MySocial\\MySocial\\MySocial.WebUI\\wwwroot\\uploads\\39niprghbdnc1_e51c.webp",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "39476"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/webp"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"C2lGLMhfpo0+5KUIk2vJ8n+ka9KVoTZZvs9Ia/W/nTQ=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 29 May 2025 17:15:57 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-C2lGLMhfpo0+5KUIk2vJ8n+ka9KVoTZZvs9Ia/W/nTQ="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/39niprghbdnc1_ee06.3epyw5eyhv.webp",
+      "AssetFile": "C:\\Users\\ERHAN\\Documents\\GitHub\\MySocial\\MySocial\\MySocial.WebUI\\wwwroot\\uploads\\39niprghbdnc1_ee06.webp",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "39476"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/webp"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"C2lGLMhfpo0+5KUIk2vJ8n+ka9KVoTZZvs9Ia/W/nTQ=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 29 May 2025 17:17:33 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "3epyw5eyhv"
+        },
+        {
+          "Name": "label",
+          "Value": "uploads/39niprghbdnc1_ee06.webp"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-C2lGLMhfpo0+5KUIk2vJ8n+ka9KVoTZZvs9Ia/W/nTQ="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/39niprghbdnc1_ee06.webp",
+      "AssetFile": "C:\\Users\\ERHAN\\Documents\\GitHub\\MySocial\\MySocial\\MySocial.WebUI\\wwwroot\\uploads\\39niprghbdnc1_ee06.webp",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "39476"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/webp"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"C2lGLMhfpo0+5KUIk2vJ8n+ka9KVoTZZvs9Ia/W/nTQ=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 29 May 2025 17:17:33 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-C2lGLMhfpo0+5KUIk2vJ8n+ka9KVoTZZvs9Ia/W/nTQ="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/39niprghbdnc1_ffb4.3epyw5eyhv.webp",
+      "AssetFile": "C:\\Users\\ERHAN\\Documents\\GitHub\\MySocial\\MySocial\\MySocial.WebUI\\wwwroot\\uploads\\39niprghbdnc1_ffb4.webp",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "39476"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/webp"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"C2lGLMhfpo0+5KUIk2vJ8n+ka9KVoTZZvs9Ia/W/nTQ=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 29 May 2025 17:13:48 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "3epyw5eyhv"
+        },
+        {
+          "Name": "label",
+          "Value": "uploads/39niprghbdnc1_ffb4.webp"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-C2lGLMhfpo0+5KUIk2vJ8n+ka9KVoTZZvs9Ia/W/nTQ="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/39niprghbdnc1_ffb4.webp",
+      "AssetFile": "C:\\Users\\ERHAN\\Documents\\GitHub\\MySocial\\MySocial\\MySocial.WebUI\\wwwroot\\uploads\\39niprghbdnc1_ffb4.webp",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "39476"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/webp"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"C2lGLMhfpo0+5KUIk2vJ8n+ka9KVoTZZvs9Ia/W/nTQ=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 29 May 2025 17:13:48 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-C2lGLMhfpo0+5KUIk2vJ8n+ka9KVoTZZvs9Ia/W/nTQ="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/dogo_2036.06yinangr7.jpg",
+      "AssetFile": "C:\\Users\\ERHAN\\Documents\\GitHub\\MySocial\\MySocial\\MySocial.WebUI\\wwwroot\\uploads\\dogo_2036.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "615467"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"eMx6o2jcOmw+oWCCYzgVCpyI+/J8YbeWTyCemt0SSbc=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 29 May 2025 18:48:27 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "06yinangr7"
+        },
+        {
+          "Name": "label",
+          "Value": "uploads/dogo_2036.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-eMx6o2jcOmw+oWCCYzgVCpyI+/J8YbeWTyCemt0SSbc="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/dogo_2036.jpg",
+      "AssetFile": "C:\\Users\\ERHAN\\Documents\\GitHub\\MySocial\\MySocial\\MySocial.WebUI\\wwwroot\\uploads\\dogo_2036.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "615467"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"eMx6o2jcOmw+oWCCYzgVCpyI+/J8YbeWTyCemt0SSbc=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 29 May 2025 18:48:27 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-eMx6o2jcOmw+oWCCYzgVCpyI+/J8YbeWTyCemt0SSbc="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/dogo_5ffa.06yinangr7.jpg",
+      "AssetFile": "C:\\Users\\ERHAN\\Documents\\GitHub\\MySocial\\MySocial\\MySocial.WebUI\\wwwroot\\uploads\\dogo_5ffa.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "615467"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"eMx6o2jcOmw+oWCCYzgVCpyI+/J8YbeWTyCemt0SSbc=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 29 May 2025 18:55:13 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "06yinangr7"
+        },
+        {
+          "Name": "label",
+          "Value": "uploads/dogo_5ffa.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-eMx6o2jcOmw+oWCCYzgVCpyI+/J8YbeWTyCemt0SSbc="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/dogo_5ffa.jpg",
+      "AssetFile": "C:\\Users\\ERHAN\\Documents\\GitHub\\MySocial\\MySocial\\MySocial.WebUI\\wwwroot\\uploads\\dogo_5ffa.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "615467"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"eMx6o2jcOmw+oWCCYzgVCpyI+/J8YbeWTyCemt0SSbc=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 29 May 2025 18:55:13 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-eMx6o2jcOmw+oWCCYzgVCpyI+/J8YbeWTyCemt0SSbc="
+        }
+      ]
+    },
+    {
       "Route": "uploads/download_04e0.jpg",
       "AssetFile": "C:\\Users\\ERHAN\\Documents\\GitHub\\MySocial\\MySocial\\MySocial.WebUI\\wwwroot\\uploads\\download_04e0.jpg",
       "Selectors": [],
@@ -11426,6 +12168,88 @@
         {
           "Name": "integrity",
           "Value": "sha256-JPH2buxkviJVWPauSd30xpZRRBMeEnVmYvpCVx/SurM="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/images_6586.j8ni4vm5zp.jfif",
+      "AssetFile": "C:\\Users\\ERHAN\\Documents\\GitHub\\MySocial\\MySocial\\MySocial.WebUI\\wwwroot\\uploads\\images_6586.jfif",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "16644"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/pjpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"3bkYLF7f7NWAPkbEfi1fs2sYtFq4gpuEGhJfhGcmV84=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 29 May 2025 20:28:22 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "j8ni4vm5zp"
+        },
+        {
+          "Name": "label",
+          "Value": "uploads/images_6586.jfif"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-3bkYLF7f7NWAPkbEfi1fs2sYtFq4gpuEGhJfhGcmV84="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/images_6586.jfif",
+      "AssetFile": "C:\\Users\\ERHAN\\Documents\\GitHub\\MySocial\\MySocial\\MySocial.WebUI\\wwwroot\\uploads\\images_6586.jfif",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "16644"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/pjpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"3bkYLF7f7NWAPkbEfi1fs2sYtFq4gpuEGhJfhGcmV84=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 29 May 2025 20:28:22 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-3bkYLF7f7NWAPkbEfi1fs2sYtFq4gpuEGhJfhGcmV84="
         }
       ]
     }

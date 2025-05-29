@@ -18,8 +18,10 @@
 <body class="d-flex flex-column">
     <div class="container-fluid">
         <div class="row">
-            <aside class="col-3 vh-100 position-fixed bg-light border-end">
-                <a class="align-items-center pb-3 mb-3 link-dark text-dark py-4 text-decoration-none d-flex justify-content-center" asp-controller="Home" asp-action="Index">
+            @if (User.Identity.IsAuthenticated)
+            {
+                <aside class="col-3 vh-100 position-fixed bg-light border-end">
+                    <a class="align-items-center pb-3 mb-3 link-dark text-dark py-4 text-decoration-none d-flex justify-content-center" asp-controller="Home" asp-action="Index">
                     <h1 class=" fw-bold">MySocial</h1>
                 </a>
                 <nav class="d-flex flex-column flex-grow-1">
@@ -40,20 +42,13 @@
                                 Messages
                             </a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link fs-5 @(currentController == "Notification" ? "active" : "text-dark navButton")">
-                                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="@(currentController == "Notification" ? "#FFFFFF" : "black")" class="align-middle d-inline-block me-2 mb-1">
-                                    <path d="M160-200v-80h80v-280q0-83 50-147.5T420-792v-28q0-25 17.5-42.5T480-880q25 0 42.5 17.5T540-820v28q80 20 130 84.5T720-560v280h80v80H160Zm320-300Zm0 420q-33 0-56.5-23.5T400-160h160q0 33-23.5 56.5T480-80ZM320-280h320v-280q0-66-47-113t-113-47q-66 0-113 47t-47 113v280Z" />
-                                </svg>
-                                Notifications
-                            </a>
-                        </li>
                     </ul>
                     <ul class="nav nav-pills flex-column">
                         <partial name="_LoginPartial" />
                     </ul>
                 </nav>
             </aside>
+            }
             <main role="main" class="col-9 offset-3 d-flex flex-column vh-100 p-0">
                 @RenderBody()
             </main>

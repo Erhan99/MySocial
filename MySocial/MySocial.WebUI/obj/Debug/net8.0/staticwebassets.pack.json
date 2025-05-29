@@ -61,10 +61,6 @@
       "PackagePath": "staticwebassets\\js\\chat.js"
     },
     {
-      "Id": "C:\\Users\\ERHAN\\Documents\\GitHub\\MySocial\\MySocial\\MySocial.WebUI\\wwwroot\\js\\home.js",
-      "PackagePath": "staticwebassets\\js\\home.js"
-    },
-    {
       "Id": "C:\\Users\\ERHAN\\Documents\\GitHub\\MySocial\\MySocial\\MySocial.WebUI\\wwwroot\\js\\signalr\\dist\\browser\\signalr.js",
       "PackagePath": "staticwebassets\\js\\signalr\\dist\\browser\\signalr.js"
     },
@@ -301,8 +297,44 @@
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
     },
     {
+      "Id": "C:\\Users\\ERHAN\\Documents\\GitHub\\MySocial\\MySocial\\MySocial.WebUI\\wwwroot\\uploads\\39niprghbdnc1_7a19.webp",
+      "PackagePath": "staticwebassets\\uploads\\39niprghbdnc1_7a19.webp"
+    },
+    {
+      "Id": "C:\\Users\\ERHAN\\Documents\\GitHub\\MySocial\\MySocial\\MySocial.WebUI\\wwwroot\\uploads\\39niprghbdnc1_cc0c.webp",
+      "PackagePath": "staticwebassets\\uploads\\39niprghbdnc1_cc0c.webp"
+    },
+    {
+      "Id": "C:\\Users\\ERHAN\\Documents\\GitHub\\MySocial\\MySocial\\MySocial.WebUI\\wwwroot\\uploads\\39niprghbdnc1_d3fc.webp",
+      "PackagePath": "staticwebassets\\uploads\\39niprghbdnc1_d3fc.webp"
+    },
+    {
+      "Id": "C:\\Users\\ERHAN\\Documents\\GitHub\\MySocial\\MySocial\\MySocial.WebUI\\wwwroot\\uploads\\39niprghbdnc1_e51c.webp",
+      "PackagePath": "staticwebassets\\uploads\\39niprghbdnc1_e51c.webp"
+    },
+    {
+      "Id": "C:\\Users\\ERHAN\\Documents\\GitHub\\MySocial\\MySocial\\MySocial.WebUI\\wwwroot\\uploads\\39niprghbdnc1_ee06.webp",
+      "PackagePath": "staticwebassets\\uploads\\39niprghbdnc1_ee06.webp"
+    },
+    {
+      "Id": "C:\\Users\\ERHAN\\Documents\\GitHub\\MySocial\\MySocial\\MySocial.WebUI\\wwwroot\\uploads\\39niprghbdnc1_ffb4.webp",
+      "PackagePath": "staticwebassets\\uploads\\39niprghbdnc1_ffb4.webp"
+    },
+    {
+      "Id": "C:\\Users\\ERHAN\\Documents\\GitHub\\MySocial\\MySocial\\MySocial.WebUI\\wwwroot\\uploads\\dogo_2036.jpg",
+      "PackagePath": "staticwebassets\\uploads\\dogo_2036.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ERHAN\\Documents\\GitHub\\MySocial\\MySocial\\MySocial.WebUI\\wwwroot\\uploads\\dogo_5ffa.jpg",
+      "PackagePath": "staticwebassets\\uploads\\dogo_5ffa.jpg"
+    },
+    {
       "Id": "C:\\Users\\ERHAN\\Documents\\GitHub\\MySocial\\MySocial\\MySocial.WebUI\\wwwroot\\uploads\\download_04e0.jpg",
       "PackagePath": "staticwebassets\\uploads\\download_04e0.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ERHAN\\Documents\\GitHub\\MySocial\\MySocial\\MySocial.WebUI\\wwwroot\\uploads\\images_6586.jfif",
+      "PackagePath": "staticwebassets\\uploads\\images_6586.jfif"
     },
     {
       "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.MySocial.WebUI.Microsoft.AspNetCore.StaticWebAssetEndpoints.props",

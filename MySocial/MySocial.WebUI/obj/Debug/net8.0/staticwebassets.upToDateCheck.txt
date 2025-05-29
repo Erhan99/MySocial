@@ -12,7 +12,6 @@ wwwroot\icons\profile_icon.svg
 wwwroot\icons\send_icon.svg
 wwwroot\icons\settings_icon.svg
 wwwroot\js\chat.js
-wwwroot\js\home.js
 wwwroot\js\signalr\dist\browser\signalr.js
 wwwroot\js\signalr\dist\browser\signalr.min.js
 wwwroot\lib\bootstrap\dist\css\bootstrap.css
@@ -72,4 +71,13 @@ wwwroot\lib\jquery-validation\LICENSE.md
 wwwroot\lib\jquery-validation-unobtrusive\jquery.validate.unobtrusive.js
 wwwroot\lib\jquery-validation-unobtrusive\jquery.validate.unobtrusive.min.js
 wwwroot\lib\jquery-validation-unobtrusive\LICENSE.txt
+wwwroot\uploads\39niprghbdnc1_7a19.webp
+wwwroot\uploads\39niprghbdnc1_cc0c.webp
+wwwroot\uploads\39niprghbdnc1_d3fc.webp
+wwwroot\uploads\39niprghbdnc1_e51c.webp
+wwwroot\uploads\39niprghbdnc1_ee06.webp
+wwwroot\uploads\39niprghbdnc1_ffb4.webp
+wwwroot\uploads\dogo_2036.jpg
+wwwroot\uploads\dogo_5ffa.jpg
 wwwroot\uploads\download_04e0.jpg
+wwwroot\uploads\images_6586.jfif

@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("MySocial.WebAPI")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ccae31534068aeec18dad46a73daab2e20d9976d")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b026125539358b5d3af27845b193e82dbe28c1ac")]
 [assembly: System.Reflection.AssemblyProductAttribute("MySocial.WebAPI")]
 [assembly: System.Reflection.AssemblyTitleAttribute("MySocial.WebAPI")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

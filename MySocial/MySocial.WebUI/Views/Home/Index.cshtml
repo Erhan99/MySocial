@@ -10,13 +10,16 @@
 
 <div class="text-center py-1">
     <section class="my-1 container bg-white p-3 rounded-3" style="max-width:600px;">
-        <form class="align-items-end" id="postForm">
+        <form class="align-items-end" id="postForm" enctype="multipart/form-data">
             <div class="d-flex">
-                <img src="@Model.profilePictureUrl" alt="Profile Picture" class="rounded-circle me-2" width="50" height="50" />
-                <input type="text" class="form-control rounded-pill shadow-sm py-3" id="postContent" placeholder="What's on your mind, @Model.UserName?" style="background-color: #F0F2F5;" />
+                <img src="@Model.profilePictureUrl" alt="Profile Picture" class="rounded-circle me-2 flex-shrink-0" width="50" height="50" />
+                <div class="flex-grow-1">
+                    <div id="editorjs" class="border rounded p-3 mb-2" ></div>
+                    <input type="hidden" name="EditorContent" id="editorContent" />
+                </div>
             </div>
                 <div class="d-flex justify-content-end mt-3">
-                    <button type="submit" class="btn btn-primary px-3 rounded-pill">Post</button>
+                    <button type="submit" class="btn btn-primary px-3 rounded-pill" id="PostButton">Post</button>
                 </div>
             </form>
     </section>
@@ -25,15 +28,50 @@
 		
 	</section>
 </div>
+@Html.Raw("<script src=\"https://cdn.jsdelivr.net/npm/@editorjs/editorjs@latest\"></script>")
+@Html.Raw("<script src=\"https://cdn.jsdelivr.net/npm/@editorjs/header@latest\"></script>")
+@Html.Raw("<script src=\"https://cdn.jsdelivr.net/npm/@editorjs/image@latest\"></script>")
 <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/editorjs-html@4.0.0/.build/edjsHTML.browser.js"></script>
 <script>
     const baseUrl = "https://localhost:7164/api/";
+
     const postsSection = document.querySelector("#posts");
-    const loggedUserId = "@logged";
-    localStorage.setItem("Logged", loggedUserId);
     let posts = [];
 
+    const loggedUserId = "@logged";
+    localStorage.setItem("Logged", loggedUserId);
+ 
+    const editor = new EditorJS({
+        holder: "editorjs",
+        minHeight: 0,
+        placeholder: "What's on your mind, @Model.UserName?",
+        tools: {
+            header: {
+                class: Header,
+            },
+            image: {
+                class: ImageTool, 
+                config: {
+                    endpoints: {
+                        byFile: "/Upload"
+                    }
+                }
+            }
+        },
+        onReady: () => {
+            checkEditorContent("PostButton", editor);
+        },
+        onChange: () => {
+            checkEditorContent("PostButton", editor);
+        }
+    })
+    let editor2 = null;
+    const edjsParser = edjsHTML();
+
     const card = (post, canEdit) => {
+        const data = JSON.parse(post.content); 
+        const html = edjsParser.parse(data);
         return(
                    `<div class="container bg-white my-3 rounded-1 shadow-sm post" style="max-width:600px;">
       <div class="d-flex align-items-start p-3">
@@ -72,8 +110,8 @@
             `: ""}
           </div>
           
-          <div id="post-content-${post.id}" class="text-xl-start mb-2">
-            <p class="mb-2">${post.content}</p>
+          <div id="post-content-${post.id}" class="editorjs-content text-xl-start mb-2">
+            ${html}
           </div>
 
           <div class="d-flex align-items-center gap-3 mt-3">
@@ -98,6 +136,20 @@
     `
                 )
        }
+
+    const checkEditorContent = async(buttonId, editorInstance) => {
+        const output = await editorInstance.save();
+        console.log(output.blocks.length)
+        const isEmpty = output.blocks.length === 0 || output.blocks.every(block => {
+            if (block.type === 'paragraph' || block.type === 'header') {
+                return !block.data.text.trim();
+            }
+            return false;
+        });
+
+        document.getElementById(buttonId).disabled = isEmpty;
+    }
+
 
     // fetch and load posts
         const FetchAndLoadPosts = async () => {
@@ -167,8 +219,10 @@
     // add a post
        const addPost = async(e) => {
            e.preventDefault();
-          const content = document.querySelector("#postContent").value;
           try {
+             const output = await editor.save();
+             const content = JSON.stringify(output);
+
              axios.post(baseUrl + "post/", {
                 Content: content,
                 UserId: loggedUserId
@@ -224,18 +278,46 @@
        const EditButtonClick = (e) => {
            e.preventDefault();
            const postId = e.currentTarget.dataset.postId;
+           const postToEdit = posts.find(p => p.id == postId);
            const contentArea = document.querySelector(`#post-content-${postId}`);
-           const prevContent = contentArea.querySelector("p").innerHTML;
+
            contentArea.innerHTML = `
                    <form class="align-items-end">
-                    <input type="text" class="form-control rounded-2 shadow-sm py-3" id="editContent" value="${prevContent}"/>
+                    <div class="flex-grow-1">
+                        <div id="editorjs2" class="border rounded p-3 mb-2" ></div>
+                        <input type="hidden" name="EditorContent" id="editorContent" />
+                    </div>
                     <div class="d-flex justify-content-end gap-1 mt-2">
                         <button type="button" class="btn btn-primary px-3 rounded-2 cancel" data-post-id="${postId}">Cancel</button>
-                        <button type="submit" class="btn btn-primary px-3 rounded-2 edit-2" data-post-id="${postId}">Edit</button>
+                        <button type="submit" class="btn btn-primary px-3 rounded-2 edit-2" data-post-id="${postId}" id="EditPostButton">Edit</button>
                     </div>
                    </form>`;     
-                   CancelEditButtonHandler();
-                   ConfirmEditButtonHandler();
+
+            editor2 = new EditorJS({
+                holder: "editorjs2",
+                minHeight: 0,
+                placeholder: "What's on your mind, @Model.UserName?",
+                tools: {
+                    header: {
+                        class: Header,
+                    },
+                    image: {
+                        class: ImageTool,
+                        config: {
+                            endpoints: {
+                                byFile: "/Upload"
+                            }
+                        }
+                    }
+                },
+                data:JSON.parse(postToEdit.content),
+                onChange: () => {
+                    checkEditorContent("EditPostButton", editor2);
+                }
+            })
+
+           CancelEditButtonHandler();
+           ConfirmEditButtonHandler();
        }
 
        const AttachEditButtonHandler = () => {
@@ -248,8 +330,12 @@
        const CancelEditButtonClick = (e) => {
            e.preventDefault()
            const postId = e.currentTarget.dataset.postId
+           const postToEdit = posts.find(p => p.id == postId);
+           const data = JSON.parse(postToEdit.content);
+           const content = edjsParser.parse(data);
+
            const contentArea = document.querySelector(`#post-content-${postId}`)
-           const content = posts.find(p => p.id == postId).content
+           
            contentArea.innerHTML = `
                    <p>${content}</p>`;
        };
@@ -262,11 +348,14 @@
        };
 
        // edit
-       const ConfirmEditButtonClick = (e) => {
+       const ConfirmEditButtonClick = async(e) => {
            e.preventDefault();
            try{
+               const output = await editor2.save();
+               const content = JSON.stringify(output);
+
                const postId = e.currentTarget.dataset.postId
-               const content = document.querySelector("#editContent").value
+
                axios.put(baseUrl + `post/${postId}`, {
                    Content: content
                },
@@ -276,9 +365,11 @@
                    }
                }
                );
+               editor2.clear();
+
+               const html = edjsParser.parse(output);
                const contentArea = document.querySelector(`#post-content-${postId}`);
-               contentArea.innerHTML = `
-                   <p>${content}</p>`;
+               contentArea.innerHTML = html;
                const post = posts.find(p => p.id == postId)
                if(post){
                    post.content = content;

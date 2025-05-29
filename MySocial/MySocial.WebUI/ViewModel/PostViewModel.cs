@@ -10,9 +10,12 @@ namespace MySocial.WebUI.ViewModel
         public string profilePictureUrl {  get; set; }
 
         public int postId { get; set; } = -1;
+        public IFormFile? Image {  get; set; } = null;
         public string ReceiverId { get; set; } = "";
         public string ReceiverName { get; set; } = "";
         public string receiverProfilePictureUrl { get; set; } = "";
         public IEnumerable<UserDTO> Users { get; set; } = [];
+        
+
     }
 }
