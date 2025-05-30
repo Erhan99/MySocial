@@ -12,6 +12,7 @@ namespace MySocial.Application.DTOs.Comment
         public int Id { get; set; }
         public string Content { get; set; }
         public DateTime CreatedAt { get; set; }
+        public bool IsModified { get; set; }
         public UserDTO User { get; set; }
     }
 }

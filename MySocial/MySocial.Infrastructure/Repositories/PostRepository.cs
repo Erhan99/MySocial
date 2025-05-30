@@ -27,6 +27,7 @@ namespace MySocial.Infrastructure.Repositories
                     Id = p.Id,
                     Content = p.Content,
                     CreatedAt = p.CreatedAt,
+                    IsModified = p.IsModified,
                     User = new UserDTO
                     {
                         Id = p.UserId,
@@ -60,6 +61,7 @@ namespace MySocial.Infrastructure.Repositories
                     Id = p.Id,
                     Content = p.Content,
                     CreatedAt = p.CreatedAt,
+                    IsModified = p.IsModified,
                     User = new UserDTO
                     {
                         Id = p.UserId,
@@ -98,7 +100,7 @@ namespace MySocial.Infrastructure.Repositories
         {
             Post post = _context.Posts.Where(p => p.Id == postId).FirstOrDefault();
             post.Content = content;
-            post.CreatedAt = DateTime.Now;
+            post.IsModified = true;
             _context.SaveChanges();
         }
     }

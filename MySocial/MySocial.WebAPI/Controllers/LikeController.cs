@@ -1,5 +1,4 @@
 ﻿using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using MySocial.Application.DTOs.Like;
 using MySocial.Application.Interfaces.Repositories;
@@ -8,6 +7,7 @@ namespace MySocial.WebAPI.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+    [Authorize]
     public class LikeController : ControllerBase
     {
         private readonly ILikeInterface _likeRepository;

@@ -1,10 +1,5 @@
-﻿using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Identity;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using MySocial.Application.Interfaces.Repositories;
-using MySocial.Infrastructure.Data;
-using MySocial.Infrastructure.Identity;
 
 namespace MySocial.WebAPI.Controllers
 {

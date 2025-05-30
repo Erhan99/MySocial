@@ -32,6 +32,7 @@ namespace MySocial.Infrastructure.Repositories
                 {
                     Id = c.Id,
                     CreatedAt = c.CreatedAt,
+                    IsModified = c.IsModified,
                     Content = c.Content,
                     User = new UserDTO
                     {
@@ -42,11 +43,32 @@ namespace MySocial.Infrastructure.Repositories
                 }).FirstOrDefault();
         }
 
+        public IEnumerable<CommentDTO> GetCommentByPost(int postId)
+        {
+            var users = _context.Users;
+            return _context.Comments
+                .Where(c => c.PostId == postId)
+                .OrderByDescending(c => c.CreatedAt)
+                .Select(c => new CommentDTO
+                {
+                    Id = c.Id,
+                    CreatedAt = c.CreatedAt,
+                    IsModified = c.IsModified,
+                    Content = c.Content,
+                    User = new UserDTO
+                    {
+                        Id = c.UserId,
+                        UserName = users.Where(u => u.Id == c.UserId).Select(u => u.UserName).FirstOrDefault(),
+                        ProfilePictureUrl = users.Where(u => u.Id == c.UserId).Select(u => u.ProfilePictureUrl).FirstOrDefault()
+                    }
+                }).ToList();
+        }
+
         public void UpdateComment(int commentId, string content)
         {
             Comment comment = _context.Comments.Where(c => c.Id == commentId).FirstOrDefault();
             comment.Content = content;
-            comment.CreatedAt = DateTime.Now;
+            comment.IsModified = true;
             _context.SaveChanges();
         }
 

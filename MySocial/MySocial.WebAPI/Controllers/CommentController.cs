@@ -1,23 +1,24 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Hosting;
 using MySocial.Application.DTOs.Comment;
 using MySocial.Application.DTOs.Post;
 using MySocial.Application.Interfaces.Repositories;
 using MySocial.Domain.Entities;
-using MySocial.Infrastructure.Repositories;
-using System.Security.Claims;
 
 namespace MySocial.WebAPI.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+    [Authorize]
     public class CommentController : ControllerBase
     {
         private readonly ICommentRepository _commentRepository;
-
-        public CommentController(ICommentRepository commentRepository)
+        private readonly IAuthorizationService _authorizationService;
+        public CommentController(ICommentRepository commentRepository, IAuthorizationService authorizationService)
         {
             _commentRepository = commentRepository;
+            _authorizationService = authorizationService;
         }
 
         [HttpGet("{id}")]
@@ -28,6 +29,29 @@ namespace MySocial.WebAPI.Controllers
             if (comment == null) return NotFound();
 
             return Ok(comment);
+        }
+
+        [HttpGet("post/{postId}")]
+        public async Task<IActionResult> GetByPost(int postId)
+        {
+            var comments = _commentRepository.GetCommentByPost(postId);
+
+            if (comments == null) return NotFound();
+
+            List<AutoriseCommentDTO> authComments = new List<AutoriseCommentDTO>();
+            foreach (var comment in comments)
+            {
+                var result = await _authorizationService.AuthorizeAsync(User, comment, "CanEditComment");
+                var dto = new AutoriseCommentDTO
+                {
+                    Comment = comment,
+                    canEdit = result.Succeeded,
+                    canDelete = result.Succeeded
+                };
+
+                authComments.Add(dto);
+            }
+            return Ok(authComments);
         }
 
         [HttpPost]

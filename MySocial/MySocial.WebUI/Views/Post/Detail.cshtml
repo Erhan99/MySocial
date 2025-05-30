@@ -16,7 +16,7 @@
         </a>
     </div>
 </div>
-<div class="bg-white h-100 container" style="max-width:600px;">
+<div class="bg-white container" style="max-width:600px;">
     <section id="postArea">
     </section>
     <hr />
@@ -34,12 +34,17 @@
     </section>
 </div>
 <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/editorjs-html@4.0.0/.build/edjsHTML.browser.js"></script>
 <script>
     let postData; 
     let comments;
     const baseUrl = "https://localhost:7164/api/";
     const loggedUserId = "@logged";
+    const edjsParser = edjsHTML();
+
     const PostCard = (post) => {
+        const data = JSON.parse(post.content);
+        const html = edjsParser.parse(data);
         return(
                    `<div class="container my-3 post" style="max-width:600px;">
       <div class="d-flex align-items-start p-3">
@@ -63,7 +68,7 @@
           </div>
 
           <div id="post-content-${post.id}" class="text-xl-start mb-2">
-            <p class="mb-2">${post.content}</p>
+            <p class="mb-2">${html}</p>
           </div>
 
           <div class="d-flex align-items-center gap-3 mt-3">
@@ -107,7 +112,8 @@
                 )
        };
 
-    const CommentCard = (comment) => {
+    const CommentCard = (comment, canEdit) => {
+       console.log(canEdit)
            return( `
            <div class="container my-3 rounded-1 comment" style="max-width:600px;">
       <div class="d-flex align-items-start p-3">
@@ -129,6 +135,7 @@
               </small>
             </div>
 
+             ${canEdit ? `
             <div class="dropdown ">
               <button class="btn" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="black">
@@ -142,6 +149,7 @@
                 </form>
               </div>
             </div>
+            `: ""}
           </div>
 
           <div id="comment-content-${comment.id}" class="text-xl-start mb-2">
@@ -154,26 +162,33 @@
     //fetch the post
     const FetchPost = async() => {
         try{
-            const response = await axios.get(baseUrl + `post/@postId`)
+            const response = await axios.get(baseUrl + `post/@postId`, {withCredentials: true})
             postData = response.data
             document.querySelector("#postArea").innerHTML += PostCard(postData)
-            const commentsArea = document.querySelector("#commentsArea")
-            comments = postData.comments
-            if(comments.length == 0){
-                commentsArea.innerHTML
-            }
-            comments.forEach(c => {
-                            commentsArea.innerHTML = CommentCard(c) + commentsArea.innerHTML
-            })
-            document.querySelector("#replyForm1").addEventListener("submit", PostComment)
-            LikeButtonEventHandler();
-            attachDeleteHandlers();
-            AttachEditButtonHandler();
-                CancelEditButtonHandler();
-                ConfirmEditButtonHandler();
+
         }catch(error){
             console.log("error fetching post", error)
         }
+        try{
+            const response2 = await axios.get(baseUrl + `comment/post/@postId`, {withCredentials: true})
+            const commentsArea = document.querySelector("#commentsArea")
+            comments = response2.data
+            console.log(comments)
+            if(comments.length == 0){
+                commentsArea.innerHTML = `<p class="text-muted fst-italic text-center">No comments yet. Be the first to comment!</p>`
+            }
+            comments.forEach(c => {
+                            commentsArea.innerHTML = CommentCard(c.comment, c.canEdit) + commentsArea.innerHTML
+            })
+        }catch(error){
+            console.log("error fetching comments", error)
+        }
+        document.querySelector("#replyForm1").addEventListener("submit", PostComment)
+        LikeButtonEventHandler();
+        attachDeleteHandlers();
+        AttachEditButtonHandler();
+        CancelEditButtonHandler();
+        ConfirmEditButtonHandler();
     }
 
     //post the comment (modal)
@@ -188,10 +203,16 @@
             },{
                  headers: {
                      "RequestVerificationToken" : document.getElementById("RequestVerificationToken").value
-                 }
+                 },
+                 withCredentials: true
              });
+             const comment = response.data;
+             postData.comments.push(comment)
              const commentsArea = document.querySelector("#commentsArea");
              commentsArea.innerHTML = CommentCard(response.data) + commentsArea.innerHTML;
+
+             const commentCount = document.querySelector(`#comment-count-${postData.id}`)
+             commentCount.innerHTML = parseInt(postData.comments.length)
              attachDeleteHandlers();
         }catch(error){
             console.log("error posting comment", error)
@@ -210,10 +231,16 @@
             },{
                  headers: {
                      "RequestVerificationToken" : document.getElementById("RequestVerificationToken").value
-                 }
+                 },
+                 withCredentials: true
              });
+             const comment = response.data;
+             postData.comments.push(comment)
              const commentsArea = document.querySelector("#commentsArea");
              commentsArea.innerHTML = CommentCard(response.data) + commentsArea.innerHTML;
+             
+             const commentCount = document.querySelector(`#comment-count-${postData.id}`)
+             commentCount.innerHTML = parseInt(postData.comments.length)
              attachDeleteHandlers();
         }catch(error){
             console.log("error posting comment", error)
@@ -233,10 +260,10 @@
 
                 try {
                     if(isLiked){
-                        await axios.put(baseUrl + "Like/", { postId: parseInt(postId), userId: loggedUserId }, { headers: {"RequestVerificationToken" : document.getElementById("RequestVerificationToken").value}})
+                        await axios.put(baseUrl + "Like/", { postId: parseInt(postId), userId: loggedUserId }, { headers: {"RequestVerificationToken" : document.getElementById("RequestVerificationToken").value}, withCredentials: true })
                     }
                     else{
-                        await axios.post(baseUrl + "Like/", { postId: parseInt(postId), userId: loggedUserId }, {headers: {"RequestVerificationToken" : document.getElementById("RequestVerificationToken").value}});
+                        await axios.post(baseUrl + "Like/", { postId: parseInt(postId), userId: loggedUserId }, {headers: {"RequestVerificationToken" : document.getElementById("RequestVerificationToken").value}, withCredentials: true});
                     }
                    const likeState = !isLiked;
                    svg.setAttribute("fill", likeState ? "red" : "#e3e3e3");
@@ -263,7 +290,8 @@
                {
                    headers: {
                        'RequestVerificationToken': document.getElementById("RequestVerificationToken").value
-                   }
+                   },
+                   withCredentials: true
                }
                );
                const card = e.currentTarget.closest(".comment");
@@ -339,7 +367,8 @@
                {
                    headers: {
                        'RequestVerificationToken': document.getElementById("RequestVerificationToken").value
-                   }
+                   },
+                   withCredentials: true
                }
                );
                const contentArea = document.querySelector(`#comment-content-${commentId}`);

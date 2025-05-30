@@ -70,6 +70,7 @@
     const edjsParser = edjsHTML();
 
     const card = (post, canEdit) => {
+        const isModified = post.isModified ? " (edited)" : "";
         const data = JSON.parse(post.content); 
         const html = edjsParser.parse(data);
         return(
@@ -82,14 +83,14 @@
             <div>
               <strong class="me-2">${post.user.userName}</strong>
               <span class="text-muted me-2">·</span>
-              <small class="text-muted timestamp">
+              <small class="text-muted timestamp" id="post-date-${post.id}">
                 ${new Date(post.createdAt).toLocaleString(undefined, {
                   day: 'numeric',
                   month: 'long',
                   year: 'numeric',
                   hour: 'numeric',
                   minute: '2-digit'
-                })}
+                }) + isModified}
               </small>
             </div>
 
@@ -139,7 +140,6 @@
 
     const checkEditorContent = async(buttonId, editorInstance) => {
         const output = await editorInstance.save();
-        console.log(output.blocks.length)
         const isEmpty = output.blocks.length === 0 || output.blocks.every(block => {
             if (block.type === 'paragraph' || block.type === 'header') {
                 return !block.data.text.trim();
@@ -154,20 +154,12 @@
     // fetch and load posts
         const FetchAndLoadPosts = async () => {
         try {
-            const response = await axios.get(baseUrl + "post/");
-            posts = response.data;
-
-            for (const post of posts) {
-                let canEdit = false;
-                try {
-                        const authRes = await axios.get(baseUrl + `post/authorization/CanEdit/${post.id}`, {
+            const response = await axios.get(baseUrl + "post/", {
                 withCredentials: true
             });
-                    canEdit = authRes.data.authorized;
-                } catch (error) {
-                    console.error("Authorization failed", error);
-                }
-                postsSection.innerHTML += card(post, canEdit);
+            posts = response.data;
+            for (const post of posts) {
+                postsSection.innerHTML += card(post.post, post.canEdit);
             }
 
             LikeButtonEventHandler();
@@ -189,15 +181,15 @@
                 const svg = this.querySelector("svg");
                 const postId = this.dataset.postId;
                 const countEl = document.getElementById(`like-count-${postId}`);
-                const post = posts.find(p => p.id == postId);
+                const post = posts.find(p => p.post.id == postId).post;
                 let isLiked = post.usersLiked.includes(loggedUserId);
 
                 try {
                     if(isLiked){
-                        await axios.put(baseUrl + "Like/", { postId: parseInt(postId), userId: loggedUserId }, { headers: {"RequestVerificationToken" : document.getElementById("RequestVerificationToken").value}})
+                        await axios.put(baseUrl + "Like/", { postId: parseInt(postId), userId: loggedUserId }, { headers: {"RequestVerificationToken" : document.getElementById("RequestVerificationToken").value}, withCredentials: true})
                     }
                     else{
-                        await axios.post(baseUrl + "Like/", { postId: parseInt(postId), userId: loggedUserId }, {headers: {"RequestVerificationToken" : document.getElementById("RequestVerificationToken").value}});
+                        await axios.post(baseUrl + "Like/", { postId: parseInt(postId), userId: loggedUserId }, {headers: {"RequestVerificationToken" : document.getElementById("RequestVerificationToken").value}, withCredentials: true});
                     }
                    const likeState = !isLiked;
                    svg.setAttribute("fill", likeState ? "red" : "#e3e3e3");
@@ -221,6 +213,7 @@
            e.preventDefault();
           try {
              const output = await editor.save();
+             editor.clear();
              const content = JSON.stringify(output);
 
              axios.post(baseUrl + "post/", {
@@ -229,11 +222,12 @@
              }, {
                  headers: {
                      "RequestVerificationToken" : document.getElementById("RequestVerificationToken").value
-                 }
+                 },
+                withCredentials: true
              }).then(response => {
                 const post = response.data;
                 postsSection.innerHTML = card(post, true) + postsSection.innerHTML;
-                posts.push(post)
+                posts.push({post: post, canEdit: true, canDelete: false})
                 LikeButtonEventHandler();
                 AttachEditButtonHandler();
                 CancelEditButtonHandler();
@@ -249,17 +243,20 @@
        const deletePost = async (e) => {
            e.preventDefault();
            try{
-               const postId = e.currentTarget.dataset.postId
-               axios.put(baseUrl + `post/remove/${postId}`,
+               const form = e.currentTarget; 
+               const postId = form.dataset.postId;
+               console.log(postId)
+               await axios.put(baseUrl + `post/remove/${postId}`, null,
                {
                    headers: {
                        'RequestVerificationToken': document.getElementById("RequestVerificationToken").value
-                   }
+                   },
+                   withCredentials: true
                }
                );
-               const card = e.currentTarget.closest(".post");
+               const card = form.closest(".post");
                card.remove();
-               posts.filter(p => p.id != postId);
+               posts = posts.filter(p => p.post.id != postId);
            }catch(error){
                console.error("Delete post failed", error)
            }
@@ -278,9 +275,9 @@
        const EditButtonClick = (e) => {
            e.preventDefault();
            const postId = e.currentTarget.dataset.postId;
-           const postToEdit = posts.find(p => p.id == postId);
+           const postToEdit = posts.find(p => p.post.id == postId).post;
            const contentArea = document.querySelector(`#post-content-${postId}`);
-
+           console.log(postToEdit)
            contentArea.innerHTML = `
                    <form class="align-items-end">
                     <div class="flex-grow-1">
@@ -330,7 +327,8 @@
        const CancelEditButtonClick = (e) => {
            e.preventDefault()
            const postId = e.currentTarget.dataset.postId
-           const postToEdit = posts.find(p => p.id == postId);
+           const postToEdit = posts.find(p => p.post.id == postId).post;
+           console.log(postToEdit)
            const data = JSON.parse(postToEdit.content);
            const content = edjsParser.parse(data);
 
@@ -362,17 +360,21 @@
                {
                    headers: {
                        'RequestVerificationToken': document.getElementById("RequestVerificationToken").value
-                   }
+                   },
+                   withCredentials: true
                }
                );
                editor2.clear();
 
                const html = edjsParser.parse(output);
                const contentArea = document.querySelector(`#post-content-${postId}`);
+               const dateArea = document.querySelector(`#post-date-${postId}`);
                contentArea.innerHTML = html;
-               const post = posts.find(p => p.id == postId)
+               dateArea.innerHTML += " (edited)";
+               const post = posts.find(p => p.post.id == postId).post
                if(post){
                    post.content = content;
+                   post.isModifed = true;
                };
            }catch(error){
                console.error("Edit post failed", error)

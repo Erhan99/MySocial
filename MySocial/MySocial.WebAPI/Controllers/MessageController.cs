@@ -1,10 +1,7 @@
-﻿using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Hosting;
+﻿using Microsoft.AspNetCore.Mvc;
 using MySocial.Application.DTOs.Message;
 using MySocial.Application.Interfaces.Repositories;
 using MySocial.Domain.Entities;
-using MySocial.Infrastructure.Repositories;
 
 namespace MySocial.WebAPI.Controllers
 {

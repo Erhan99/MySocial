@@ -6,6 +6,8 @@ using MySocial.Application.Interfaces.Repositories;
 using MySocial.Infrastructure.Data;
 using MySocial.Infrastructure.Identity;
 using MySocial.Infrastructure.Repositories;
+using MySocial.WebAPI.Handlers;
+using MySocial.WebAPI.Requirements;
 using MySocial.WebUI.Requirements;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -40,13 +42,18 @@ builder.Services.AddScoped<ILikeInterface, LikeRepository>();
 builder.Services.AddScoped<ICommentRepository, CommentRepository>();
 builder.Services.AddScoped<IMessageRepository, MessageRepository>();
 builder.Services.AddScoped<IUserRepository, UserRepository>();
+
 builder.Services.AddScoped<IAuthorizationHandler, IsPostAuthorHandler>();
+builder.Services.AddScoped<IAuthorizationHandler, IsCommentAuthorHandler>();
 
 builder.Services.AddAuthorization(options =>
 {
     options.AddPolicy("AdminOnly", policyBuilder => policyBuilder.RequireClaim("IsAdmin"));
     options.AddPolicy("CanEditPost", policyBuilder => policyBuilder.AddRequirements(
         new IsPostAuthorRequirement()
+        ));
+    options.AddPolicy("CanEditComment", policyBuilder => policyBuilder.AddRequirements(
+        new IsCommentAuthorRequirement()
         ));
 });
 

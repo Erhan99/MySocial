@@ -12,7 +12,7 @@ namespace MySocial.Application.Interfaces.Repositories
     {
         public void AddComment(Comment comment);
         public CommentDTO GetCommentById(int commentId);
-
+        public IEnumerable<CommentDTO> GetCommentByPost(int postId);
         public void DeleteComment(int commentId);
         public void UpdateComment(int CommentId, string content);
     }

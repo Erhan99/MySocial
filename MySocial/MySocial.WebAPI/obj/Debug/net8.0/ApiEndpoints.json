@@ -54,6 +54,22 @@
   },
   {
     "ContainingType": "MySocial.WebAPI.Controllers.CommentController",
+    "Method": "GetByPost",
+    "RelativePath": "api/Comment/post/{postId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "postId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MySocial.WebAPI.Controllers.CommentController",
     "Method": "Remove",
     "RelativePath": "api/Comment/remove/{id}",
     "HttpMethod": "PUT",
@@ -227,22 +243,6 @@
       {
         "Name": "request",
         "Type": "MySocial.Application.DTOs.Post.UpdatePostDTO",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "MySocial.WebAPI.Controllers.PostController",
-    "Method": "CanEditPost",
-    "RelativePath": "api/Post/authorization/CanEdit/{postId}",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "postId",
-        "Type": "System.Int32",
         "IsRequired": true
       }
     ],
