@@ -34,6 +34,7 @@ namespace MySocial.WebAPI.Controllers
         [HttpGet("post/{postId}")]
         public async Task<IActionResult> GetByPost(int postId)
         {
+            var isAdmin = User.HasClaim("IsAdmin", "");
             var comments = _commentRepository.GetCommentByPost(postId);
 
             if (comments == null) return NotFound();
@@ -42,14 +43,25 @@ namespace MySocial.WebAPI.Controllers
             foreach (var comment in comments)
             {
                 var result = await _authorizationService.AuthorizeAsync(User, comment, "CanEditComment");
-                var dto = new AutoriseCommentDTO
+                if (!isAdmin)
                 {
-                    Comment = comment,
-                    canEdit = result.Succeeded,
-                    canDelete = result.Succeeded
-                };
-
-                authComments.Add(dto);
+                    var dto = new AutoriseCommentDTO
+                    {
+                        Comment = comment,
+                        canEdit = result.Succeeded,
+                        canDelete = result.Succeeded
+                    };
+                    authComments.Add(dto);
+                }
+                else {
+                    var dto = new AutoriseCommentDTO
+                    {
+                        Comment = comment,
+                        canEdit = result.Succeeded,
+                        canDelete = true
+                    };
+                    authComments.Add(dto);
+                }
             }
             return Ok(authComments);
         }

@@ -81,3 +81,4 @@ wwwroot\uploads\dogo_2036.jpg
 wwwroot\uploads\dogo_5ffa.jpg
 wwwroot\uploads\download_04e0.jpg
 wwwroot\uploads\images_6586.jfif
+wwwroot\uploads\pexels-pixabay-39866_50a3.jpg

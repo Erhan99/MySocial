@@ -26,7 +26,7 @@ namespace MySocial.Infrastructure.Repositories
         {
             var users = _context.Users;
             return _context.Comments
-                .Where(c => c.Id == commentId)
+                .Where(c => c.Id == commentId && c.IsDeleted == false)
                 .OrderByDescending(c => c.CreatedAt)
                 .Select(c => new CommentDTO
                 {
@@ -47,7 +47,7 @@ namespace MySocial.Infrastructure.Repositories
         {
             var users = _context.Users;
             return _context.Comments
-                .Where(c => c.PostId == postId)
+                .Where(c => c.PostId == postId && c.IsDeleted == false)
                 .OrderByDescending(c => c.CreatedAt)
                 .Select(c => new CommentDTO
                 {

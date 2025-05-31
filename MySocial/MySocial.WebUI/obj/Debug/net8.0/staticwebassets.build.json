@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "4inr9rcfrYEJUUHZNPeBMx3/vs8qd3K+hBrWar1KjFQ=",
+  "Hash": "LRU8CTIFgvK1yOtSFmrERjLsyg10LJu0ho7eqc/K0KQ=",
   "Source": "MySocial.WebUI",
   "BasePath": "_content/MySocial.WebUI",
   "Mode": "Default",
@@ -1606,8 +1606,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "53srvevqv6",
-      "Integrity": "8a1v6kiXd2sDj/Z/nccxSk2qjn12uuxbYg/Rnl9PP24=",
+      "Fingerprint": "d0z569g00j",
+      "Integrity": "fcraV152w4BPd1NDWt0kiTvpwOcJqiSfzrO0L5VBDaU=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\js\\chat.js"
@@ -3060,6 +3060,27 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\uploads\\images_6586.jfif"
+    },
+    {
+      "Identity": "C:\\Users\\ERHAN\\Documents\\GitHub\\MySocial\\MySocial\\MySocial.WebUI\\wwwroot\\uploads\\pexels-pixabay-39866_50a3.jpg",
+      "SourceId": "MySocial.WebUI",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\ERHAN\\Documents\\GitHub\\MySocial\\MySocial\\MySocial.WebUI\\wwwroot\\",
+      "BasePath": "_content/MySocial.WebUI",
+      "RelativePath": "uploads/pexels-pixabay-39866_50a3#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "743n652uk9",
+      "Integrity": "efbuoBiPb//T+oiiEGtX0t8XqZ8XECxfZ9MpKMyxx6k=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\pexels-pixabay-39866_50a3.jpg"
     }
   ],
   "Endpoints": [
@@ -6350,7 +6371,7 @@
       ]
     },
     {
-      "Route": "js/chat.53srvevqv6.js",
+      "Route": "js/chat.d0z569g00j.js",
       "AssetFile": "C:\\Users\\ERHAN\\Documents\\GitHub\\MySocial\\MySocial\\MySocial.WebUI\\wwwroot\\js\\chat.js",
       "Selectors": [],
       "ResponseHeaders": [
@@ -6360,7 +6381,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "4054"
+          "Value": "4124"
         },
         {
           "Name": "Content-Type",
@@ -6368,11 +6389,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"8a1v6kiXd2sDj/Z/nccxSk2qjn12uuxbYg/Rnl9PP24=\""
+          "Value": "\"fcraV152w4BPd1NDWt0kiTvpwOcJqiSfzrO0L5VBDaU=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 26 May 2025 14:53:19 GMT"
+          "Value": "Sat, 31 May 2025 17:59:48 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -6382,7 +6403,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "53srvevqv6"
+          "Value": "d0z569g00j"
         },
         {
           "Name": "label",
@@ -6390,7 +6411,7 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-8a1v6kiXd2sDj/Z/nccxSk2qjn12uuxbYg/Rnl9PP24="
+          "Value": "sha256-fcraV152w4BPd1NDWt0kiTvpwOcJqiSfzrO0L5VBDaU="
         }
       ]
     },
@@ -6405,7 +6426,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "4054"
+          "Value": "4124"
         },
         {
           "Name": "Content-Type",
@@ -6413,11 +6434,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"8a1v6kiXd2sDj/Z/nccxSk2qjn12uuxbYg/Rnl9PP24=\""
+          "Value": "\"fcraV152w4BPd1NDWt0kiTvpwOcJqiSfzrO0L5VBDaU=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 26 May 2025 14:53:19 GMT"
+          "Value": "Sat, 31 May 2025 17:59:48 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -6427,7 +6448,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-8a1v6kiXd2sDj/Z/nccxSk2qjn12uuxbYg/Rnl9PP24="
+          "Value": "sha256-fcraV152w4BPd1NDWt0kiTvpwOcJqiSfzrO0L5VBDaU="
         }
       ]
     },
@@ -12250,6 +12271,88 @@
         {
           "Name": "integrity",
           "Value": "sha256-3bkYLF7f7NWAPkbEfi1fs2sYtFq4gpuEGhJfhGcmV84="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/pexels-pixabay-39866_50a3.743n652uk9.jpg",
+      "AssetFile": "C:\\Users\\ERHAN\\Documents\\GitHub\\MySocial\\MySocial\\MySocial.WebUI\\wwwroot\\uploads\\pexels-pixabay-39866_50a3.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1634021"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"efbuoBiPb//T+oiiEGtX0t8XqZ8XECxfZ9MpKMyxx6k=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 31 May 2025 16:36:48 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "743n652uk9"
+        },
+        {
+          "Name": "label",
+          "Value": "uploads/pexels-pixabay-39866_50a3.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-efbuoBiPb//T+oiiEGtX0t8XqZ8XECxfZ9MpKMyxx6k="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/pexels-pixabay-39866_50a3.jpg",
+      "AssetFile": "C:\\Users\\ERHAN\\Documents\\GitHub\\MySocial\\MySocial\\MySocial.WebUI\\wwwroot\\uploads\\pexels-pixabay-39866_50a3.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1634021"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"efbuoBiPb//T+oiiEGtX0t8XqZ8XECxfZ9MpKMyxx6k=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 31 May 2025 16:36:48 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-efbuoBiPb//T+oiiEGtX0t8XqZ8XECxfZ9MpKMyxx6k="
         }
       ]
     }

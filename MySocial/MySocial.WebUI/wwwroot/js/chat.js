@@ -53,7 +53,8 @@ const FetchMessages = async () => {
             params: {
                 userId1: user,
                 userId2: receiver
-            }
+            },
+            withCredentials: true
         });
         messages = response.data
         messages.forEach(message => {
@@ -78,7 +79,8 @@ const CreateMessage = async (content) => {
             Content: content,
             ReceiverId: receiver,
             SenderId: user
-        });
+        },
+        {withCredentials: true});
         const message = response.data
         messages.push(message)
         messageList.innerHTML += card(message)

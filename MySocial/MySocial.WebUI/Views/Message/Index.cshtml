@@ -15,7 +15,7 @@
         <div class="mt-4">
             <h1>Chats</h1>
             <div id="chatList">
-                <p>No chats available, message a user.</p>
+                <p class="text-muted fst-italic text-center">No chats available, message a user.</p>
             </div>
         </div>
     </div>
@@ -34,7 +34,8 @@
             const response = await axios.get(baseUrl + "user/", {
                  headers: {
                      "RequestVerificationToken" : document.getElementById("RequestVerificationToken").value
-                 }
+                     },
+                    withCredentials: true
              })
 
              users = response.data.filter(user => user.id != "@Model.UserId");
@@ -93,12 +94,14 @@ const FetchMessages = async () => {
                     const response = await axios.get(baseUrl + `Message/MessagedUser/@Model.UserId`, {
                      headers: {
                          "RequestVerificationToken" : document.getElementById("RequestVerificationToken").value
-                     }
+                         },
+                    withCredentials: true
             });
             console.log(response.data)
                 lastMessages = response.data;
-                // TODO controleer eerst of data leeg is
-                    ChatList.innerHTML = "";
+                if(lastMessages.length > 0){
+                   ChatList.innerHTML = "";
+                }
                 lastMessages.forEach(m => {
                         ChatList.innerHTML += ChatCard(m)
                 })

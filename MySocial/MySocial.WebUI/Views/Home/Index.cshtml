@@ -69,7 +69,7 @@
     let editor2 = null;
     const edjsParser = edjsHTML();
 
-    const card = (post, canEdit) => {
+    const card = (post, canEdit, canDelete) => {
         const isModified = post.isModified ? " (edited)" : "";
         const data = JSON.parse(post.content); 
         const html = edjsParser.parse(data);
@@ -94,7 +94,7 @@
               </small>
             </div>
 
-            ${canEdit ? `
+            ${canEdit || canDelete ? `
             <div class="dropdown ">
               <button class="btn" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 <svg xmlns="http:www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="black">
@@ -102,7 +102,9 @@
                 </svg>
               </button>
               <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                <button type="button" class="dropdown-item edit" data-post-id="${post.id}">Edit</button>
+              ${ canEdit ?
+                `<button type="button" class="dropdown-item edit" data-post-id="${post.id}">Edit</button>` : ""
+              }
                 <form class="deletePostForm" data-post-id="${post.id}">
                   <button type="submit" class="dropdown-item">Delete</button>
                 </form>
@@ -159,7 +161,7 @@
             });
             posts = response.data;
             for (const post of posts) {
-                postsSection.innerHTML += card(post.post, post.canEdit);
+                postsSection.innerHTML += card(post.post, post.canEdit, post.canDelete);
             }
 
             LikeButtonEventHandler();
@@ -370,7 +372,11 @@
                const contentArea = document.querySelector(`#post-content-${postId}`);
                const dateArea = document.querySelector(`#post-date-${postId}`);
                contentArea.innerHTML = html;
-               dateArea.innerHTML += " (edited)";
+
+               if(!dateArea.innerHTML.includes("edited")){
+                   dateArea.innerHTML += " (edited)"
+               }
+               
                const post = posts.find(p => p.post.id == postId).post
                if(post){
                    post.content = content;

@@ -337,6 +337,10 @@
       "PackagePath": "staticwebassets\\uploads\\images_6586.jfif"
     },
     {
+      "Id": "C:\\Users\\ERHAN\\Documents\\GitHub\\MySocial\\MySocial\\MySocial.WebUI\\wwwroot\\uploads\\pexels-pixabay-39866_50a3.jpg",
+      "PackagePath": "staticwebassets\\uploads\\pexels-pixabay-39866_50a3.jpg"
+    },
+    {
       "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.MySocial.WebUI.Microsoft.AspNetCore.StaticWebAssetEndpoints.props",
       "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssetEndpoints.props"
     },

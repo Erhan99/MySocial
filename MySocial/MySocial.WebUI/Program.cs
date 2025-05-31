@@ -12,7 +12,9 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllersWithViews();
 builder.Services.AddSignalR();
 
-var keysFolder = new DirectoryInfo(@"C:\MySocial\Keys");
+var env = builder.Environment;
+var keysFolder = new DirectoryInfo(Path.Combine(env.ContentRootPath, "..", "..", "Keys"));
+
 builder.Services.AddDataProtection()
     .PersistKeysToFileSystem(keysFolder)
     .SetApplicationName("MySocial");

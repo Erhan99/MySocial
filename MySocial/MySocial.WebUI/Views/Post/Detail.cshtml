@@ -112,8 +112,8 @@
                 )
        };
 
-    const CommentCard = (comment, canEdit) => {
-       console.log(canEdit)
+    const CommentCard = (comment, canEdit, canDelete) => {
+        const isModified = comment.isModified ? " (edited)" : "";
            return( `
            <div class="container my-3 rounded-1 comment" style="max-width:600px;">
       <div class="d-flex align-items-start p-3">
@@ -124,18 +124,18 @@
             <div>
               <strong class="me-2">${comment.user.userName}</strong>
               <span class="text-muted me-2">·</span>
-              <small class="text-muted timestamp">
+              <small class="text-muted timestamp" id="comment-date-${comment.id}">
                 ${new Date(comment.createdAt).toLocaleString(undefined, {
                   day: 'numeric',
                   month: 'long',
                   year: 'numeric',
                   hour: 'numeric',
                   minute: '2-digit'
-                })}
+                }) + isModified}
               </small>
             </div>
 
-             ${canEdit ? `
+             ${canEdit || canDelete ? `
             <div class="dropdown ">
               <button class="btn" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="black">
@@ -143,7 +143,9 @@
                 </svg>
               </button>
               <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                <button type="button" class="dropdown-item edit" data-comment-id="${comment.id}">Edit</button>
+                ${ canEdit ?
+                `<button type="button" class="dropdown-item edit" data-comment-id="${comment.id}">Edit</button>` : ""
+              }
                 <form class="deleteCommentForm" data-comment-id="${comment.id}">
                   <button type="submit" class="dropdown-item">Delete</button>
                 </form>
@@ -178,7 +180,7 @@
                 commentsArea.innerHTML = `<p class="text-muted fst-italic text-center">No comments yet. Be the first to comment!</p>`
             }
             comments.forEach(c => {
-                            commentsArea.innerHTML = CommentCard(c.comment, c.canEdit) + commentsArea.innerHTML
+                            commentsArea.innerHTML = CommentCard(c.comment, c.canEdit, c.canDelete) + commentsArea.innerHTML
             })
         }catch(error){
             console.log("error fetching comments", error)
@@ -209,11 +211,14 @@
              const comment = response.data;
              postData.comments.push(comment)
              const commentsArea = document.querySelector("#commentsArea");
-             commentsArea.innerHTML = CommentCard(response.data) + commentsArea.innerHTML;
+             commentsArea.innerHTML = CommentCard(response.data, true) + commentsArea.innerHTML;
 
              const commentCount = document.querySelector(`#comment-count-${postData.id}`)
              commentCount.innerHTML = parseInt(postData.comments.length)
-             attachDeleteHandlers();
+        attachDeleteHandlers();
+        AttachEditButtonHandler();
+        CancelEditButtonHandler();
+        ConfirmEditButtonHandler();
         }catch(error){
             console.log("error posting comment", error)
         }
@@ -237,11 +242,14 @@
              const comment = response.data;
              postData.comments.push(comment)
              const commentsArea = document.querySelector("#commentsArea");
-             commentsArea.innerHTML = CommentCard(response.data) + commentsArea.innerHTML;
+             commentsArea.innerHTML = CommentCard(response.data, true) + commentsArea.innerHTML;
              
              const commentCount = document.querySelector(`#comment-count-${postData.id}`)
              commentCount.innerHTML = parseInt(postData.comments.length)
-             attachDeleteHandlers();
+            attachDeleteHandlers();
+            AttachEditButtonHandler();
+            CancelEditButtonHandler();
+            ConfirmEditButtonHandler();
         }catch(error){
             console.log("error posting comment", error)
         }
@@ -286,7 +294,7 @@
            e.preventDefault();
            try{
                const commentId = e.currentTarget.dataset.commentId
-               axios.put(baseUrl + `comment/remove/${commentId}`,
+               axios.put(baseUrl + `comment/remove/${commentId}`, null,
                {
                    headers: {
                        'RequestVerificationToken': document.getElementById("RequestVerificationToken").value
@@ -296,7 +304,10 @@
                );
                const card = e.currentTarget.closest(".comment");
                card.remove();
-               comments.filter(c => c.id != commentId);
+               comments = comments.filter(c => c.comment.id != commentId);
+               postData.comments = comments;
+               const commentCount = document.querySelector(`#comment-count-${postData.id}`)
+                commentCount.innerHTML = parseInt(postData.comments.length)
            }catch(error){
                console.error("Delete comment failed", error)
            }
@@ -343,7 +354,7 @@
            e.preventDefault()
            const commentId = e.currentTarget.dataset.commentId
            const contentArea = document.querySelector(`#comment-content-${commentId}`)
-           const content = comments.find(c => c.id == commentId).content
+           const content = comments.find(c => c.comment.id == commentId).comment.content
            contentArea.innerHTML = `
                    <p>${content}</p>`;
        };
@@ -372,11 +383,18 @@
                }
                );
                const contentArea = document.querySelector(`#comment-content-${commentId}`);
+               const dateArea = document.querySelector(`#comment-date-${commentId}`);
+
                contentArea.innerHTML = `
                    <p>${content}</p>`;
-               const comment = comments.find(c => c.id == commentId)
+
+               if(!dateArea.innerHTML.includes("edited")){
+                  dateArea.innerHTML += " (edited)"
+               }
+               const comment = comments.find(c => c.comment.id == commentId).comment.content
                if(comment){
                    comment.content = content;
+                   comment.isModified = true;
                };
            }catch(error){
                console.error("Edit comment failed", error)

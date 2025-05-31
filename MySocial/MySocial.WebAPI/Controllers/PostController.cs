@@ -21,19 +21,34 @@ namespace MySocial.WebAPI.Controllers
         [HttpGet]
         public async Task<IActionResult> GetAll()
         {
+            var isAdmin = User.HasClaim("IsAdmin", ""); 
+
             var posts = _postRepository.GetPosts();
             List<AutorisedPostDTO> authPosts = new List<AutorisedPostDTO>();
             foreach (var post in posts)
             {
                 var result = await _authorizationService.AuthorizeAsync(User, post, "CanEditPost");
-                var dto = new AutorisedPostDTO
+                if (!isAdmin)
                 {
-                    Post = post,
-                    canEdit = result.Succeeded,
-                    canDelete = result.Succeeded 
-                };
+                    var dto = new AutorisedPostDTO
+                    {
+                        Post = post,
+                        canEdit = result.Succeeded,
+                        canDelete = result.Succeeded
+                    };
+                    authPosts.Add(dto);
+                }
+                else
+                {
+                    var dto = new AutorisedPostDTO
+                    {
+                        Post = post,
+                        canEdit = result.Succeeded,
+                        canDelete = true
+                    };
+                    authPosts.Add(dto);
+                }
 
-                authPosts.Add(dto);
             }
             return Ok(authPosts);
         }

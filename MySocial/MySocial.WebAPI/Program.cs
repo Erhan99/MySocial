@@ -18,7 +18,9 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-var keysFolder = new DirectoryInfo(@"C:\MySocial\Keys");
+var env = builder.Environment;
+var keysFolder = new DirectoryInfo(Path.Combine(env.ContentRootPath, "..", "..", "Keys"));
+
 builder.Services.AddDataProtection()
     .PersistKeysToFileSystem(keysFolder)
     .SetApplicationName("MySocial");
