@@ -1,10 +1,12 @@
 using Microsoft.AspNetCore.DataProtection;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using MySocial.Application.Interfaces.Repositories;
 using MySocial.Infrastructure.Data;
 using MySocial.Infrastructure.Identity;
 using MySocial.Infrastructure.Repositories;
 using MySocial.WebUI.Hubs;
+using System.Security.Claims;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -61,6 +63,29 @@ app.UseAuthorization();
 app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Home}/{action=Index}/{id?}");
+
+// seed admin
+using (var scope = app.Services.CreateScope())
+{
+    var userManager = scope.ServiceProvider.GetService<UserManager<ApplicationUser>>();
+    if (userManager.FindByEmailAsync("admin@test.be").Result == null)
+    {
+        ApplicationUser adminUser = new ApplicationUser();
+        adminUser.UserName = "admin";
+        adminUser.Email = "admin@test.be";
+        adminUser.EmailConfirmed = true; 
+
+        var result = userManager.CreateAsync(adminUser, "Admin123!").Result;
+        if (result.Succeeded)
+        {
+            Claim[] claims = new Claim[] {
+                new Claim("IsAdmin", string.Empty)
+                };
+
+            userManager.AddClaimsAsync(adminUser, claims).Wait();
+        }
+    }
+}
 
 app.MapRazorPages();
 app.MapHub<ChatHub>("/chatHub");

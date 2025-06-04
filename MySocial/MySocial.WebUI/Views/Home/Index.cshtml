@@ -12,7 +12,7 @@
     <section class="my-1 container bg-white p-3 rounded-3" style="max-width:600px;">
         <form class="align-items-end" id="postForm" enctype="multipart/form-data">
             <div class="d-flex">
-                <img src="@Model.profilePictureUrl" alt="Profile Picture" class="rounded-circle me-2 flex-shrink-0" width="50" height="50" />
+                <img src="@Model.profilePictureUrl" alt="Profile Picture" class="rounded-circle me-2 flex-shrink-0" style="object-fit: cover;" width="50" height="50" />
                 <div class="flex-grow-1">
                     <div id="editorjs" class="border rounded p-3 mb-2" ></div>
                     <input type="hidden" name="EditorContent" id="editorContent" />
@@ -76,7 +76,7 @@
         return(
                    `<div class="container bg-white my-3 rounded-1 shadow-sm post" style="max-width:600px;">
       <div class="d-flex align-items-start p-3">
-        <img src="${post.user.profilePictureUrl}" alt="Profile Picture" class="rounded-circle me-3" width="50" height="50" />
+        <img src="${post.user.profilePictureUrl}" alt="Profile Picture" class="rounded-circle me-3" style="object-fit: cover;" width="50" height="50" />
 
         <div class="flex-grow-1">
           <div class="d-flex justify-content-between align-items-center">

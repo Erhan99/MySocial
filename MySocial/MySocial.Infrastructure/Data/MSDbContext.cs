@@ -2,6 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using MySocial.Domain.Entities;
 using MySocial.Infrastructure.Identity;
+using System.Reflection.Emit;
 
 namespace MySocial.Infrastructure.Data
 {
@@ -48,18 +49,6 @@ namespace MySocial.Infrastructure.Data
                 .HasForeignKey(c => c.UserId)
                 .OnDelete(DeleteBehavior.Restrict);
 
-            builder.Entity<FriendRequest>()
-                .HasOne<ApplicationUser>()
-                .WithMany()
-                .HasForeignKey(fr => fr.SenderId)
-                .OnDelete(DeleteBehavior.Restrict);
-
-            builder.Entity<FriendRequest>()
-                .HasOne<ApplicationUser>()
-                .WithMany()
-                .HasForeignKey(fr => fr.ReceiverId)
-                .OnDelete(DeleteBehavior.Cascade);
-
             builder.Entity<Message>()
                 .HasOne<ApplicationUser>()
                 .WithMany()
@@ -71,13 +60,10 @@ namespace MySocial.Infrastructure.Data
                 .WithMany()
                 .HasForeignKey(m => m.ReceiverId)
                 .OnDelete(DeleteBehavior.Cascade);
-
-
         }
         public DbSet<Post> Posts { get; set; }
         public DbSet<Like> Likes { get; set; }
         public DbSet<Comment> Comments { get; set; }
-        public DbSet<FriendRequest> FriendRequests { get; set; }
         public DbSet<Message> Messages { get; set; }
     }
 }

@@ -56,8 +56,7 @@ namespace MySocial.WebAPI.Controllers
             {
                 Content = dto.Content,
                 ReceiverId = dto.ReceiverId,
-                SenderId = dto.SenderId,
-                Status = "Sent"
+                SenderId = dto.SenderId
             };
             _messageRepository.CreateMessage(message);
             return CreatedAtAction(nameof(GetById), new { id=message.Id }, _messageRepository.getMessageById(message.Id));

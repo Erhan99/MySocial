@@ -22,34 +22,34 @@
             {
                 <aside class="col-3 vh-100 position-fixed bg-light border-end">
                     <a class="align-items-center pb-3 mb-3 link-dark text-dark py-4 text-decoration-none d-flex justify-content-center" asp-controller="Home" asp-action="Index">
-                    <h1 class=" fw-bold">MySocial</h1>
-                </a>
-                <nav class="d-flex flex-column flex-grow-1">
-                    <ul class="nav nav-pills flex-column mb-auto">
-                        <li class="nav-item">
-                            <a class="nav-link fs-5 @(currentController == "Home" || currentController == "Post" ? "active" : "text-dark navButton")" asp-controller="Home" asp-action="Index">
-                                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="@(currentController == "Home" || currentController == "Post" ? "#FFFFFF" : "black")" class="align-middle d-inline-block me-2 mb-1">
-                                    <path d="M240-200h120v-240h240v240h120v-360L480-740 240-560v360Zm-80 80v-480l320-240 320 240v480H520v-240h-80v240H160Zm320-350Z" />
-                                </svg>
-                                Home
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link fs-5 @(currentController == "Message" ? "active" : "text-dark navButton")" asp-controller="Message" asp-action="Index">
-                                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="@(currentController == "Message" ? "#FFFFFF" : "black")" class="align-middle d-inline-block me-2 mb-1">
-                                    <path d="M240-400h320v-80H240v80Zm0-120h480v-80H240v80Zm0-120h480v-80H240v80ZM80-80v-720q0-33 23.5-56.5T160-880h640q33 0 56.5 23.5T880-800v480q0 33-23.5 56.5T800-240H240L80-80Zm126-240h594v-480H160v525l46-45Zm-46 0v-480 480Z" />
-                                </svg>
-                                Messages
-                            </a>
-                        </li>
-                    </ul>
-                    <ul class="nav nav-pills flex-column">
-                        <partial name="_LoginPartial" />
-                    </ul>
-                </nav>
-            </aside>
+                        <h1 class=" fw-bold">MySocial</h1>
+                    </a>
+                    <nav class="d-flex flex-column flex-grow-1">
+                        <ul class="nav nav-pills flex-column mb-auto">
+                            <li class="nav-item">
+                                <a class="nav-link fs-5 @(currentController == "Home" || currentController == "Post" ? "active" : "text-dark navButton")" asp-controller="Home" asp-action="Index">
+                                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="@(currentController == "Home" || currentController == "Post" ? "#FFFFFF" : "black")" class="align-middle d-inline-block me-2 mb-1">
+                                        <path d="M240-200h120v-240h240v240h120v-360L480-740 240-560v360Zm-80 80v-480l320-240 320 240v480H520v-240h-80v240H160Zm320-350Z" />
+                                    </svg>
+                                    Home
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link fs-5 @(currentController == "Message" ? "active" : "text-dark navButton")" asp-controller="Message" asp-action="Index">
+                                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="@(currentController == "Message" ? "#FFFFFF" : "black")" class="align-middle d-inline-block me-2 mb-1">
+                                        <path d="M240-400h320v-80H240v80Zm0-120h480v-80H240v80Zm0-120h480v-80H240v80ZM80-80v-720q0-33 23.5-56.5T160-880h640q33 0 56.5 23.5T880-800v480q0 33-23.5 56.5T800-240H240L80-80Zm126-240h594v-480H160v525l46-45Zm-46 0v-480 480Z" />
+                                    </svg>
+                                    Messages
+                                </a>
+                            </li>
+                        </ul>
+                        <ul class="nav nav-pills flex-column">
+                            <partial name="_LoginPartial" />
+                        </ul>
+                    </nav>
+                </aside>
             }
-            <main role="main" class="col-9 offset-3 d-flex flex-column vh-100 p-0">
+            <main role="main" class="@(User.Identity.IsAuthenticated ? "col-9 offset-3 d-flex flex-column vh-100 p-0" : "d-flex justify-content-center align-items-center vh-100")">
                 @RenderBody()
             </main>
         </div>

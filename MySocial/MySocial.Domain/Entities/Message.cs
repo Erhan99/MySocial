@@ -15,7 +15,5 @@ namespace MySocial.Domain.Entities
         public string SenderId { get; set; }
         [ForeignKey("ReceiverId")]
         public string ReceiverId { get; set; }
-        public string Status { get; set; }
-        public bool IsDeleted { get; set; } = false;
     }
 }
