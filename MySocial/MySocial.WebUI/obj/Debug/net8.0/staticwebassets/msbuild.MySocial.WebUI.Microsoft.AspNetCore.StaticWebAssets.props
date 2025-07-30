@@ -1332,149 +1332,59 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\MySocial.WebUI.a78mu1sqaa.bundle.scp.css'))</OriginalItemSpec>
     </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\39niprghbdnc1_8fec.webp'))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\asian-handsome-man-with-a-mustache-smiling-on-white-background-free-photo_91ba.jpg'))">
       <SourceType>Package</SourceType>
       <SourceId>MySocial.WebUI</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/MySocial.WebUI</BasePath>
-      <RelativePath>uploads/39niprghbdnc1_8fec.webp</RelativePath>
+      <RelativePath>uploads/asian-handsome-man-with-a-mustache-smiling-on-white-background-free-photo_91ba.jpg</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Primary</AssetRole>
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>3epyw5eyhv</Fingerprint>
-      <Integrity>C2lGLMhfpo0+5KUIk2vJ8n+ka9KVoTZZvs9Ia/W/nTQ=</Integrity>
+      <Fingerprint>05ddzsdifk</Fingerprint>
+      <Integrity>PDnIxqfaxwuawcszfIRVd25MKw3TkjwZuU8/2c3CX+E=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\39niprghbdnc1_8fec.webp'))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\asian-handsome-man-with-a-mustache-smiling-on-white-background-free-photo_91ba.jpg'))</OriginalItemSpec>
     </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\a-young-woman-with-brown-hair-wearing-an-off-white-sweater-thoughtfully-looking-up-with-chin-resting-on-her-hand-photo_c78f.jpeg'))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\photo-1438761681033-6461ffad8d80_082a.jpg'))">
       <SourceType>Package</SourceType>
       <SourceId>MySocial.WebUI</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/MySocial.WebUI</BasePath>
-      <RelativePath>uploads/a-young-woman-with-brown-hair-wearing-an-off-white-sweater-thoughtfully-looking-up-with-chin-resting-on-her-hand-photo_c78f.jpeg</RelativePath>
+      <RelativePath>uploads/photo-1438761681033-6461ffad8d80_082a.jpg</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Primary</AssetRole>
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>fmpxpd9tkr</Fingerprint>
-      <Integrity>99yHQ7JpRGMY54K6/HONrCihEgzgLh47cpVBZZ/IKC0=</Integrity>
+      <Fingerprint>4ekqhnxev3</Fingerprint>
+      <Integrity>vOYe+ghxEFcnwgY0zpaf7nqsUkUw4kpZ4qTG5e0B4KU=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\a-young-woman-with-brown-hair-wearing-an-off-white-sweater-thoughtfully-looking-up-with-chin-resting-on-her-hand-photo_c78f.jpeg'))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\photo-1438761681033-6461ffad8d80_082a.jpg'))</OriginalItemSpec>
     </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\depositphotos_19841901-stock-photo-asian-young-business-man-close_2457.jpg'))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\thumb16_5989.jpg'))">
       <SourceType>Package</SourceType>
       <SourceId>MySocial.WebUI</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/MySocial.WebUI</BasePath>
-      <RelativePath>uploads/depositphotos_19841901-stock-photo-asian-young-business-man-close_2457.jpg</RelativePath>
+      <RelativePath>uploads/thumb16_5989.jpg</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Primary</AssetRole>
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>gu2iuzancs</Fingerprint>
-      <Integrity>6IiMLaHVqOY4Vkibl9kk2hz+/4k28R0jawKn5DYhats=</Integrity>
+      <Fingerprint>x1a0gzr391</Fingerprint>
+      <Integrity>G+GiDb7OjjTNT+wWvPyWKMHQkyc7zCSrXB6ac6rT3pE=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\depositphotos_19841901-stock-photo-asian-young-business-man-close_2457.jpg'))</OriginalItemSpec>
-    </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\depositphotos_19841901-stock-photo-asian-young-business-man-close_8252.jpg'))">
-      <SourceType>Package</SourceType>
-      <SourceId>MySocial.WebUI</SourceId>
-      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
-      <BasePath>_content/MySocial.WebUI</BasePath>
-      <RelativePath>uploads/depositphotos_19841901-stock-photo-asian-young-business-man-close_8252.jpg</RelativePath>
-      <AssetKind>All</AssetKind>
-      <AssetMode>All</AssetMode>
-      <AssetRole>Primary</AssetRole>
-      <RelatedAsset></RelatedAsset>
-      <AssetTraitName></AssetTraitName>
-      <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>gu2iuzancs</Fingerprint>
-      <Integrity>6IiMLaHVqOY4Vkibl9kk2hz+/4k28R0jawKn5DYhats=</Integrity>
-      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\depositphotos_19841901-stock-photo-asian-young-business-man-close_8252.jpg'))</OriginalItemSpec>
-    </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\desk_aedc.jpg'))">
-      <SourceType>Package</SourceType>
-      <SourceId>MySocial.WebUI</SourceId>
-      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
-      <BasePath>_content/MySocial.WebUI</BasePath>
-      <RelativePath>uploads/desk_aedc.jpg</RelativePath>
-      <AssetKind>All</AssetKind>
-      <AssetMode>All</AssetMode>
-      <AssetRole>Primary</AssetRole>
-      <RelatedAsset></RelatedAsset>
-      <AssetTraitName></AssetTraitName>
-      <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>pb271ecu0e</Fingerprint>
-      <Integrity>ex/0Ju7Tq7v4+aWYUtwRwIe+6YCPD0RC/q1vxPnLwew=</Integrity>
-      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\desk_aedc.jpg'))</OriginalItemSpec>
-    </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\photo-1590086782957-93c06ef21604_cd6c.jpg'))">
-      <SourceType>Package</SourceType>
-      <SourceId>MySocial.WebUI</SourceId>
-      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
-      <BasePath>_content/MySocial.WebUI</BasePath>
-      <RelativePath>uploads/photo-1590086782957-93c06ef21604_cd6c.jpg</RelativePath>
-      <AssetKind>All</AssetKind>
-      <AssetMode>All</AssetMode>
-      <AssetRole>Primary</AssetRole>
-      <RelatedAsset></RelatedAsset>
-      <AssetTraitName></AssetTraitName>
-      <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>s19u2zgk9v</Fingerprint>
-      <Integrity>UDdwKWcDNKct3Ot0ouwJkGkFXe6OV/tXz8b8lrWEY9E=</Integrity>
-      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\photo-1590086782957-93c06ef21604_cd6c.jpg'))</OriginalItemSpec>
-    </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\portrait-young-smiling-man_171337-11976_152a.avif'))">
-      <SourceType>Package</SourceType>
-      <SourceId>MySocial.WebUI</SourceId>
-      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
-      <BasePath>_content/MySocial.WebUI</BasePath>
-      <RelativePath>uploads/portrait-young-smiling-man_171337-11976_152a.avif</RelativePath>
-      <AssetKind>All</AssetKind>
-      <AssetMode>All</AssetMode>
-      <AssetRole>Primary</AssetRole>
-      <RelatedAsset></RelatedAsset>
-      <AssetTraitName></AssetTraitName>
-      <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>3btovpxr1b</Fingerprint>
-      <Integrity>X/3U1GZCEOxKR23S3lDH7QkHiFC8LnI41FDLdzWSDHw=</Integrity>
-      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\portrait-young-smiling-man_171337-11976_152a.avif'))</OriginalItemSpec>
-    </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\sunny_0954.jpg'))">
-      <SourceType>Package</SourceType>
-      <SourceId>MySocial.WebUI</SourceId>
-      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
-      <BasePath>_content/MySocial.WebUI</BasePath>
-      <RelativePath>uploads/sunny_0954.jpg</RelativePath>
-      <AssetKind>All</AssetKind>
-      <AssetMode>All</AssetMode>
-      <AssetRole>Primary</AssetRole>
-      <RelatedAsset></RelatedAsset>
-      <AssetTraitName></AssetTraitName>
-      <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>r4jff1qjrf</Fingerprint>
-      <Integrity>m4EjIPrzXUhi4CVD3xfjijo5pdVLfBcCD2fFiAWP1zo=</Integrity>
-      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\sunny_0954.jpg'))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\thumb16_5989.jpg'))</OriginalItemSpec>
     </StaticWebAsset>
   </ItemGroup>
 </Project>

@@ -15,7 +15,7 @@ builder.Services.AddControllersWithViews();
 builder.Services.AddSignalR();
 
 var env = builder.Environment;
-var keysFolder = new DirectoryInfo(Path.Combine(env.ContentRootPath, "..", "..", "Keys"));
+var keysFolder = new DirectoryInfo(Path.Combine(env.ContentRootPath, "..", "Keys"));
 
 builder.Services.AddDataProtection()
     .PersistKeysToFileSystem(keysFolder)

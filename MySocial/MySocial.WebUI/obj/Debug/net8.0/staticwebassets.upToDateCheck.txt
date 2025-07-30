@@ -71,11 +71,6 @@ wwwroot\lib\jquery-validation\LICENSE.md
 wwwroot\lib\jquery-validation-unobtrusive\jquery.validate.unobtrusive.js
 wwwroot\lib\jquery-validation-unobtrusive\jquery.validate.unobtrusive.min.js
 wwwroot\lib\jquery-validation-unobtrusive\LICENSE.txt
-wwwroot\uploads\39niprghbdnc1_8fec.webp
-wwwroot\uploads\a-young-woman-with-brown-hair-wearing-an-off-white-sweater-thoughtfully-looking-up-with-chin-resting-on-her-hand-photo_c78f.jpeg
-wwwroot\uploads\depositphotos_19841901-stock-photo-asian-young-business-man-close_2457.jpg
-wwwroot\uploads\depositphotos_19841901-stock-photo-asian-young-business-man-close_8252.jpg
-wwwroot\uploads\desk_aedc.jpg
-wwwroot\uploads\photo-1590086782957-93c06ef21604_cd6c.jpg
-wwwroot\uploads\portrait-young-smiling-man_171337-11976_152a.avif
-wwwroot\uploads\sunny_0954.jpg
+wwwroot\uploads\asian-handsome-man-with-a-mustache-smiling-on-white-background-free-photo_91ba.jpg
+wwwroot\uploads\photo-1438761681033-6461ffad8d80_082a.jpg
+wwwroot\uploads\thumb16_5989.jpg

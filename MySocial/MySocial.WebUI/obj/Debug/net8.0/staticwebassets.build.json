@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "+/n1rYeEbfV7WVxGw26eKkrEi/7S1bX7Qi4/szf8jNI=",
+  "Hash": "8ZcCnsT3maM2ff8UrwDts6z+Mso7MALyzMgFY85SlDY=",
   "Source": "MySocial.WebUI",
   "BasePath": "_content/MySocial.WebUI",
   "Mode": "Default",
@@ -2852,12 +2852,12 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
     },
     {
-      "Identity": "C:\\Users\\ERHAN\\Documents\\GitHub\\MySocial\\MySocial\\MySocial.WebUI\\wwwroot\\uploads\\39niprghbdnc1_8fec.webp",
+      "Identity": "C:\\Users\\ERHAN\\Documents\\GitHub\\MySocial\\MySocial\\MySocial.WebUI\\wwwroot\\uploads\\asian-handsome-man-with-a-mustache-smiling-on-white-background-free-photo_91ba.jpg",
       "SourceId": "MySocial.WebUI",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\ERHAN\\Documents\\GitHub\\MySocial\\MySocial\\MySocial.WebUI\\wwwroot\\",
       "BasePath": "_content/MySocial.WebUI",
-      "RelativePath": "uploads/39niprghbdnc1_8fec#[.{fingerprint}]?.webp",
+      "RelativePath": "uploads/asian-handsome-man-with-a-mustache-smiling-on-white-background-free-photo_91ba#[.{fingerprint}]?.jpg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -2866,19 +2866,19 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "3epyw5eyhv",
-      "Integrity": "C2lGLMhfpo0+5KUIk2vJ8n+ka9KVoTZZvs9Ia/W/nTQ=",
+      "Fingerprint": "05ddzsdifk",
+      "Integrity": "PDnIxqfaxwuawcszfIRVd25MKw3TkjwZuU8/2c3CX+E=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\uploads\\39niprghbdnc1_8fec.webp"
+      "OriginalItemSpec": "wwwroot\\uploads\\asian-handsome-man-with-a-mustache-smiling-on-white-background-free-photo_91ba.jpg"
     },
     {
-      "Identity": "C:\\Users\\ERHAN\\Documents\\GitHub\\MySocial\\MySocial\\MySocial.WebUI\\wwwroot\\uploads\\a-young-woman-with-brown-hair-wearing-an-off-white-sweater-thoughtfully-looking-up-with-chin-resting-on-her-hand-photo_c78f.jpeg",
+      "Identity": "C:\\Users\\ERHAN\\Documents\\GitHub\\MySocial\\MySocial\\MySocial.WebUI\\wwwroot\\uploads\\photo-1438761681033-6461ffad8d80_082a.jpg",
       "SourceId": "MySocial.WebUI",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\ERHAN\\Documents\\GitHub\\MySocial\\MySocial\\MySocial.WebUI\\wwwroot\\",
       "BasePath": "_content/MySocial.WebUI",
-      "RelativePath": "uploads/a-young-woman-with-brown-hair-wearing-an-off-white-sweater-thoughtfully-looking-up-with-chin-resting-on-her-hand-photo_c78f#[.{fingerprint}]?.jpeg",
+      "RelativePath": "uploads/photo-1438761681033-6461ffad8d80_082a#[.{fingerprint}]?.jpg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -2887,19 +2887,19 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "fmpxpd9tkr",
-      "Integrity": "99yHQ7JpRGMY54K6/HONrCihEgzgLh47cpVBZZ/IKC0=",
+      "Fingerprint": "4ekqhnxev3",
+      "Integrity": "vOYe+ghxEFcnwgY0zpaf7nqsUkUw4kpZ4qTG5e0B4KU=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\uploads\\a-young-woman-with-brown-hair-wearing-an-off-white-sweater-thoughtfully-looking-up-with-chin-resting-on-her-hand-photo_c78f.jpeg"
+      "OriginalItemSpec": "wwwroot\\uploads\\photo-1438761681033-6461ffad8d80_082a.jpg"
     },
     {
-      "Identity": "C:\\Users\\ERHAN\\Documents\\GitHub\\MySocial\\MySocial\\MySocial.WebUI\\wwwroot\\uploads\\depositphotos_19841901-stock-photo-asian-young-business-man-close_2457.jpg",
+      "Identity": "C:\\Users\\ERHAN\\Documents\\GitHub\\MySocial\\MySocial\\MySocial.WebUI\\wwwroot\\uploads\\thumb16_5989.jpg",
       "SourceId": "MySocial.WebUI",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\ERHAN\\Documents\\GitHub\\MySocial\\MySocial\\MySocial.WebUI\\wwwroot\\",
       "BasePath": "_content/MySocial.WebUI",
-      "RelativePath": "uploads/depositphotos_19841901-stock-photo-asian-young-business-man-close_2457#[.{fingerprint}]?.jpg",
+      "RelativePath": "uploads/thumb16_5989#[.{fingerprint}]?.jpg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -2908,116 +2908,11 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "gu2iuzancs",
-      "Integrity": "6IiMLaHVqOY4Vkibl9kk2hz+/4k28R0jawKn5DYhats=",
+      "Fingerprint": "x1a0gzr391",
+      "Integrity": "G+GiDb7OjjTNT+wWvPyWKMHQkyc7zCSrXB6ac6rT3pE=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\uploads\\depositphotos_19841901-stock-photo-asian-young-business-man-close_2457.jpg"
-    },
-    {
-      "Identity": "C:\\Users\\ERHAN\\Documents\\GitHub\\MySocial\\MySocial\\MySocial.WebUI\\wwwroot\\uploads\\depositphotos_19841901-stock-photo-asian-young-business-man-close_8252.jpg",
-      "SourceId": "MySocial.WebUI",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\ERHAN\\Documents\\GitHub\\MySocial\\MySocial\\MySocial.WebUI\\wwwroot\\",
-      "BasePath": "_content/MySocial.WebUI",
-      "RelativePath": "uploads/depositphotos_19841901-stock-photo-asian-young-business-man-close_8252#[.{fingerprint}]?.jpg",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "AssetMergeBehavior": "",
-      "AssetMergeSource": "",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "Fingerprint": "gu2iuzancs",
-      "Integrity": "6IiMLaHVqOY4Vkibl9kk2hz+/4k28R0jawKn5DYhats=",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\uploads\\depositphotos_19841901-stock-photo-asian-young-business-man-close_8252.jpg"
-    },
-    {
-      "Identity": "C:\\Users\\ERHAN\\Documents\\GitHub\\MySocial\\MySocial\\MySocial.WebUI\\wwwroot\\uploads\\desk_aedc.jpg",
-      "SourceId": "MySocial.WebUI",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\ERHAN\\Documents\\GitHub\\MySocial\\MySocial\\MySocial.WebUI\\wwwroot\\",
-      "BasePath": "_content/MySocial.WebUI",
-      "RelativePath": "uploads/desk_aedc#[.{fingerprint}]?.jpg",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "AssetMergeBehavior": "",
-      "AssetMergeSource": "",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "Fingerprint": "pb271ecu0e",
-      "Integrity": "ex/0Ju7Tq7v4+aWYUtwRwIe+6YCPD0RC/q1vxPnLwew=",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\uploads\\desk_aedc.jpg"
-    },
-    {
-      "Identity": "C:\\Users\\ERHAN\\Documents\\GitHub\\MySocial\\MySocial\\MySocial.WebUI\\wwwroot\\uploads\\photo-1590086782957-93c06ef21604_cd6c.jpg",
-      "SourceId": "MySocial.WebUI",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\ERHAN\\Documents\\GitHub\\MySocial\\MySocial\\MySocial.WebUI\\wwwroot\\",
-      "BasePath": "_content/MySocial.WebUI",
-      "RelativePath": "uploads/photo-1590086782957-93c06ef21604_cd6c#[.{fingerprint}]?.jpg",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "AssetMergeBehavior": "",
-      "AssetMergeSource": "",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "Fingerprint": "s19u2zgk9v",
-      "Integrity": "UDdwKWcDNKct3Ot0ouwJkGkFXe6OV/tXz8b8lrWEY9E=",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\uploads\\photo-1590086782957-93c06ef21604_cd6c.jpg"
-    },
-    {
-      "Identity": "C:\\Users\\ERHAN\\Documents\\GitHub\\MySocial\\MySocial\\MySocial.WebUI\\wwwroot\\uploads\\portrait-young-smiling-man_171337-11976_152a.avif",
-      "SourceId": "MySocial.WebUI",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\ERHAN\\Documents\\GitHub\\MySocial\\MySocial\\MySocial.WebUI\\wwwroot\\",
-      "BasePath": "_content/MySocial.WebUI",
-      "RelativePath": "uploads/portrait-young-smiling-man_171337-11976_152a#[.{fingerprint}]?.avif",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "AssetMergeBehavior": "",
-      "AssetMergeSource": "",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "Fingerprint": "3btovpxr1b",
-      "Integrity": "X/3U1GZCEOxKR23S3lDH7QkHiFC8LnI41FDLdzWSDHw=",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\uploads\\portrait-young-smiling-man_171337-11976_152a.avif"
-    },
-    {
-      "Identity": "C:\\Users\\ERHAN\\Documents\\GitHub\\MySocial\\MySocial\\MySocial.WebUI\\wwwroot\\uploads\\sunny_0954.jpg",
-      "SourceId": "MySocial.WebUI",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\ERHAN\\Documents\\GitHub\\MySocial\\MySocial\\MySocial.WebUI\\wwwroot\\",
-      "BasePath": "_content/MySocial.WebUI",
-      "RelativePath": "uploads/sunny_0954#[.{fingerprint}]?.jpg",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "AssetMergeBehavior": "",
-      "AssetMergeSource": "",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "Fingerprint": "r4jff1qjrf",
-      "Integrity": "m4EjIPrzXUhi4CVD3xfjijo5pdVLfBcCD2fFiAWP1zo=",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\uploads\\sunny_0954.jpg"
+      "OriginalItemSpec": "wwwroot\\uploads\\thumb16_5989.jpg"
     }
   ],
   "Endpoints": [
@@ -11392,8 +11287,8 @@
       ]
     },
     {
-      "Route": "uploads/39niprghbdnc1_8fec.3epyw5eyhv.webp",
-      "AssetFile": "C:\\Users\\ERHAN\\Documents\\GitHub\\MySocial\\MySocial\\MySocial.WebUI\\wwwroot\\uploads\\39niprghbdnc1_8fec.webp",
+      "Route": "uploads/asian-handsome-man-with-a-mustache-smiling-on-white-background-free-photo_91ba.05ddzsdifk.jpg",
+      "AssetFile": "C:\\Users\\ERHAN\\Documents\\GitHub\\MySocial\\MySocial\\MySocial.WebUI\\wwwroot\\uploads\\asian-handsome-man-with-a-mustache-smiling-on-white-background-free-photo_91ba.jpg",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -11402,19 +11297,19 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "39476"
+          "Value": "36943"
         },
         {
           "Name": "Content-Type",
-          "Value": "image/webp"
+          "Value": "image/jpeg"
         },
         {
           "Name": "ETag",
-          "Value": "\"C2lGLMhfpo0+5KUIk2vJ8n+ka9KVoTZZvs9Ia/W/nTQ=\""
+          "Value": "\"PDnIxqfaxwuawcszfIRVd25MKw3TkjwZuU8/2c3CX+E=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 04 Jun 2025 15:21:57 GMT"
+          "Value": "Wed, 30 Jul 2025 16:08:33 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -11424,21 +11319,21 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "3epyw5eyhv"
+          "Value": "05ddzsdifk"
         },
         {
           "Name": "label",
-          "Value": "uploads/39niprghbdnc1_8fec.webp"
+          "Value": "uploads/asian-handsome-man-with-a-mustache-smiling-on-white-background-free-photo_91ba.jpg"
         },
         {
           "Name": "integrity",
-          "Value": "sha256-C2lGLMhfpo0+5KUIk2vJ8n+ka9KVoTZZvs9Ia/W/nTQ="
+          "Value": "sha256-PDnIxqfaxwuawcszfIRVd25MKw3TkjwZuU8/2c3CX+E="
         }
       ]
     },
     {
-      "Route": "uploads/39niprghbdnc1_8fec.webp",
-      "AssetFile": "C:\\Users\\ERHAN\\Documents\\GitHub\\MySocial\\MySocial\\MySocial.WebUI\\wwwroot\\uploads\\39niprghbdnc1_8fec.webp",
+      "Route": "uploads/asian-handsome-man-with-a-mustache-smiling-on-white-background-free-photo_91ba.jpg",
+      "AssetFile": "C:\\Users\\ERHAN\\Documents\\GitHub\\MySocial\\MySocial\\MySocial.WebUI\\wwwroot\\uploads\\asian-handsome-man-with-a-mustache-smiling-on-white-background-free-photo_91ba.jpg",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -11447,19 +11342,19 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "39476"
+          "Value": "36943"
         },
         {
           "Name": "Content-Type",
-          "Value": "image/webp"
+          "Value": "image/jpeg"
         },
         {
           "Name": "ETag",
-          "Value": "\"C2lGLMhfpo0+5KUIk2vJ8n+ka9KVoTZZvs9Ia/W/nTQ=\""
+          "Value": "\"PDnIxqfaxwuawcszfIRVd25MKw3TkjwZuU8/2c3CX+E=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 04 Jun 2025 15:21:57 GMT"
+          "Value": "Wed, 30 Jul 2025 16:08:33 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -11469,13 +11364,13 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-C2lGLMhfpo0+5KUIk2vJ8n+ka9KVoTZZvs9Ia/W/nTQ="
+          "Value": "sha256-PDnIxqfaxwuawcszfIRVd25MKw3TkjwZuU8/2c3CX+E="
         }
       ]
     },
     {
-      "Route": "uploads/a-young-woman-with-brown-hair-wearing-an-off-white-sweater-thoughtfully-looking-up-with-chin-resting-on-her-hand-photo_c78f.fmpxpd9tkr.jpeg",
-      "AssetFile": "C:\\Users\\ERHAN\\Documents\\GitHub\\MySocial\\MySocial\\MySocial.WebUI\\wwwroot\\uploads\\a-young-woman-with-brown-hair-wearing-an-off-white-sweater-thoughtfully-looking-up-with-chin-resting-on-her-hand-photo_c78f.jpeg",
+      "Route": "uploads/photo-1438761681033-6461ffad8d80_082a.4ekqhnxev3.jpg",
+      "AssetFile": "C:\\Users\\ERHAN\\Documents\\GitHub\\MySocial\\MySocial\\MySocial.WebUI\\wwwroot\\uploads\\photo-1438761681033-6461ffad8d80_082a.jpg",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -11484,7 +11379,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "4643"
+          "Value": "281720"
         },
         {
           "Name": "Content-Type",
@@ -11492,11 +11387,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"99yHQ7JpRGMY54K6/HONrCihEgzgLh47cpVBZZ/IKC0=\""
+          "Value": "\"vOYe+ghxEFcnwgY0zpaf7nqsUkUw4kpZ4qTG5e0B4KU=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 03 Jun 2025 19:21:16 GMT"
+          "Value": "Wed, 30 Jul 2025 16:09:59 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -11506,21 +11401,21 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "fmpxpd9tkr"
+          "Value": "4ekqhnxev3"
         },
         {
           "Name": "label",
-          "Value": "uploads/a-young-woman-with-brown-hair-wearing-an-off-white-sweater-thoughtfully-looking-up-with-chin-resting-on-her-hand-photo_c78f.jpeg"
+          "Value": "uploads/photo-1438761681033-6461ffad8d80_082a.jpg"
         },
         {
           "Name": "integrity",
-          "Value": "sha256-99yHQ7JpRGMY54K6/HONrCihEgzgLh47cpVBZZ/IKC0="
+          "Value": "sha256-vOYe+ghxEFcnwgY0zpaf7nqsUkUw4kpZ4qTG5e0B4KU="
         }
       ]
     },
     {
-      "Route": "uploads/a-young-woman-with-brown-hair-wearing-an-off-white-sweater-thoughtfully-looking-up-with-chin-resting-on-her-hand-photo_c78f.jpeg",
-      "AssetFile": "C:\\Users\\ERHAN\\Documents\\GitHub\\MySocial\\MySocial\\MySocial.WebUI\\wwwroot\\uploads\\a-young-woman-with-brown-hair-wearing-an-off-white-sweater-thoughtfully-looking-up-with-chin-resting-on-her-hand-photo_c78f.jpeg",
+      "Route": "uploads/photo-1438761681033-6461ffad8d80_082a.jpg",
+      "AssetFile": "C:\\Users\\ERHAN\\Documents\\GitHub\\MySocial\\MySocial\\MySocial.WebUI\\wwwroot\\uploads\\photo-1438761681033-6461ffad8d80_082a.jpg",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -11529,7 +11424,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "4643"
+          "Value": "281720"
         },
         {
           "Name": "Content-Type",
@@ -11537,11 +11432,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"99yHQ7JpRGMY54K6/HONrCihEgzgLh47cpVBZZ/IKC0=\""
+          "Value": "\"vOYe+ghxEFcnwgY0zpaf7nqsUkUw4kpZ4qTG5e0B4KU=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 03 Jun 2025 19:21:16 GMT"
+          "Value": "Wed, 30 Jul 2025 16:09:59 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -11551,13 +11446,13 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-99yHQ7JpRGMY54K6/HONrCihEgzgLh47cpVBZZ/IKC0="
+          "Value": "sha256-vOYe+ghxEFcnwgY0zpaf7nqsUkUw4kpZ4qTG5e0B4KU="
         }
       ]
     },
     {
-      "Route": "uploads/depositphotos_19841901-stock-photo-asian-young-business-man-close_2457.gu2iuzancs.jpg",
-      "AssetFile": "C:\\Users\\ERHAN\\Documents\\GitHub\\MySocial\\MySocial\\MySocial.WebUI\\wwwroot\\uploads\\depositphotos_19841901-stock-photo-asian-young-business-man-close_2457.jpg",
+      "Route": "uploads/thumb16_5989.jpg",
+      "AssetFile": "C:\\Users\\ERHAN\\Documents\\GitHub\\MySocial\\MySocial\\MySocial.WebUI\\wwwroot\\uploads\\thumb16_5989.jpg",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -11566,7 +11461,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "11034"
+          "Value": "41229"
         },
         {
           "Name": "Content-Type",
@@ -11574,56 +11469,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"6IiMLaHVqOY4Vkibl9kk2hz+/4k28R0jawKn5DYhats=\""
+          "Value": "\"G+GiDb7OjjTNT+wWvPyWKMHQkyc7zCSrXB6ac6rT3pE=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 04 Jun 2025 15:21:30 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "gu2iuzancs"
-        },
-        {
-          "Name": "label",
-          "Value": "uploads/depositphotos_19841901-stock-photo-asian-young-business-man-close_2457.jpg"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-6IiMLaHVqOY4Vkibl9kk2hz+/4k28R0jawKn5DYhats="
-        }
-      ]
-    },
-    {
-      "Route": "uploads/depositphotos_19841901-stock-photo-asian-young-business-man-close_2457.jpg",
-      "AssetFile": "C:\\Users\\ERHAN\\Documents\\GitHub\\MySocial\\MySocial\\MySocial.WebUI\\wwwroot\\uploads\\depositphotos_19841901-stock-photo-asian-young-business-man-close_2457.jpg",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "11034"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "image/jpeg"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"6IiMLaHVqOY4Vkibl9kk2hz+/4k28R0jawKn5DYhats=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Wed, 04 Jun 2025 15:21:30 GMT"
+          "Value": "Wed, 30 Jul 2025 16:10:34 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -11633,13 +11483,13 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-6IiMLaHVqOY4Vkibl9kk2hz+/4k28R0jawKn5DYhats="
+          "Value": "sha256-G+GiDb7OjjTNT+wWvPyWKMHQkyc7zCSrXB6ac6rT3pE="
         }
       ]
     },
     {
-      "Route": "uploads/depositphotos_19841901-stock-photo-asian-young-business-man-close_8252.gu2iuzancs.jpg",
-      "AssetFile": "C:\\Users\\ERHAN\\Documents\\GitHub\\MySocial\\MySocial\\MySocial.WebUI\\wwwroot\\uploads\\depositphotos_19841901-stock-photo-asian-young-business-man-close_8252.jpg",
+      "Route": "uploads/thumb16_5989.x1a0gzr391.jpg",
+      "AssetFile": "C:\\Users\\ERHAN\\Documents\\GitHub\\MySocial\\MySocial\\MySocial.WebUI\\wwwroot\\uploads\\thumb16_5989.jpg",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -11648,7 +11498,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "11034"
+          "Value": "41229"
         },
         {
           "Name": "Content-Type",
@@ -11656,11 +11506,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"6IiMLaHVqOY4Vkibl9kk2hz+/4k28R0jawKn5DYhats=\""
+          "Value": "\"G+GiDb7OjjTNT+wWvPyWKMHQkyc7zCSrXB6ac6rT3pE=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 03 Jun 2025 19:19:56 GMT"
+          "Value": "Wed, 30 Jul 2025 16:10:34 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -11670,380 +11520,15 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "gu2iuzancs"
+          "Value": "x1a0gzr391"
         },
         {
           "Name": "label",
-          "Value": "uploads/depositphotos_19841901-stock-photo-asian-young-business-man-close_8252.jpg"
+          "Value": "uploads/thumb16_5989.jpg"
         },
         {
           "Name": "integrity",
-          "Value": "sha256-6IiMLaHVqOY4Vkibl9kk2hz+/4k28R0jawKn5DYhats="
-        }
-      ]
-    },
-    {
-      "Route": "uploads/depositphotos_19841901-stock-photo-asian-young-business-man-close_8252.jpg",
-      "AssetFile": "C:\\Users\\ERHAN\\Documents\\GitHub\\MySocial\\MySocial\\MySocial.WebUI\\wwwroot\\uploads\\depositphotos_19841901-stock-photo-asian-young-business-man-close_8252.jpg",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "11034"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "image/jpeg"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"6IiMLaHVqOY4Vkibl9kk2hz+/4k28R0jawKn5DYhats=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Tue, 03 Jun 2025 19:19:56 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=3600, must-revalidate"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-6IiMLaHVqOY4Vkibl9kk2hz+/4k28R0jawKn5DYhats="
-        }
-      ]
-    },
-    {
-      "Route": "uploads/desk_aedc.jpg",
-      "AssetFile": "C:\\Users\\ERHAN\\Documents\\GitHub\\MySocial\\MySocial\\MySocial.WebUI\\wwwroot\\uploads\\desk_aedc.jpg",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "471614"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "image/jpeg"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"ex/0Ju7Tq7v4+aWYUtwRwIe+6YCPD0RC/q1vxPnLwew=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Tue, 03 Jun 2025 19:46:49 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=3600, must-revalidate"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-ex/0Ju7Tq7v4+aWYUtwRwIe+6YCPD0RC/q1vxPnLwew="
-        }
-      ]
-    },
-    {
-      "Route": "uploads/desk_aedc.pb271ecu0e.jpg",
-      "AssetFile": "C:\\Users\\ERHAN\\Documents\\GitHub\\MySocial\\MySocial\\MySocial.WebUI\\wwwroot\\uploads\\desk_aedc.jpg",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "471614"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "image/jpeg"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"ex/0Ju7Tq7v4+aWYUtwRwIe+6YCPD0RC/q1vxPnLwew=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Tue, 03 Jun 2025 19:46:49 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "pb271ecu0e"
-        },
-        {
-          "Name": "label",
-          "Value": "uploads/desk_aedc.jpg"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-ex/0Ju7Tq7v4+aWYUtwRwIe+6YCPD0RC/q1vxPnLwew="
-        }
-      ]
-    },
-    {
-      "Route": "uploads/photo-1590086782957-93c06ef21604_cd6c.jpg",
-      "AssetFile": "C:\\Users\\ERHAN\\Documents\\GitHub\\MySocial\\MySocial\\MySocial.WebUI\\wwwroot\\uploads\\photo-1590086782957-93c06ef21604_cd6c.jpg",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "1629233"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "image/jpeg"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"UDdwKWcDNKct3Ot0ouwJkGkFXe6OV/tXz8b8lrWEY9E=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Tue, 03 Jun 2025 19:21:09 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=3600, must-revalidate"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-UDdwKWcDNKct3Ot0ouwJkGkFXe6OV/tXz8b8lrWEY9E="
-        }
-      ]
-    },
-    {
-      "Route": "uploads/photo-1590086782957-93c06ef21604_cd6c.s19u2zgk9v.jpg",
-      "AssetFile": "C:\\Users\\ERHAN\\Documents\\GitHub\\MySocial\\MySocial\\MySocial.WebUI\\wwwroot\\uploads\\photo-1590086782957-93c06ef21604_cd6c.jpg",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "1629233"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "image/jpeg"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"UDdwKWcDNKct3Ot0ouwJkGkFXe6OV/tXz8b8lrWEY9E=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Tue, 03 Jun 2025 19:21:09 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "s19u2zgk9v"
-        },
-        {
-          "Name": "label",
-          "Value": "uploads/photo-1590086782957-93c06ef21604_cd6c.jpg"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-UDdwKWcDNKct3Ot0ouwJkGkFXe6OV/tXz8b8lrWEY9E="
-        }
-      ]
-    },
-    {
-      "Route": "uploads/portrait-young-smiling-man_171337-11976_152a.3btovpxr1b.avif",
-      "AssetFile": "C:\\Users\\ERHAN\\Documents\\GitHub\\MySocial\\MySocial\\MySocial.WebUI\\wwwroot\\uploads\\portrait-young-smiling-man_171337-11976_152a.avif",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "7703"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "application/octet-stream"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"X/3U1GZCEOxKR23S3lDH7QkHiFC8LnI41FDLdzWSDHw=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Wed, 04 Jun 2025 15:20:32 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "3btovpxr1b"
-        },
-        {
-          "Name": "label",
-          "Value": "uploads/portrait-young-smiling-man_171337-11976_152a.avif"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-X/3U1GZCEOxKR23S3lDH7QkHiFC8LnI41FDLdzWSDHw="
-        }
-      ]
-    },
-    {
-      "Route": "uploads/portrait-young-smiling-man_171337-11976_152a.avif",
-      "AssetFile": "C:\\Users\\ERHAN\\Documents\\GitHub\\MySocial\\MySocial\\MySocial.WebUI\\wwwroot\\uploads\\portrait-young-smiling-man_171337-11976_152a.avif",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "7703"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "application/octet-stream"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"X/3U1GZCEOxKR23S3lDH7QkHiFC8LnI41FDLdzWSDHw=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Wed, 04 Jun 2025 15:20:32 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-X/3U1GZCEOxKR23S3lDH7QkHiFC8LnI41FDLdzWSDHw="
-        }
-      ]
-    },
-    {
-      "Route": "uploads/sunny_0954.jpg",
-      "AssetFile": "C:\\Users\\ERHAN\\Documents\\GitHub\\MySocial\\MySocial\\MySocial.WebUI\\wwwroot\\uploads\\sunny_0954.jpg",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "447242"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "image/jpeg"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"m4EjIPrzXUhi4CVD3xfjijo5pdVLfBcCD2fFiAWP1zo=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Tue, 03 Jun 2025 19:46:55 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=3600, must-revalidate"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-m4EjIPrzXUhi4CVD3xfjijo5pdVLfBcCD2fFiAWP1zo="
-        }
-      ]
-    },
-    {
-      "Route": "uploads/sunny_0954.r4jff1qjrf.jpg",
-      "AssetFile": "C:\\Users\\ERHAN\\Documents\\GitHub\\MySocial\\MySocial\\MySocial.WebUI\\wwwroot\\uploads\\sunny_0954.jpg",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "447242"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "image/jpeg"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"m4EjIPrzXUhi4CVD3xfjijo5pdVLfBcCD2fFiAWP1zo=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Tue, 03 Jun 2025 19:46:55 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "r4jff1qjrf"
-        },
-        {
-          "Name": "label",
-          "Value": "uploads/sunny_0954.jpg"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-m4EjIPrzXUhi4CVD3xfjijo5pdVLfBcCD2fFiAWP1zo="
+          "Value": "sha256-G+GiDb7OjjTNT+wWvPyWKMHQkyc7zCSrXB6ac6rT3pE="
         }
       ]
     }
